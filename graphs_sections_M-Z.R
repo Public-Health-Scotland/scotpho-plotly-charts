@@ -17,14 +17,14 @@ multiline(filepath="Migration/migration_scottish_chart1",
           xaxtitle="Year", yaxtitle="Change in population")
 
 onebar(filepath="Migration/migration_board_chart1", 
-          xvar="class1", yvar="measure",
-          title="Chart 1. Net migration by NHS board, 2013-14", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
-          xaxtitle="Health board", yaxtitle="Population")
+       xvar="class1", yvar="measure",
+       title="Chart 1. Net migration by NHS board, 2015-16", 
+       sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
+       xaxtitle="Health board", yaxtitle="Population")
 
 onebar(filepath="Migration/migration_la_chart1", 
        xvar="class1", yvar="measure",
-       title="Chart 1. Net migration by council, 2013-14", 
+       title="Chart 1. Net migration by council, 2015-16", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Council", yaxtitle="Population")
 
@@ -49,13 +49,13 @@ multiline(filepath="Multiple Sclerosis/ms_seccare_chart1",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
            sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarized rate of <br>new cases per 100,000")
+          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 multiline(filepath="Multiple Sclerosis/ms_seccare_chart2", 
          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-         xaxtitle="Year", yaxtitle="Age-sex standarized rate of <br>new cases per 100,000")
+         xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 multiline(filepath="Multiple Sclerosis/ms_mortality_chart1", 
          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
@@ -69,7 +69,7 @@ multiline(filepath="Multiple Sclerosis/ms_mortality_chart1",
 #adults
 multibar(filepath="Obesity/obesity_adults_Chart_1", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Prevalence of obesity, Scotland, 2015", 
+         title="Chart 1. Prevalence of obesity, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
@@ -94,13 +94,13 @@ multiline(filepath="Obesity/obesity_children_chart2",
 #deprivation
 multibar(filepath="Obesity/obesity_Deprivation_Chart_1", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. Adults obese and morbidly obese<br>by SIMD quintile, Scotland, 2015", 
+         title="Chart 1. Adults obese and morbidly obese<br>by SIMD quintile, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 multibar(filepath="Obesity/obesity_Deprivation_Chart_2", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Children obese and morbidly obese<br>by SIMD quintile, Scotland, 2015", 
+         title="Chart 2. Children obese and morbidly obese<br>by SIMD quintile, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
@@ -113,19 +113,19 @@ onebar(filepath="Obesity/obesity_Deprivation_Chart_3",
 #international
 #Maybe a good example worth try subplotting
 barcompar(filepath="Obesity/obesity_International - Chart 1", 
-         xvar="class1", yvar="measure", comparator="scotland_2015", compname="Scotland (2015)",
+         xvar="class1", yvar="measure", comparator="scotland_2016", compname="Scotland (2016)",
          title="Chart 1. Prevalence of obesity in men by country", 
        sourc="<a href='http://stats.oecd.org/index.aspx?DataSetCode=HEALTH_STAT'>OECD: StatsExtract</a>", 
        xaxtitle='Country', yaxtitle="Percentage")
 
 barcompar(filepath="Obesity/obesity_International - Chart 2", 
-         xvar="class1", yvar="measure", comparator="scotland_2015", compname="Scotland (2015)",
+         xvar="class1", yvar="measure", comparator="scotland_2016", compname="Scotland (2016)",
        title="Chart 2. Prevalence of obesity in women by country", 
        sourc="<a href='http://stats.oecd.org/index.aspx?DataSetCode=HEALTH_STAT'>OECD: StatsExtract</a>", 
        xaxtitle='Country', yaxtitle="Percentage")
 
 ############################.
-##Older People ----
+### Older People ----
 ############################.
 multibar(filepath="Older People/Older People - Chart 1", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
@@ -141,7 +141,7 @@ multiline(filepath="Older People/Older People - Chart 2",
           xaxtitle='Year', yaxtitle="Estimated percentage")
 
 ############################.
-##Oral Health----
+### Oral Health----
 ############################.
 oneline(filepath="Oral Health/oral_adulttrend_chart1", 
            xvar="class1", yvar="measure", 
@@ -156,24 +156,24 @@ onebar(filepath="Oral Health/oral_adulttrend_chart2",
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 ############################.
-##Physical activity ----
+### Physical activity ----
 ############################.
 #adults
 multibar(filepath="Physical activity/pa_agegender_csv_Chart_1", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Adults meeting physical activity<br> recommendations per week, Scotland, 2015", 
+         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 multibar(filepath="Physical activity/pa-adults-muscle-agegender-chart2", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Adults achieving recommended levels of<br> muscle-strengthening activity per week, Scotland, 2015", 
+         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
-multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_2", 
+multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 3. Adults meeting physical activity<br> recommendations per week, Scotland, 2015", 
+         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
@@ -186,13 +186,13 @@ multiline(filepath="Physical activity/pa-adults-timetrend-chart4",
 #children
 multibar(filepath="Physical activity/pa_child_agegender_csv_Chart_1", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations per week, Scotland, 2015", 
+         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations per week, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 multibar(filepath="Physical activity/pa_childrenSIMD_csv_Chart_2", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations last week, Scotland, 2015", 
+         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations last week, Scotland, 2016", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
@@ -209,13 +209,13 @@ multibar(filepath="Physical activity/pa_children_international_chart4",
          xaxtitle='Country', yaxtitle="Percentage")
 
 ############################.
-##Physical environment ----
+### Physical environment ----
 ############################.
 #active travel
 stackedbar(filepath="Physical environment/Active travel - Chart 1", 
            xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
            title="Chart 1. Journeys made by main mode of transport", 
-           sourc="<a href='https://www.transport.gov.scot/publication/transport-and-travel-in-scotland-2014/'>Transport Scotland</a>", 
+           sourc="<a href='https://www.transport.gov.scot/publication/26-september-2017-transport-and-travel-in-scotland-2016/'>Transport Scotland</a>", 
            xaxtitle="Year", yaxtitle="Percentage journeys made")
 
 #environmental justice
@@ -240,13 +240,13 @@ onebar(filepath="Physical environment/environmental_justice_chart3",
 #green spaces
 onebar(filepath="Physical environment/Greenspace SIMD - Chart 1", 
        xvar="class1", yvar="measure", 
-       title="Chart 1. Adults living within a 5 minute walk<br> of greenspace, Scotland, 2014", 
+       title="Chart 1. Adults living within a 5 minute walk <br> of greenspace, Scotland, 2016", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 onebar(filepath="Physical environment/Greenspace SIMD - Chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults satisfied with local <br>greenspace, Scotland, 2014", 
+       title="Chart 2. Adults satisfied with local <br>greenspace, Scotland, 2016", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
@@ -266,7 +266,7 @@ onebar(filepath="Physical environment/Housing overcrowded - Chart 2",
 #maintenance
 onebar(filepath="Physical environment/Maintenance - Chart 1", 
        xvar="class1", yvar="measure", 
-       title="Chart 1. Adults saying that rubbish/litter is very/fairly <br>common in their neighbourhood, Scotland, 2014", 
+       title="Chart 1. Adults saying that rubbish/litter is very/fairly <br>common in their neighbourhood, Scotland, 2016", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
        xaxtitle='SIMD decile', yaxtitle="Percentage")
 
@@ -278,7 +278,7 @@ oneline(filepath="Physical environment/Traffic - Chart 1",
        xaxtitle='Year', yaxtitle="Percentage")
 
 ############################.
-##Population ----
+### Population ----
 ############################.
 #Household projections
 multibar(filepath="Population/2016_pop_house_chart1", 
@@ -346,22 +346,22 @@ oneline(filepath="Population/2016_pop_scot_est_chart2",
         xaxtitle="Year", yaxtitle="Population")
 
 ############################.
-##Rurality----
+### Rurality----
 ############################.
 multibar(filepath="Rurality/Rurality_Chart_1", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Life expectancy for urban/rural<br> areas, Scotland, 2013-2015", 
-         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy'>NRS</a>", 
-         xaxtitle='Urban-rural classification', yaxtitle="Life expectancy at birth")
+         title="Chart 1. Life expectancy for Urban-Rural<br> areas, Scotland, 2014-2016", 
+         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-in-scottish-areas/2014-2016/list-of-tables'>NRS</a>", 
+         xaxtitle='2013-14 Urban-Rural classification', yaxtitle="Life expectancy at birth")
 
 stackedbar(filepath="Rurality/Rurality_Chart_2", 
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. Population across the urban-rural<br> classification, Scotland, 2015", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
-           xaxtitle="Urban-rural classification", yaxtitle="Population")
+           title="Chart 2. Population estimates across the Urban-Rural<br> classification, Scotland, 2016", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/2011-based-special-area-population-estimates/population-estimates-by-urban-rural-classification'>NRS</a>", 
+           xaxtitle="2013-14 Urban-Rural classification", yaxtitle="Population")
 
 ############################.
-##Social environment ----
+### Social environment ----
 ############################.
 #civic participation
 barcompar(filepath="Social Environment/Civic_participation_Chart_1", 
@@ -455,22 +455,54 @@ barcompar(filepath="Social Environment/volunteering_chart1",
        xaxtitle='Council', yaxtitle="Percentage")
 
 ############################.
-##Smoking----
+### Smoking----
 ############################.
-oneline(filepath="Smoking/smoking_admissions_chart1", 
-        xvar="class1", yvar="measure", 
+#admissions
+multiline(filepath="Smoking/smoking_admissions_chart1", 
+        xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
         title="Chart 1. Smoking attributable admissions, Scotland", 
         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
-        xaxtitle="Year", yaxtitle="Number of admissions")
+        xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-oneline(filepath="Smoking/smoking_deaths_chart1", 
-        xvar="class1", yvar="measure", 
-        title="Chart 1. Smoking attributable deaths, Scotland", 
-        sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/'>NRS</a>, <a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
-        xaxtitle="Year", yaxtitle="Number of deaths")
+multiline(filepath="Smoking/smoking_admissions_sex_chart2", 
+          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+          title="Chart 2. Smoking attributable admissions by sex, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Age standarized rate per 100,000")
+
+multiline(filepath="Smoking/smoking_admissions_age_chart3", 
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
+          title="Chart 3. Smoking attributable admissions by age group, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Sex standarized rate per 100,000")
+
+multiline(filepath="Smoking/smoking_admissions_simd_chart4", 
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
+          title="Chart 4. Smoking attributable admissions by SIMD quintile, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+
+#deaths
+multiline(filepath="Smoking/smoking_deaths_sex_chart1", 
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
+          title="Chart 1. Smoking attributable deaths by sex, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Age standarized rate per 100,000")
+
+multiline(filepath="Smoking/smoking_deaths_age_chart2", 
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
+          title="Chart 2. Smoking attributable deaths by age group, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Sex standarized rate per 100,000")
+
+multiline(filepath="Smoking/smoking_deaths_simd_chart3", 
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
+          title="Chart 3. Smoking attributable deaths by SIMD quintile, Scotland", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
 ############################.
-##Suicide ----
+### Suicide ----
 ############################.
 multiline(filepath="Suicide/suicide_national_chart1_2017", 
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
@@ -503,7 +535,7 @@ multiline(filepath="Suicide/suicide_uk_chart1_2016",
           xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
 
 ############################.
-##Violence ----
+### Violence ----
 ############################.
 oneline(filepath="Violence/Violence - National trends Chart 1", 
         xvar="class1", yvar="measure", 
