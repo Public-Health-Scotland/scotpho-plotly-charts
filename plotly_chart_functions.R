@@ -61,7 +61,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/jvillacampa/test
 ############################.
 ### Bar plot multi series function ----
 multibar <- function (filepath, xvar, yvar, group, title,
-                      sourc, xaxtitle, yaxtitle, pal_col)
+                      sourc, xaxtitle, yaxtitle, pal_col, privacy = "public")
 {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
@@ -84,13 +84,14 @@ multibar <- function (filepath, xvar, yvar, group, title,
            images = scotpho_logo) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
 ############################.
 ### Bar plot one series ----
-onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle) {
+onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle, 
+                    privacy = "public") {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
   
@@ -108,14 +109,14 @@ onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle) {
            images = scotpho_logo) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
 ############################.
 ##Bar plot 1 series w/comparator----
 barcompar <- function (filepath, xvar, yvar, comparator, compname,
-                       title, sourc, xaxtitle, yaxtitle)
+                       title, sourc, xaxtitle, yaxtitle, privacy = "public")
 {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
@@ -141,14 +142,14 @@ barcompar <- function (filepath, xvar, yvar, comparator, compname,
            images = scotpho_logo) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
 ############################.
 ##Stacked bar plot----
 stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col,
-                        xaxtitle, yaxtitle) {
+                        xaxtitle, yaxtitle, privacy = "public") {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
   #Number of factors, so it knows how many colors of the pal to use
@@ -173,13 +174,14 @@ stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col,
     ) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
 ############################.
 ##Line plot 1 series----
-oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle) {
+oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle,
+                     labelsx, privacy = "public") {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
   
@@ -197,16 +199,39 @@ oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle) {
            images = scotpho_logo) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
+# oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle,
+#                      labelsx) {
+#   #Reading data
+#   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+#   
+#   #Plotting
+#   plot_plotly <- plot_ly(data=data, x=data[,xvar], y=round(data[,yvar],1),
+#                          type = "scatter", mode='lines', width = 650, height = 500, #size of plot
+#                          line = list(color = pal1color)) %>% #Grouping variable for color and palette
+#     #Layout
+#     layout(title = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
+#            titlefont = list(size=15), #title size
+#            annotations = list(), #It needs this because of a buggy behaviour
+#            yaxis = list(title = yaxtitle, rangemode="tozero"),
+#            xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10),
+#                         tickvals=data[,xvar], ticktext=data[,labelsx]), #axis parameter
+#            margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
+#            images = scotpho_logo) %>%
+#     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
+#   
+#   api_create(x=plot_plotly, filename = filepath) #Upload to server
+#   
+# }
 
 ############################.
 ##Line plot 2+ series----
 #This macro should be modified once we get a more recent version of R (3.2.0 at the moment)
 #Currently it uses a very hacky solution to allow the display of lines, it could be simplified massively
 multiline <- function (filepath, xvar, yvar, group, title,
-                       sourc, xaxtitle, yaxtitle, pal_col) {
+                       sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
   #Reading data
   data<- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
   #Number of factors, so it knows how many colors of the pal to use
@@ -232,6 +257,40 @@ multiline <- function (filepath, xvar, yvar, group, title,
            legend = list(x = 100, y = 0.5)) %>%   #anchoring the legend to the middle of the y-axis so that text appears halway down the graph
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
   
-  api_create(x=plot_plotly, filename = filepath) #Upload to server
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
+  
+}
+
+############################.
+##Line plot 2+ series with part of the time period dashed ----
+multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
+                              sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
+  #Reading data
+  data <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  #Number of factors, so it knows how many colors of the pal to use
+  cat_length <- length(unique(data[,group]))
+  
+  pal_chose <-pal_col #Palette
+  
+  #Plotting
+  
+  plot_plotly <-  plot_ly(data=data, x=data[,xvar], width = 650, height = 500,
+                          color=as.factor(data[,group]), colors = pal_chose[1:cat_length]) %>%
+    add_lines(y = round(data[,yvar], 1)) %>% #normal line
+    add_lines(y = round(data[,yvar_dashed], 1), line = list(dash="dash"),
+              showlegend = FALSE) %>% #dashed line
+    #Layout
+    layout(title = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
+           titlefont = list(size=15), #title size
+           annotations = list(), #It needs this because of a buggy behaviour
+           yaxis = list(title = yaxtitle, rangemode="tozero"),
+           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10), dtick = 1), #axis parameter
+           margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
+           hovermode = 'false', # to get hover compare mode as default
+           images = scotpho_logo,
+           legend = list(x = 100, y = 0.5)) %>%   #anchoring the legend to the middle of the y-axis so that text appears halway down the graph
+    config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
+  
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
