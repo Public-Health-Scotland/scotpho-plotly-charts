@@ -1,10 +1,10 @@
-#Syntax to create plotly graphics and upload them to plotly site
+#Code to create plotly graphics and upload them to plotly site
 #Sections starting with a M until a Z.
 
 ############################.
 ### Packages, functions and plot parameters----
 ############################.
-source("./plotly_chart_functions.r")
+source("plotly_chart_functions.r")
 
 ###############################.
 ##PRE-RELEASE ACCESS---- SUICIDE.
@@ -39,6 +39,32 @@ multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA",
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
           xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
 
+############################.
+### Multiple sclerosis PRE RELEASE ACCESS----
+############################.
+
+#secondary care
+#Chart 590
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart1PRA", 
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
+          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+
+#Chart 592
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart2PRA", 
+          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
+          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+
+#Chart 594
+multiline(filepath="Multiple Sclerosis/ms_mortality_chart1PRA", 
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
+          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle='Year of registration', yaxtitle="Number of deaths")
+
 #########################################################################################
 
 
@@ -68,12 +94,14 @@ onebar(filepath="Migration/migration_la_chart1",
 ### Multiple sclerosis----
 ############################.
 #primary care
+#Chart 229
 stackedbar(filepath="Multiple Sclerosis/ms_primcare_chart1", 
            xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
            title="Chart 1. Estimated number of consultations for<br> multiple sclerosis by staff type, Scotland ", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>ISD</a>. District nurse and health visitor data from 2006/07 onwards not available", 
            xaxtitle="Year", yaxtitle="Estimated number of consultations")
 
+#Chart 227
 multibar(filepath="Multiple Sclerosis/ms_primcare_chart2", 
          xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
          title="Chart 2. Patients consulting GP/practice nurse at least<br> once a year for multiple sclerosis, Scotland, 2012/13", 
@@ -81,23 +109,26 @@ multibar(filepath="Multiple Sclerosis/ms_primcare_chart2",
          xaxtitle='Age group', yaxtitle="Age-sex standarized rate<br> per 1,000 patients registered")
 
 #secondary care
+#Chart 231
 multiline(filepath="Multiple Sclerosis/ms_seccare_chart1", 
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
+          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
+#Chart 233
 multiline(filepath="Multiple Sclerosis/ms_seccare_chart2", 
-         xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-         title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-         sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-         xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
+          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
+#Chart 440
 multiline(filepath="Multiple Sclerosis/ms_mortality_chart1", 
-         xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
-         title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
-         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
-         xaxtitle='Year of registration', yaxtitle="Number of deaths")
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
+          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle='Year of registration', yaxtitle="Number of deaths")
 
 ############################.
 ### Obesity ----
@@ -194,114 +225,51 @@ onebar(filepath="Oral Health/oral_adulttrend_chart2",
 ######To run on Monday###
 ####new code#####
 
-# ############################.
-# ### Physical activity ----
-# ############################.
-# #adults
-# multibar(filepath="Physical activity/pa_agegender_csv_Chart_1", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2017", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='Age group', yaxtitle="Percentage")
-# 
-# multibar(filepath="Physical activity/pa-adults-muscle-agegender-chart2", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2017", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='Age group', yaxtitle="Percentage")
-# 
-# multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2017", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='SIMD quintile', yaxtitle="Percentage")
-# 
-# multiline(filepath="Physical activity/pa-adults-timetrend-chart4", 
-#           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#           title="Chart 4. Adults achieving physical activity<br> recommendations, Scotland, 2012-2017", 
-#           sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#           xaxtitle='Year', yaxtitle="Percentage")
-# 
-# #children
-# multibar(filepath="Physical activity/pa_child_agegender_csv_Chart_1", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations per week, Scotland, 2017", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='Age group', yaxtitle="Percentage")
-# 
-# multibar(filepath="Physical activity/pa_childrenSIMD_csv_Chart_2", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations last week, by SIMD quintile, 2017", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='SIMD quintile', yaxtitle="Percentage")
-# 
-# #DELETE
-# # multiline(filepath="Physical activity/pa_childrentrend_csv_Chart_3", 
-# #          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-# #          title="Chart 3. Children between 0-16 years old meeting<br> physical activity recommendations, Scotland", 
-# #          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-# #          xaxtitle='Year', yaxtitle="Percentage")
-# 
-# #This will now be chart 3
-# multibar(filepath="Physical activity/pa_children_international_chart4", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-#          title="Chart 3. Girls and boys aged 15 meeting recommended<br> levels of physical activity in HSBC countries, 2013/14", 
-#          sourc="<a href='http://www.hbsc.org/'>Health Behaviour in School-aged Children Survey</a>", 
-#          xaxtitle='Country', yaxtitle="Percentage")
-
 ############################.
 ### Physical activity ----
 ############################.
 #adults
-multibar(filepath="Physical activity/pa_agegender_csv_Chart_1", 
+multibar(filepath="Physical activity/pa_agegender_csv_Chart_1",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2017",
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
-multibar(filepath="Physical activity/pa-adults-muscle-agegender-chart2", 
+multibar(filepath="Physical activity/pa-adults-muscle-agegender-chart2",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2017",
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
-multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3", 
+multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2017",
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
-multiline(filepath="Physical activity/pa-adults-timetrend-chart4", 
-         xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 4. Adults achieving according to old and new guidelines of <br> physical activity recommendations, Scotland, 2008 - 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-         xaxtitle='Year', yaxtitle="Percentage")
+multiline(filepath="Physical activity/pa-adults-timetrend-chart4",
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 4. Adults achieving physical activity<br> recommendations by sex, Scotland, 2012-2017",
+          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
+          xaxtitle='Year', yaxtitle="Percentage")
 
 #children
-multibar(filepath="Physical activity/pa_child_agegender_csv_Chart_1", 
+multibar(filepath="Physical activity/pa_child_agegender_csv_Chart_1",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations per week, Scotland, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations, Scotland, 2017",
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
-multibar(filepath="Physical activity/pa_childrenSIMD_csv_Chart_2", 
+multibar(filepath="Physical activity/pa_childrenSIMD_csv_Chart_2",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations last week, by SIMD quintile, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations, by SIMD quintile, 2017",
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
-#DELETE
-# multiline(filepath="Physical activity/pa_childrentrend_csv_Chart_3", 
-#          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-#          title="Chart 3. Children between 0-16 years old meeting<br> physical activity recommendations, Scotland", 
-#          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-#          xaxtitle='Year', yaxtitle="Percentage")
-
-#This will now be chart 3
-multibar(filepath="Physical activity/pa_children_international_chart4", 
+multibar(filepath="Physical activity/pa_children_international_chart4",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 4. Girls and boys aged 15 meeting recommended<br> levels of physical activity in HSBC countries, 2013/14", 
-         sourc="<a href='http://www.hbsc.org/'>Health Behaviour in School-aged Children Survey</a>", 
+         title="Chart 3. Girls and boys aged 15 meeting recommended<br> levels of physical activity in HSBC countries, 2013/14",
+         sourc="<a href='http://www.hbsc.org/'>Health Behaviour in School-aged Children Survey</a>",
          xaxtitle='Country', yaxtitle="Percentage")
 
 ############################.
@@ -554,44 +522,44 @@ barcompar(filepath="Social Environment/volunteering_chart1",
 ### Smoking----
 ############################.
 #admissions
-multiline(filepath="Smoking/smoking_admissions_chart1", 
-        xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+multiline_dashed(filepath="Smoking/smoking_admissions_chart1", privacy = "secret",
+        xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
         title="Chart 1. Hospital admissions attributable to smoking, Scotland", 
         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Smoking/smoking_admissions_sex_chart2", 
-          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+multiline_dashed(filepath="Smoking/smoking_admissions_sex_chart2", privacy = "secret",
+          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
           title="Chart 2. Hospital admissions attributable to smoking<br> by gender, Scotland", 
           sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
           xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
 
-multiline(filepath="Smoking/smoking_admissions_age_chart3", 
-          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
+multiline_dashed(filepath="Smoking/smoking_admissions_age_chart3", privacy = "secret",
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,yvar_dashed = "measure2",
           title="Chart 3. Hospital admissions attributable to smoking <br>by age group, Scotland", 
           sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
           xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
 
-multiline(filepath="Smoking/smoking_admissions_simd_chart4", 
+multiline(filepath="Smoking/smoking_admissions_simd_chart4", privacy = "secret",
           xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
           title="Chart 4. Hospital admissions attributable to smoking<br>by SIMD quintile, Scotland", 
           sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
-multibar(filepath="Smoking/smoking_admissions_disease_chart5", 
+multibar(filepath="Smoking/smoking_admissions_disease_chart5", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 5. Hospital admissions attributable to smoking as a<br>percentage of all admissions in each disease grouping, 2017, Scotland", 
          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
          xaxtitle="Disease group", yaxtitle="Percentage attributable")
 
 #deaths
-multiline_dashed(filepath="Smoking/smoking_deaths_sex_chart1", privacy = "secret",
+multiline_dashed(filepath="Smoking/smoking_deaths_sex_chart1", 
                  xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=palbysexoverall,
                  title="Chart 1. Deaths attributable to smoking by sex, </br>Scotland; 2003, 2008-2017", 
                  sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
                  xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
 
-multiline_dashed(filepath="Smoking/smoking_deaths_age_chart2", privacy = "secret",
+multiline_dashed(filepath="Smoking/smoking_deaths_age_chart2", 
                  xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=pal_five_gradient,
                  title="Chart 2. Deaths attributable to smoking by age group, </br>Scotland; 2003, 2008-2017", 
                  sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
@@ -599,7 +567,7 @@ multiline_dashed(filepath="Smoking/smoking_deaths_age_chart2", privacy = "secret
 
 multiline(filepath="Smoking/smoking_deaths_simd_chart3", 
           xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
-          title="Chart 3. Deaths attributable to smoking by<br> SIMD quintile, Scotland", 
+          title="Chart 3. Deaths attributable to smoking by<br> SIMD quintile, Scotland; 2008-2017", 
           sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
