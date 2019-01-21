@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+data/
+migration/
+*.csv
+*.docx
+*.Rproj
