@@ -6,11 +6,6 @@
 ############################.
 source("plotly_chart_functions.R")
 
-#############################################################################################################################################.
-##March 2018 PRE RELEASE ACCESS----
-#############################################################################################################################################.
-
-
 ############################.
 ##Chronic Liver Disease PRE RELEASE ACCESS----
 ############################.
@@ -64,20 +59,6 @@ multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA",
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
 
-#############################################################################################################################################.
-##DECEMBER 2018 PRE RELEASE ACCESS----
-#############################################################################################################################################.
-
-
-############################.
-##Allergy ----
-############################.
-
-#Replaced with Shiny dashboard:
-# \\stats\scotpho\Website\Charts\Shiny\SQ\Allergic Conditions Chart
-#Instructions in folder.
-
-
 
 ############################.
 ##Asthma PRE RELEASE ACCESS----
@@ -103,8 +84,6 @@ multiline(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",
           title="Chart 2. First hospitalisations with asthma,<br> by age and gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarised rate per 100,000")
-
-############################.
 
 ############################.
 ##COPD PRE RELEASE ACCESS----
@@ -163,8 +142,6 @@ onebar(filepath="COPD/COPD_International - Chart 2PRA",
        title="Chart 2. Death rates due to COPD in various industrialised<br>countries, Females", 
        sourc="<a href='http://www.who.int/healthinfo/mortality_data/en/'>WHO Mortality Database</a>, extracted December 2016", 
        xaxtitle='Country', yaxtitle="Rate per 100,000")
-
-############################.
 
 ############################.
 ##Epilepsy PRE RELEASE ACCESS----
@@ -256,9 +233,6 @@ multiline(filepath="Multiple Sclerosis/ms_mortality_chart1PRA",
 #           title="Chart 1. Acute Hospital Inpatient/Day Case Patients<br> with selected diagnoses,<br>Directly age-sex standardised to the European Standard Population 2013,<br> Scotland", 
 #           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>.", 
 #           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-
-
-
 
 
 ############################.
@@ -1007,15 +981,14 @@ barcompar(filepath="Income and employment/IE-worklessness-chart2",
 multiline (filepath="Injuries/inj_road_traffic_chart_1", 
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Road traffic casualties, Scotland",
-           sourc="<a href='https://www.transport.gov.scot/publication/key-reported-road-casualties-scotland-2016'>Transport Scotland</a>", 
+           sourc="<a href='https://www.transport.gov.scot/publication/reported-road-casualties-scotland-2017/'>Transport Scotland</a>", 
            xaxtitle="Year", yaxtitle="Number")
 
-oneline(filepath="Injuries/inj_seccare_chart1", 
-        xvar="class1", yvar="measure", 
+multiline(filepath="Injuries/inj_seccare_chart1", 
+        xvar="class1", yvar="measure", group="class2", pal_col=palalccondition,
         title="Chart 1. Injury related hospital admissions, Scotland", 
         sourc="<a href='http://www.isdscotland.org/Health-Topics/Emergency-Care/Unintentional-Injuries/'>SMR01, ISD</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standarized rate per 100,000")
-
 
 oneline(filepath="Injuries/inj_mortality_chart_1", 
         xvar="class1", yvar="measure", 
