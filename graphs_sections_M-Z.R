@@ -9,31 +9,31 @@ source("plotly_chart_functions.r")
 ###############################.
 ##PRE-RELEASE ACCESS---- SUICIDE.
 ###############################.
-multiline(filepath="Suicide/suicide_national_chart1_2018_PRA", 
+multiline(filepath="Suicide/suicide_national_chart1_2018_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart2_2018_PRA", 
+multibar(filepath="Suicide/suicide_national_chart2_2018_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 2. Male deaths from suicide<br>over time by age group, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart3_2018_PRA", 
+multibar(filepath="Suicide/suicide_national_chart3_2018_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 3. Female deaths from suicide<br>over time by age group, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multiline(filepath="Suicide/suicide_national_chart4_2018_PRA", 
+multiline(filepath="Suicide/suicide_national_chart4_2018_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA", 
+multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
@@ -45,21 +45,21 @@ multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA",
 
 #secondary care
 #Chart 590
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart1PRA", 
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart1PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 #Chart 592
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart2PRA", 
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart2PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 #Chart 594
-multiline(filepath="Multiple Sclerosis/ms_mortality_chart1PRA", 
+multiline(filepath="Multiple Sclerosis/ms_mortality_chart1PRA",  privacy = "secret",
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
