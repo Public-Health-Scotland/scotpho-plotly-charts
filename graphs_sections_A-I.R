@@ -491,8 +491,8 @@ barcompar(filepath="COPD/COPD - NHS Board data - Chart 1",
 barcompar(filepath="/data/COPD/COPD - NHS Board data - Chart 2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2015/16", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ", 
-          xaxtitle='NHS Board', yaxtitle="Age-sex standardised rate per 100,000 ")
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 codes J40-J44.", 
+          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 #Smoking
 multiline(filepath="COPD/COPD_Smoking_chart_1", 
@@ -503,7 +503,7 @@ multiline(filepath="COPD/COPD_Smoking_chart_1",
 
 multiline(filepath="COPD/COPD_Smoking_chart_2", 
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 3. Smoking rates by gender, Scotland", 
+          title="Chart 2. Smoking rates by gender, Scotland", 
           sourc="<a href='https://data.gov.uk/dataset/general_household_survey'>General Household Survey</a>", 
           xaxtitle="Year", yaxtitle="Percentage who are current smokers")
 
