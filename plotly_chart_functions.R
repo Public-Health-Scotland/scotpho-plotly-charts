@@ -247,7 +247,7 @@ multiline <- function (filepath, xvar, yvar, group, title,
 multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
                               sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
 
-  data_plot <- read.csv(paste("data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste(data_folder, filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
   
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
