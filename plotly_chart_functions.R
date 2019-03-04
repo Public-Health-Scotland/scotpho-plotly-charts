@@ -65,7 +65,7 @@ multibar <- function (filepath, xvar, yvar, group, title,
                       sourc, xaxtitle, yaxtitle, pal_col, privacy = "public")
 {
 
-  data_plot <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
@@ -95,7 +95,7 @@ multibar <- function (filepath, xvar, yvar, group, title,
 onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle, 
                     privacy = "public") {
 
-  data_plot <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Plotting
   plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
@@ -121,7 +121,7 @@ barcompar <- function (filepath, xvar, yvar, comparator, compname,
                        title, sourc, xaxtitle, yaxtitle, privacy = "public")
 {
   
-  data_plot <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Plotting
   plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], width = 650, height = 500) %>% #size of plot
@@ -153,7 +153,7 @@ barcompar <- function (filepath, xvar, yvar, comparator, compname,
 stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col,
                         xaxtitle, yaxtitle, privacy = "public") {
   
-  data_plot <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
@@ -186,7 +186,7 @@ stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col,
 oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle,
                      labelsx, privacy = "public") {
   
-  data_plot <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Plotting
   plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
@@ -247,7 +247,7 @@ multiline <- function (filepath, xvar, yvar, group, title,
 multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
                               sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
 
-  data_plot <- read.csv(paste(data_folder, filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
