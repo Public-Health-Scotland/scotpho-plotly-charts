@@ -13,9 +13,14 @@ library(plotly) #version 4.7
 ##Plot and upload parameters----
 ############################.
 #Login credentials to ScotPHO plotly.
-source("//stats/ScotPHO/Website/Charts/Plotly/login_credentials.r")
-data_folder <- "//stats/ScotPHO/Website/Charts/Plotly/data/"
-
+if (sessionInfo()$platform == "x86_64-redhat-linux-gnu (64-bit)") {
+  source("//PHI_conf/ScotPHO/Website/Charts/Plotly/login_credentials.R")
+  data_folder <- "//PHI_conf/ScotPHO/Website/Charts/Plotly/data/"
+} else  {
+  source("//stats/ScotPHO/Website/Charts/Plotly/login_credentials.R")
+  data_folder <- "//stats/ScotPHO/Website/Charts/Plotly/data/"
+}
+  
 ############################.
 ### Palettes ----
 #Palette used by the functions onebar, barcompar and oneline.

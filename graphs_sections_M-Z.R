@@ -4,7 +4,7 @@
 ############################.
 ### Packages, functions and plot parameters----
 ############################.
-source("plotly_chart_functions.r")
+source("plotly_chart_functions.R")
 
 ############################.
 ### Migration----
