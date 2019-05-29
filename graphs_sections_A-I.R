@@ -7,174 +7,8 @@
 source("plotly_chart_functions.R")
 
 ############################.
-##Chronic Liver Disease PRE RELEASE ACCESS----
-############################.
-#Mortality
-multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease mortality<br> by gender, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmortage,
-          title="Chart 2. Chronic liver disease mortality by age group, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
-          title="Chart 3. Chronic liver disease mortality by condition, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd,
-          title="Chart 4. Chronic liver disease mortality<br> by SIMD decile, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-#Morbidity
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease morbidity<br>by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmorbage,
-          title="Chart 2. Chronic liver disease morbidity by age group, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
-          title="Chart 3. Chronic liver disease morbidity<br>by condition, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", 
-          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-          title="Chart 4. Chronic liver disease morbidity<br>by SIMD deciles, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
-
-
-############################.
-##Asthma PRE RELEASE ACCESS----
-############################.
-
-#Chart 
-multiline(filepath="Asthma/asthma_mortality_chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Deaths due to asthma, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 
-multiline(filepath="Asthma/asthma_seccare_sex_chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. First hospitalisations with asthma,<br> by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-
-#Chart 
-multiline(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
-          title="Chart 2. First hospitalisations with asthma,<br> by age and gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarised rate per 100,000")
-
-############################.
-##COPD PRE RELEASE ACCESS----
-############################.
-
-#Secondary care
-#Chart 467
-multiline (filepath="COPD/COPD_Secondary Care - Chart 1PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
-
-#Chart 469
-multiline (filepath="COPD/COPD_Secondary Care - Chart 2PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 2. Incidence of COPD, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000 per year")
-
-#Mortality
-#Chart 471
-multiline (filepath="COPD/COPD_Mortality_Chart_1PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Mortality rate for COPD by gender, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
-           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
-
-#Deprivation
-#Chart 473
-multibar(filepath="COPD/COPD_deprivation_Chart_1PRA",  privacy = "secret",
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. COPD admissions in males, Scotland, 2017/18", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
-         xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
-
-#Chart 475
-multibar(filepath="COPD/COPD_deprivation_Chart_2PRA",  privacy = "secret",
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. COPD admissions in females, Scotland, 2017/18", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
-         xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
-
-#International Charts 1&2 not updated - WHO data source no longer available???
-#International
-#Chart 
-onebar(filepath="COPD/COPD_International - Chart 1PRA",  privacy = "secret",
-       xvar="class1", yvar="measure", 
-       title="Chart 1. Death rates due to COPD in various industrialised<br>countries, Males", 
-       sourc="<a href='http://www.who.int/healthinfo/mortality_data/en/'>WHO Mortality Database</a>, extracted December 2016", 
-       xaxtitle='Country', yaxtitle="Rate per 100,000")
-
-#Chart 
-onebar(filepath="COPD/COPD_International - Chart 2PRA",  privacy = "secret",
-       xvar="class1", yvar="measure", 
-       title="Chart 2. Death rates due to COPD in various industrialised<br>countries, Females", 
-       sourc="<a href='http://www.who.int/healthinfo/mortality_data/en/'>WHO Mortality Database</a>, extracted December 2016", 
-       xaxtitle='Country', yaxtitle="Rate per 100,000")
-
-############################.
-##Epilepsy PRE RELEASE ACCESS----
-############################.
-#Chart 477
-multiline (filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
-           xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 479
-multiline (filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-
-#Chart 481
-multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3PRA",  privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-
-
-#############################################################################################################################################.
-
-
-############################.
 ##Allergy ----
 ############################.
-
 #Replaced with Shiny dashboard:
 # \\stats\scotpho\Website\Charts\Shiny\SQ\Allergic Conditions Chart
 
@@ -233,6 +67,29 @@ multiline(filepath="Asthma/asthma_seccare_age_sex_chart2",
           title="Chart 2. First hospitalisations with asthma,<br> by age and gender, Scotland<br>Rates directly age-sex standardised using the European Standard Population 2013", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+############################.
+##Asthma PRE RELEASE ACCESS
+
+#Chart 
+multiline(filepath="Asthma/asthma_mortality_chart1PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          title="Chart 1. Deaths due to asthma, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>", 
+          xaxtitle="Year", yaxtitle="Number of deaths")
+
+#Chart 
+multiline(filepath="Asthma/asthma_seccare_sex_chart1PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 1. First hospitalisations with asthma,<br> by gender, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+
+#Chart 
+multiline(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
+          title="Chart 2. First hospitalisations with asthma,<br> by age and gender, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standarised rate per 100,000")
 
 ############################.
 ##Cancer ----
@@ -383,6 +240,57 @@ multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4",
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
+############################.
+##Chronic Liver Disease PRE RELEASE ACCESS
+#Mortality
+multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          title="Chart 1. Chronic liver disease mortality<br> by gender, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmortage,
+          title="Chart 2. Chronic liver disease mortality by age group, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
+          title="Chart 3. Chronic liver disease mortality by condition, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd,
+          title="Chart 4. Chronic liver disease mortality<br> by SIMD decile, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+#Morbidity
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          title="Chart 1. Chronic liver disease morbidity<br>by gender, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmorbage,
+          title="Chart 2. Chronic liver disease morbidity by age group, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3PRA",  privacy = "secret",
+          xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
+          title="Chart 3. Chronic liver disease morbidity<br>by condition, Scotland", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", 
+          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
+          title="Chart 4. Chronic liver disease morbidity<br>by SIMD deciles, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
 
 ############################.
 ##Community Wellbeing ----
@@ -522,6 +430,47 @@ onebar(filepath="COPD/COPD_International - Chart 2",
        title="Chart 2. Death rates due to COPD in various industrialised<br>countries, Females", 
        sourc="<a href='http://www.who.int/healthinfo/mortality_data/en/'>WHO Mortality Database</a>, extracted October 2016", 
        xaxtitle='Country', yaxtitle="Rate per 100,000")
+############################.
+##COPD PRE RELEASE ACCESS
+
+#Secondary care
+#Chart 467
+multiline (filepath="COPD/COPD_Secondary Care - Chart 1PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
+           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
+
+#Chart 469
+multiline (filepath="COPD/COPD_Secondary Care - Chart 2PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
+           title="Chart 2. Incidence of COPD, Scotland", 
+           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000 per year")
+
+#Mortality
+#Chart 471
+multiline (filepath="COPD/COPD_Mortality_Chart_1PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           title="Chart 1. Mortality rate for COPD by gender, Scotland", 
+           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
+           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+#Deprivation
+#Chart 473
+multibar(filepath="COPD/COPD_deprivation_Chart_1PRA",  privacy = "secret",
+         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         title="Chart 1. COPD admissions in males, Scotland, 2017/18", 
+         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
+         xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
+
+#Chart 475
+multibar(filepath="COPD/COPD_deprivation_Chart_2PRA",  privacy = "secret",
+         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         title="Chart 2. COPD admissions in females, Scotland, 2017/18", 
+         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
+         xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
+
 
 ############################.
 ##Crime ----
@@ -818,6 +767,31 @@ multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3",
            xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 ############################.
+##PRE RELEASE ACCESS
+
+#Chart 477
+multiline (filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
+           xaxtitle="Year", yaxtitle="Number of deaths")
+
+#Chart 479
+multiline (filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
+           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+
+#Chart 481
+multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3PRA",  privacy = "secret",
+           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
+           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
+           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+
+
+############################.
 ##Ethnicity ----
 ############################.
 multibar(filepath="Ethnicity/ethnicity_sah_chart1", 
@@ -838,19 +812,71 @@ multiline (filepath="Gender/Gender_chart1",
 ############################.
 ##Health Inequalities ----
 ############################.
+# Policy context
+dualaxisline(filepath="Health Inequalities/Health_Inequalities_Policy_Chart_1", 
+             xvar="class1", yvar="measure", yvar2="measure2", 
+             title="Trends in income inequality (share of national income received by<br>top 1%) and mortality inequality (gap between ‘best’ and ‘worst’
+             <br> local authority area), Great Britain 1920-2005", 
+             sourc="<a href='https://doi.org/10.1136/bmj.c3639'>Thomas B, Dorling D, Davey Smith G. Inequalities in premature mortality in Britain: observational study from 1921 to 2007</a><br>
+             <a href='https://policy.bristoluniversitypress.co.uk/injustice-revised-edition'>Dorling D. Injustice: why social inequality persists. Bristol: The Policy Press; 2010</a>        ", 
+             xaxtitle="Three year rolling average", yaxtitle="Ratio of best to worst deciles for area-based mortality", yaxtitle2="Top 1% share of national income",
+             minyrange = 1.2, maxyrange = 2.2, yname ="Mortality gap (ratio of best to worst local authority areas)", y2name = "Share of national income received by top 1%")
+
+#Scottish trends
 #Legend overlay in plotly
-oneline(filepath="Health Inequalities/Health_Inequalities_Chart_1", 
+oneline(filepath="Health Inequalities/Health_Inequalities_Chart_1_new", 
         xvar="class1", yvar="measure", 
-        title="Chart 1. Relative Index of Inequality (RII)<br>All-cause mortality under 75 years, Scotland, 2015", 
-        sourc="<a href='http://www.gov.scot/Publications/2017/03/8751'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+        title="Chart 1. Relative Index of Inequality (RII)<br>(using SIMD income-employment index),<br>All-cause mortality under 75 years, Scotland", 
+        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
         xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
 
 #Legend overlay in plotly
-multiline (filepath="Health Inequalities/Health_Inequalities_Chart_2", 
+multiline (filepath="Health Inequalities/Health_Inequalities_Chart_2_new", 
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. Absolute gap: all-causes mortality<br>under 75 years, Scotland, 2015", 
-           sourc="<a href='http://www.gov.scot/Publications/2017/03/8751'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
-           xaxtitle="Year", yaxtitle="Absolute gap")
+           title="Chart 2. Age-standardised all-cause mortality rates under 75<br> years by least and most deprived deciles (using SIMD income-employment index),<br> Scotland", 
+           sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+           xaxtitle="Year", yaxtitle="European age-standarised mortality rate<br>per 100,000 population")
+
+dualaxisline(filepath="Health Inequalities/Health_Inequalities_Chart_3", 
+             xvar="class1", yvar="measure", yvar2="measure2", 
+             title="Chart 3. Relative Index of Inequality (RII) and<br>Slope Index of Inequality (SII) (using SIMD income-employment<br> index), 
+             all-cause mortality under 75 years, Scotland", 
+             sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+             xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)", 
+             yaxtitle2="Slope Index of Inequality (SII)",
+             minyrange = 0.6, maxyrange = 1.5, yname = "Relative Index of Inequality (RII)", 
+             y2name="Slope Index of Inequality (SII)")
+
+##In request by section author, this should include the trend line (linear regression)
+##between deciles; we would need the values for that trend and then use barcompar
+onebar(filepath="Health Inequalities/Health_Inequalities_Chart_4", 
+       xvar="class1", yvar="measure", 
+       title="Chart 4. Age-standardised all-cause mortality rates<br>(under 75 years) by deprivation decile, Scotland 2017", 
+       sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+       xaxtitle='SIMD income-employment index decile', 
+       yaxtitle="European age-standarised mortality rate<br>per 100,000 populaton")
+
+areaplot(filepath="Health Inequalities/Health_Inequalities_Chart_5", 
+         xvar="age_grp", yvar="value", group="cause", pal_col=pal_health_ineq_area,
+         title="Chart 5. Age specific contribution to inequalities of specific causes of death<br> across SIMD quintiles, males, Scotland 2012-16", 
+         sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>MRC/CSO Social and Public Health Sciences Unit, University of Glasgow</a>", 
+         xaxtitle='5-year age group', yaxtitle="Relative Index of Inequality")
+
+#UK trends
+#Legend overlay in plotly
+multiline (filepath="Health Inequalities/Health_Inequalities_UK_Chart_1", 
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           title="Chart 1. Relative Index of Inequality (RII)<br>(using Carstairs deprivation index), all-cause mortality, males aged 35-79 years,<br>Scotland and England & Wales", 
+           sourc="<a href='https://bmjopen.bmj.com/content/7/7/e017590'>Long-term Monitoring of Health Inequalities, McCartney et al 2017</a>", 
+           xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
+
+#Legend overlay in plotly
+multiline (filepath="Health Inequalities/Health_Inequalities_UK_Chart_2", 
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           title="Chart 2. Relative Index of Inequality (RII)<br>(using Carstairs deprivation index), all-cause mortality, females aged 35-79 years,<br>Scotland and England & Wales", 
+           sourc="<a href='https://bmjopen.bmj.com/content/7/7/e017590'>Long-term Monitoring of Health Inequalities, McCartney et al 2017</a>", 
+           xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
+
 
 ############################.
 ##Hepatitis C----

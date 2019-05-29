@@ -34,6 +34,8 @@ palalccondition <- c('#08519c', '#000000','#bdd7e7')
 #Palettes for CLD mortality and morbidity by age group
 pal_cldmortage <- c('#d0d1e6', '#c6dbef', '#9ecae1', '#6baed6', '#3182bd', '#08519c', '#000000')
 pal_cldmorbage <- c('#d0d1e6','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#084594', '#000000')
+#Excel default used by David Walsh for his Health Inequalities area chart.
+pal_health_ineq_area <- c('#800000','#014181','#F79646','#4BACC6','#8064A2','#9BBB59','#C0504D', '#4F81BD')
 #Palettes for SIMD quintile and 5 age groups and other gradient like charts
 pal_five_gradient <- c('#abd9e9', '#74add1', '#4575b4', '#313695', '#022031')
 #Palettes for SIMD decile (and overall)
@@ -248,6 +250,34 @@ multiline <- function (filepath, xvar, yvar, group, title,
 }
 
 ############################.
+##Line dual axis series----
+dualaxisline <- function (filepath, xvar, yvar, yvar2, title, sourc, xaxtitle, 
+                          yaxtitle, yaxtitle2, minyrange, maxyrange,
+                          labelsx, yname, y2name, privacy = "public") {
+  
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
+  
+  #Plotting
+  plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar], 
+                         type = "scatter", mode='lines', width = 650, height = 500, #size of plot
+                         line = list(name = yname, color = pal1color)) %>% #Grouping variable for color and palette
+    add_lines(data_plot[,xvar], y=data_plot[,yvar2], name = y2name, yaxis = "y2", line =list(color='#FF0000')) %>%
+    #Layout
+    layout(title = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
+           titlefont = list(size=15), #title size
+           annotations = list(), #It needs this because of a buggy behaviour
+           yaxis = list(title = yaxtitle, range = c(minyrange, maxyrange)),
+           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10)), #axis parameter
+           yaxis2 = list(title = yaxtitle2, rangemode="tozero", tickfont = list(color = "red"), overlaying = "y",side = "right"),
+           margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
+           images = scotpho_logo) %>%
+    config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
+  
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
+  
+}
+
+############################.
 ##Line plot 2+ series with part of the time period dashed ----
 multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
                               sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
@@ -281,3 +311,38 @@ multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
   api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
+
+
+#TO DO 
+# https://www.r-bloggers.com/how-to-add-trend-lines-in-r-using-plotly/
+############################.
+##Area plot with original values ----
+areaplot <- function (filepath, xvar, yvar, group, title,
+                      sourc, xaxtitle, yaxtitle, pal_col, privacy = "public")
+{
+  data_plot <- read.csv(paste0(data_folder, filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
+  
+  #Number of factors, so it knows how many colors of the pal to use
+  cat_length <- length(unique(data_plot[,group]))
+  
+  pal_chose <-pal_col #Palette
+  
+  #Plotting
+  plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
+                         type = "scatter", mode = 'none', stackgroup = 'one', width = 650, height = 500, #size of plot
+                         color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% #Grouping variable for color and palette
+    #Layout
+    layout(title = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
+           titlefont = list(size=15), #title size
+           annotations = list(), #It needs this because of a buggy behaviour
+           yaxis = list(title = yaxtitle),
+           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10)), #axis parameter
+           margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
+           images = scotpho_logo) %>%
+    config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
+  
+  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
+  
+}
+
+##END
