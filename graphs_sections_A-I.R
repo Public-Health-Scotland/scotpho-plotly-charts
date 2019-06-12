@@ -800,6 +800,11 @@ multibar(filepath="Ethnicity/ethnicity_sah_chart1",
          sourc="<a href='http://www.scotlandscensus.gov.uk/census-results'>Census 2011, NRS</a>", 
          xaxtitle='Ethnic group', yaxtitle="Percentage")
 
+barcompar(filepath="Ethnicity/ethnicity_routineNHS_chart1", 
+       xvar="healthboard", yvar="percentage", comparator="comparator", compname="Scotland",
+       title="Chart 1. Acute inpatient and day case records with<br>a known ethnic group, July to September 2018", 
+       sourc="SMR01", 
+       xaxtitle='Health board', yaxtitle="Percentage")
 ############################.
 ##Gender ----
 ############################.
