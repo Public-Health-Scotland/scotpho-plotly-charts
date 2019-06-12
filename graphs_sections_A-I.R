@@ -802,9 +802,10 @@ multibar(filepath="Ethnicity/ethnicity_sah_chart1",
 
 barcompar(filepath="Ethnicity/ethnicity_routineNHS_chart1", 
        xvar="healthboard", yvar="percentage", comparator="comparator", compname="Scotland",
-       title="Chart 1. Acute inpatient and day case records with<br>a known ethnic group, July to September 2018", 
-       sourc="SMR01", 
+       title="Chart 1. Percentage of acute inpatient and day case records <br>with a known ethnic group, July to September 2018", 
+       sourc="<a href='https://www.isdscotland.org/products-and-Services/Data-Support-and-Monitoring/SMR-Ethnic-Group-Recording/'>SMR01, ISD</a>", 
        xaxtitle='Health board', yaxtitle="Percentage")
+
 ############################.
 ##Gender ----
 ############################.
