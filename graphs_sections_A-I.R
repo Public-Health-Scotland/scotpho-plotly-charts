@@ -482,21 +482,21 @@ oneline(filepath="Crime/Crime - National trends Chart 1",
         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
         xaxtitle='Year', yaxtitle="Number")
 
-onebar(filepath="Crime/Crime - by local authority Chart 1", 
+barcompar(filepath="Crime/Crime - by local authority Chart 1", 
        xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
-       title="Chart 1. Crimes recorded by the police per 10,000 population, 2017/18", 
+       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2017/18", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
        xaxtitle='Council area', yaxtitle="Crime rate per 10,000 population")
 
 onebar(filepath="Crime/crime-national-target-chart1",
        xvar="labelsx", yvar="measure", 
-       title="Chart 1. Percentage of adults</br> who were a victim of one or more crimes",
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Victimisation Survey</a>",
+       title="Chart 1. Adults who were a victim of <br>one or more crimes, Scotland",
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>",
        xaxtitle='Year', yaxtitle="Percentage")
 
 onebar(filepath="Crime/crime-national-target-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. Percentage of adults who think crime in their area<br> has stayed the same or reduced in the past 2 years", 
+       title="Chart 2. Adults who think crime in their area has stayed<br> the same or reduced in the past 2 years, Scotland", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>", 
        xaxtitle='Year', yaxtitle="Percentage")
 
