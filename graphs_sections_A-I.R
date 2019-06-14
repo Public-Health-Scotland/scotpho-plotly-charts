@@ -483,68 +483,20 @@ oneline(filepath="Crime/Crime - National trends Chart 1",
         xaxtitle='Year', yaxtitle="Number")
 
 onebar(filepath="Crime/Crime - by local authority Chart 1", 
-       xvar="class1", yvar="measure", 
-       title="Chart 1. Index of crime by council, 2016/17", 
+       xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
+       title="Chart 1. Crimes recorded by the police per 10,000 population, 2017/18", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
-       xaxtitle='Council', yaxtitle="Index of crime (Scotland = 100)")
+       xaxtitle='Council area', yaxtitle="Crime rate per 10,000 population")
 
 onebar(filepath="Crime/crime-national-target-chart1",
        xvar="labelsx", yvar="measure", 
-       title="Chart 1. Proportion of respondents</br> who were a victim of one or more crimes",
+       title="Chart 1. Percentage of adults</br> who were a victim of one or more crimes",
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Victimisation Survey</a>",
        xaxtitle='Year', yaxtitle="Percentage")
 
-# oneline(filepath="Crime/crime-national-target-chart1", 
-#        xvar="class1", yvar="measure", labelsx="labelsx",
-#        title="Chart 1. Proportion of respondents</br> who were a victim of one or more crimes", 
-#        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Victimisation Survey</a>", 
-#        xaxtitle='Year', yaxtitle="Percentage")
-
-# data <- read.csv(paste("./data/", filepath, ".csv", sep=""), na.strings=c(""," ","NA")) #Reading data
-#Dataset
-data <- data.frame("labelsx" = as.factor(c("2008/09", "2009/10", "2010/11", "2012/13", "2014/15", "2016/17")),
-                   "class1"=c(2008, 2009, 2010, 2012, 2014, 2016),
-                   "measure" = c(20.4, 19.3, 17.8, 16.9, 14.5, 13.4))
-#Plot
-plot_plotly <- plot_ly(data=data, x=~class1, y=~round(measure),
-                       type = "scatter", mode='lines', width = 650, height = 500, #size of plot
-                       line = list(color = "blue")) %>% #Grouping variable for color and palette
-  #Layout
-  layout(title = "Test of errors in Plotly", #title
-         titlefont = list(size=15), #title size
-         annotations = list(), #It needs this because of a buggy behaviour
-         yaxis = list(title = "Percentage", rangemode="tozero"),
-         xaxis = list(title = "Year", tickangle = 270, tickfont =list(size=10),
-                      tickvals=~class1, ticktext=~labelsx), #axis parameter
-         margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ) #margin-paddings
-  ) %>%
-  config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
-
-print(plot_plotly)
-
-#Uploading to Plotly
-api_create(x=plot_plotly, filename = "test_error") #Upload to server
-
-#Plotting
-# plot_plotly <- plot_ly(data=data, x=data[,xvar], y=round(data[,yvar],1),
-#                        type = "scatter", mode='lines', width = 650, height = 500, #size of plot
-#                        line = list(color = pal1color)) %>% #Grouping variable for color and palette
-#   #Layout
-#   layout(title = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
-#          titlefont = list(size=15), #title size
-#          annotations = list(), #It needs this because of a buggy behaviour
-#          yaxis = list(title = yaxtitle, rangemode="tozero"),
-#          xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10),
-#                       tickvals=data[,xvar], ticktext=data[,labelsx]), #axis parameter
-#          margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
-#          images = scotpho_logo) %>%
-#   config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
-# 
-# api_create(x=plot_plotly, filename = filepath) #Upload to server
-
 onebar(filepath="Crime/crime-national-target-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. Proportion of respondents who think crime in their area<br> has stayed the same or reduced in the past 2 years", 
+       title="Chart 2. Percentage of adults who think crime in their area<br> has stayed the same or reduced in the past 2 years", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>", 
        xaxtitle='Year', yaxtitle="Percentage")
 
@@ -802,7 +754,7 @@ multibar(filepath="Ethnicity/ethnicity_sah_chart1",
 
 barcompar(filepath="Ethnicity/ethnicity_routineNHS_chart1", 
        xvar="healthboard", yvar="percentage", comparator="comparator", compname="Scotland",
-       title="Chart 1. Percentage of acute inpatient and day case records <br>with a known ethnic group, July to September 2018", 
+       title="Chart 1. Hospital records with a known ethnic group,<br> July to September 2018", 
        sourc="<a href='https://www.isdscotland.org/products-and-Services/Data-Support-and-Monitoring/SMR-Ethnic-Group-Recording/'>SMR01, ISD</a>", 
        xaxtitle='Health board', yaxtitle="Percentage")
 
