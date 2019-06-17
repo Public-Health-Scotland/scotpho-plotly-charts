@@ -550,7 +550,7 @@ onebar(filepath="Smoking/smoking_admissions_disease_chart5",
          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, Expressed as a percentage of all diagnosis that could be attributed to smoking", 
          xaxtitle="Disease group", yaxtitle="Percentage attributable")
 
-###########
+###########.
 #deaths
 multiline_dashed(filepath="Smoking/smoking_deaths_sex_chart1", 
                  xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=palbysexoverall,
@@ -581,31 +581,31 @@ multibar(filepath="Smoking/smoking_deaths_disease_chart4",
 ############################.
 ###############################.
 ##PRE-RELEASE ACCESS
-multiline(filepath="Suicide/suicide_national_chart1_2018_PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+multiline(filepath="Suicide/suicide_national_chart1_PRA",  privacy = "secret",
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart2_2018_PRA",  privacy = "secret",
+multibar(filepath="Suicide/suicide_national_chart2_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 2. Male deaths from suicide<br>over time by age group, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart3_2018_PRA",  privacy = "secret",
+multibar(filepath="Suicide/suicide_national_chart3_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 3. Female deaths from suicide<br>over time by age group, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multiline(filepath="Suicide/suicide_national_chart4_2018_PRA",  privacy = "secret",
+multiline(filepath="Suicide/suicide_national_chart4_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA",  privacy = "secret",
+multiline(filepath="Suicide/suicide_uk_chart1_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
@@ -613,31 +613,31 @@ multiline(filepath="Suicide/suicide_uk_chart1_2017_PRA",  privacy = "secret",
 
 ###############################.
 ##LIVE VERSIONS
-multiline(filepath="Suicide/suicide_national_chart1_2018", 
+multiline(filepath="Suicide/suicide_national_chart1", 
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart2_2018", 
+multibar(filepath="Suicide/suicide_national_chart2", 
           xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
           title="Chart 2. Male deaths from suicide<br>over time by age group, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multibar(filepath="Suicide/suicide_national_chart3_2018", 
+multibar(filepath="Suicide/suicide_national_chart3", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 3. Female deaths from suicide<br>over time by age group, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
 
-multiline(filepath="Suicide/suicide_national_chart4_2018", 
+multiline(filepath="Suicide/suicide_national_chart4", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
          title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
-multiline(filepath="Suicide/suicide_uk_chart1_2017", 
+multiline(filepath="Suicide/suicide_uk_chart1", 
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
