@@ -901,58 +901,58 @@ onebar(filepath="Immunisations/immunisation_inequalities_chart1",
 #Household income
 multiline (filepath="Income and employment/IE-household-income-chart1", 
            xvar="class1", yvar="measure", group="class2", pal_col=pal_gradient9,
-           title="Chart 1. Equivalised weekly household income (BHC) in Scotland: 1994-97 to 2014-17<br>(2016/17 prices)", 
+           title="Chart 1. Equivalised weekly household income (BHC) in Scotland", 
            sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI, DWP</a>", 
            xaxtitle="Year", yaxtitle="£ per week")
 
 barcompar(filepath="Income and employment/IE-household-income-chart2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of households reporting that they do not manage well financially:<br>Scotland, 2016", 
+          title="Chart 2. Percentage of households reporting that they do not<br>manage well financially", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey 2016</a>", 
           xaxtitle='Household type', yaxtitle="Percentage")
 
 #Working age poverty
 multiline (filepath="Income and employment/IE-working-age-poverty-chart1", 
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Percentage of population living in relative poverty (After Housing Costs):<br>Scotland, 1994-97 to 2014-17", 
+           title="Chart 1. Percentage of population living in relative poverty<br>(After Housing Costs)", 
            sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI dataset, DWP</a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
 barcompar(filepath="Income and employment/IE-working-age-poverty-chart2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of households where at least one person is in work claiming<br>Working Tax Credits: 2015/16", 
+          title="Chart 2. Percentage of households where at least one person is<br>in work claiming Working Tax Credits", 
           sourc="<a href='https://www.gov.uk/government/publications/hmrc-annual-report-and-accounts-2014-to-2015'>HMRC 2015/16</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/qmis/annualpopulationsurveyapsqmi>Annual Population Survey Household Datasets (2015)</a>", 
           xaxtitle='Local authority', yaxtitle="Percentage of all households")
 
 #Availability of work
 multiline (filepath="Income and employment/IE-availabilityofwork-chart1", 
            xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-           title="Chart 1. Employment rates for men and women in Scotland, 1971-2017", 
+           title="Chart 1. Employment rates for men and women in Scotland", 
            sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href='http://casweb.mimas.ac.uk/'>Census of Population</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates'>National Records for Scotland</a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
 onebar(filepath="Income and employment/IE-availabilityofwork-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. ILO unemployed (aged 16 plus)<br>by occupations in Scotland, 2015", 
+       title="Chart 2. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Occupations in Scotland", 
        sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Occupations', yaxtitle="ILO unemployment per 100 vacancies")
+       xaxtitle='Occupations', yaxtitle="Vcancies per 10 ILO unemployed")
 
 onebar(filepath="Income and employment/IE-availabilityofwork-chart3", 
        xvar="class1", yvar="measure", 
-       title="Chart 3. ILO unemployed (aged 16 plus)<br>by Scottish regions, 2015", 
+       title="Chart 3. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Scottish regions", 
        sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Scottish region', yaxtitle="ILO unemployment per 100 vacancies")
+       xaxtitle='Scottish region', yaxtitle="Vacancies per 10 ILO unemployed")
 
 #Legend overlay in plotly
 multiline (filepath="Income and employment/IE-worklessness-chart1", 
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Percentage of adults aged 16-64 claiming unemployment benefits,<br>ILO unemployed and any out-of work benefits: Scotland, 1992-2017", 
+           title="Chart 1. Percentage of adults aged 16-64 claiming unemployment<br>benefits, ILO unemployed and any out-of work benefits", 
            sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Work and Pensions Longitudinal Survey, WPLS</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/datasets/claimantcountandvacanciesdataset>Claimant Count</a>", 
            xaxtitle="Year", yaxtitle="Percentage of adults aged 16-64")
 
 barcompar(filepath="Income and employment/IE-worklessness-chart2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key out-of-work benefits,<br>by sub-region, Scotland: 2017", 
+          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region", 
           sourc="<a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Longitudinal Survey, WPLS</a>, <a href=https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates>National Records of Scotland</a>.", 
           xaxtitle='Region', yaxtitle="Percentage of adults aged 16-64")
 
