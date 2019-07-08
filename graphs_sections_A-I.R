@@ -174,9 +174,11 @@ barcompar(filepath="CHD/chd_international_chart2",
 ############################.
 multibar(filepath="Children/children_pop_chart1", 
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Estimated population, Scotland, mid 2017", 
+         title="Chart 1. Estimated population, Scotland, mid 2018", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates'>NRS</a>", 
-         xaxtitle='Age (years)', yaxtitle="Population")
+         xaxtitle="Age (years)", yaxtitle="Population")
+#bars rearranged in descending order: changed "0+" to "0" on excel. 
+#x-axis labels changed on plotly to show for all groups
 
 #Class names are other way round from other data files.
 multiline(filepath="Children/children_poverty_chart1", 
