@@ -100,7 +100,7 @@ multibar <- function (filepath, xvar, yvar, group, title,
 ############################.
 ### Bar plot one series ----
 onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle, 
-                    privacy = "public") {
+                    privacy = "public", order = FALSE) {
 
   data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
   
@@ -117,6 +117,18 @@ onebar <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle,
            margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
            images = scotpho_logo) %>%
     config(displaylogo = F, collaborate=F, editable =F) # taking out plotly logo and collaborate button
+  
+  if (order == TRUE) {
+    plot_plotly <- plot_plotly %>% 
+      layout(xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10), #axis parameters
+                          categoryorder="array", #order of plotting
+                          categoryarray = -data_plot[,yvar]))
+    
+  } else if (order == FALSE) {
+    plot_plotly <- plot_plotly %>% 
+      layout(xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10))) #axis parameters
+
+  }
   
   api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   

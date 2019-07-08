@@ -938,7 +938,7 @@ onebar(filepath="Income and employment/IE-availabilityofwork-chart2",
        xaxtitle='Occupations', yaxtitle="ILO unemployment per 100 vacancies")
 
 onebar(filepath="Income and employment/IE-availabilityofwork-chart3", 
-       xvar="class1", yvar="measure", 
+       xvar="class1", yvar="measure", order = TRUE,
        title="Chart 3. ILO unemployed (aged 16 plus)<br>by Scottish regions, 2015", 
        sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
        xaxtitle='Scottish region', yaxtitle="ILO unemployment per 100 vacancies")
