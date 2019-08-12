@@ -169,31 +169,46 @@ barcompar <- function (filepath, xvar, yvar, comparator, compname,
 
 ############################.
 ##Stacked bar plot----
-stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col,
-                        xaxtitle, yaxtitle, privacy = "public") {
+stackedbar <- function (filepath, xvar, yvar, group, title, sourc, pal_col, 
+                        horizontal = F, xaxtitle, yaxtitle, privacy = "public") {
   
   data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
-  
-  #Number of factors, so it knows how many colors of the pal to use
+
+    #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
   
   pal_chose <-pal_col #Palette
   
   #Plotting
+  if (horizontal == T) { #Horizontal bar charts
+    # Reversing factors so plot alphabetically from top to bottom
+    levels(data_plot[ ,yvar]) <- sort(levels(data_plot[ ,yvar]), decreasing = TRUE)
+    
+    plot_plotly <- plot_ly(data=data_plot, x=round(data_plot[,xvar],1), y=data_plot[,yvar],
+                           type = "bar", width = 650, height = 500, #size of plot
+                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length], 
+                           orientation = 'h') %>% 
+      layout(barmode = 'stack', #stacked bars
+             xaxis = list(title = xaxtitle, tickangle = 360, tickfont =list(size=10)), #axis parameters
+             margin=list( l = 70, r = 0, b = 0, t = 80, pad = 4 ), #margin-paddings
+             yaxis = list(title = yaxtitle, dtick =1))
+  } else {
   plot_plotly <- plot_ly(data=data_plot, x=as.factor(data_plot[,xvar]), y=round(data_plot[,yvar],1),
                          type = "bar", width = 650, height = 500, #size of plot
-                         color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% #Grouping variable for color and palette
+                         color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
+    layout(barmode = 'stack', #stacked bars
+           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10)), #axis parameters
+           margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
+           yaxis = list(title = yaxtitle))
+  } 
+  
+  plot_plotly <- plot_plotly %>% #Grouping variable for color and palette
     #Layout
     layout(title = list(text = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
                         font = list(size=15)), #title size
            annotations = list(), #It needs this because of a buggy behaviour
-           yaxis = list(title = yaxtitle),
-           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10)), #axis parameter
-           margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
-           barmode = 'stack', #stacked bars
            hovermode = 'false', # to get hover compare mode as default
-           images = scotpho_logo
-    ) %>%
+           images = scotpho_logo) %>%
     config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
   
   api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
@@ -356,5 +371,7 @@ areaplot <- function (filepath, xvar, yvar, group, title,
   api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
+
+
 
 ##END
