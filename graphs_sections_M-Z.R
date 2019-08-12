@@ -370,6 +370,18 @@ oneline(filepath="Population/pop_scot_est_chart2",
         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
         xaxtitle="Year", yaxtitle="Population")
 
+stackedbar(filepath="Population/pop_hb_est_chart3", horizontal = T,
+           yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
+           title="Chart 2. Age structure of </br>health boards, Scotland, 2018", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
+           yaxtitle="", xaxtitle="Percentage of the population")
+
+stackedbar(filepath="Population/pop_la_est_chart4", 
+           yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
+           title="Chart 2. Age structure of </br>council areas, Scotland, 2018", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
+           yaxtitle="", xaxtitle="Percentage of the population")
+
 ############################.
 ### Rurality----
 ############################.
