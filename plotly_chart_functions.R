@@ -13,7 +13,7 @@ library(plotly) #version 4.7
 ##Plot and upload parameters----
 ############################.
 #Login credentials to ScotPHO plotly.
-if (sessionInfo()$platform %in% c("x86_64-redhat-linux-gnu (64-bit)")) {
+if (sessionInfo()$platform %in% c("x86_64-redhat-linux-gnu (64-bit)", "x86_64-pc-linux-gnu (64-bit)")) {
   source("//PHI_conf/ScotPHO/Website/Charts/Plotly/login_credentials.R")
   data_folder <- "//PHI_conf/ScotPHO/Website/Charts/Plotly/data/"
 } else  {
