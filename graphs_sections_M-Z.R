@@ -185,8 +185,6 @@ onebar(filepath="Oral Health/oral_adulttrend_chart2",
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
-######To run on Monday###
-####new code#####
 
 ############################.
 ### Physical activity ----
@@ -323,19 +321,19 @@ barcompar(filepath="Population/pop_house_chart2",
 #Pop projections
 #Y axis range change in plotly
 oneline(filepath="Population/pop_scot_proj_chart1", 
-        xvar="class1", yvar="measure", 
+        xvar="class1", yvar="rounded_pop", 
         title="Chart 1. Projected population, Scotland", 
         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
         xaxtitle="Year", yaxtitle="Population")
 
 multiline(filepath="Population/pop_scot_proj_chart2", 
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          xvar="class2", yvar="rounded_pop", group="class1", pal_col=palnogroups,
           title="Chart 2. Projected population by age group, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Population")
 
 multibar(filepath="Population/pop_hb_proj_chart3", 
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         xvar="class1", yvar="rounded_pop", group="class2", pal_col=palnogroups,
          title="Chart 3. Population projection by NHS Board, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
          xaxtitle='Health board', yaxtitle="Population")
@@ -347,7 +345,7 @@ onebar(filepath="Population/pop_hb_proj_chart4",
        xaxtitle='Health board', yaxtitle="Percentage")
 
 multibar(filepath="Population/pop_la_proj_chart5", 
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         xvar="class1", yvar="rounded_pop", group="class2", pal_col=palnogroups,
          title="Chart 5. Population projection by council, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
          xaxtitle='Council', yaxtitle="Population")
@@ -360,17 +358,29 @@ onebar(filepath="Population/pop_la_proj_chart6",
 
 #Pop estimation
 onebar(filepath="Population/pop_scot_est_chart1", 
-       xvar="class1", yvar="measure", 
-       title="Chart 1. Population by age group, Scotland, 2017", 
+       xvar="class1", yvar="rounded_pop", 
+       title="Chart 1. Population by age group, Scotland, 2018", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
        xaxtitle='Age group', yaxtitle="Population")
 
 #Y axis range change in plotly
 oneline(filepath="Population/pop_scot_est_chart2", 
-        xvar="class1", yvar="measure", 
+        xvar="class1", yvar="rounded_pop", 
         title="Chart 2. Population trend, Scotland", 
         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
         xaxtitle="Year", yaxtitle="Population")
+
+stackedbar(filepath="Population/pop_hb_est_chart3", horizontal = T,
+           yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
+           title="Chart 3. Age structure of </br>health boards, Scotland, 2018", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
+           yaxtitle="", xaxtitle="Percentage of the population")
+
+stackedbar(filepath="Population/pop_la_est_chart4", 
+           yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
+           title="Chart 4. Age structure of </br>council areas, Scotland, 2018", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
+           yaxtitle="", xaxtitle="Percentage of the population")
 
 ############################.
 ### Religion, Spirituality and Belief ----

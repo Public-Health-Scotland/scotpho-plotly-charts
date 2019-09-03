@@ -837,27 +837,23 @@ multiline (filepath="Health Inequalities/Health_Inequalities_UK_Chart_2",
            sourc="<a href='https://bmjopen.bmj.com/content/7/7/e017590'>Long-term Monitoring of Health Inequalities, McCartney et al 2017</a>", 
            xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
 
-
 ############################.
 ##Hepatitis C----
 ############################.
 onebar(filepath="Hepatitis C/hep_deprivation_chart1", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. People diagnosed with Hepatitis C<br> by SIMD quintile, Scotland, 2016", 
-       sourc="<a href='http://www.hps.scot.nhs.uk/bbvsti/wrdetail.aspx?id=73581&wrtype=6'>HPS</a>; only including patients alive and with a valid postcode", 
-       xaxtitle='SIMD quintile', yaxtitle="Population")
+       title="Chart 2. Percentage of people diagnosed with Hepatitis C<br> by SIMD quintile, Scotland, 2018", 
+       sourc="<a href='https://hpspubsrepo.blob.core.windows.net/hps-website/nss/2834/documents/1_hcv-testing-diagnosis-treatment-scotland-2018.pdf'>HPS</a>; only including patients with known SIMD quintile", 
+       xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 ############################.
 ##High blood pressure ----
 ############################.
-
 multibar(filepath="High blood pressure/hbp_prevalence_chart1", 
          xvar="class1", yvar="measure", group="class2", pal=palnogroups,
          title="Chart 1. Prevalence of self-reported doctor-diagnosed<br>high blood pressure, Scotland, 2014 to 2017 combined", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>SHS, Scottish Government</a>. Adults aged 16 and over.", 
          xaxtitle='Age group', yaxtitle="Percentage")
-
-
 
 ############################.
 ##Housing ----
@@ -937,10 +933,10 @@ onebar(filepath="Income and employment/IE-availabilityofwork-chart2",
        xvar="class1", yvar="measure", 
        title="Chart 2. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Occupations in Scotland", 
        sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Occupations', yaxtitle="Vcancies per 10 ILO unemployed")
+       xaxtitle='Occupations', yaxtitle="Vacancies per 10 ILO unemployed")
 
 onebar(filepath="Income and employment/IE-availabilityofwork-chart3", 
-       xvar="class1", yvar="measure", 
+       xvar="class1", yvar="measure", order = TRUE,
        title="Chart 3. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Scottish regions", 
        sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
        xaxtitle='Scottish region', yaxtitle="Vacancies per 10 ILO unemployed")
