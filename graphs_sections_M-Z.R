@@ -159,7 +159,7 @@ barcompar(filepath="Obesity/obesity_International - Chart 2",
 ############################.
 multibar(filepath="Older People/Older People - Chart 1", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. Population aged 60 and over, Scotland, 2017", 
+         title="Chart 1. Population aged 60 and over, Scotland, 2018", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
          xaxtitle='Age', yaxtitle="Population")
 
@@ -371,6 +371,15 @@ oneline(filepath="Population/pop_scot_est_chart2",
         title="Chart 2. Population trend, Scotland", 
         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
         xaxtitle="Year", yaxtitle="Population")
+
+############################.
+### Religion, Spirituality and Belief ----
+############################.
+multibar(filepath="Religion, Spirituality and Belief/Religion - Chart 1",
+        xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+        title="Chart 1. Proportion of the Scottish population by religion,<br> 2001 and 2011",
+        sourc="<a href='https://www.scotlandscensus.gov.uk/'>Scotland's Census</a>",
+        xaxtitle="Religion", yaxtitle="Proportion of the population")
 
 ############################.
 ### Rurality----
