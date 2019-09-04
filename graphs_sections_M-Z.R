@@ -385,7 +385,7 @@ stackedbar(filepath="Population/pop_la_est_chart4",
 ############################.
 ### Religion, Spirituality and Belief ----
 ############################.
-multibar(filepath="Religion, Spirituality and Belief/Religion - Chart 1",
+multibar(filepath="Religion, Spirituality and Belief/Religion - Chart 1", order= T,
         xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
         title="Chart 1. Proportion of the Scottish population by religion,<br> 2001 and 2011",
         sourc="<a href='https://www.scotlandscensus.gov.uk/'>Scotland's Census</a>",

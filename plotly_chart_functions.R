@@ -68,7 +68,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 ############################.
 ############################.
 ### Bar plot multi series function ----
-multibar <- function (filepath, xvar, yvar, group, title,
+multibar <- function (filepath, xvar, yvar, group, title, order,
                       sourc, xaxtitle, yaxtitle, pal_col, privacy = "public")
 {
 
@@ -88,10 +88,20 @@ multibar <- function (filepath, xvar, yvar, group, title,
                         font = list(size=15)), #title size
            annotations = list(), #It needs this because of a buggy behaviour
            yaxis = list(title = yaxtitle),
-           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10)), #axis parameter
            margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
            images = scotpho_logo) %>%
     config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
+  
+  if (order == TRUE) {
+    plot_plotly <- plot_plotly %>%
+      layout(xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10), #axis parameters
+                          categoryorder="array", #order of plotting
+                          categoryarray = data_plot[, yvar]))
+  } else if (order == FALSE) {
+    plot_plotly <- plot_plotly %>%
+      layout(xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10))) #axis parameters
+
+  }
   
   api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
