@@ -42,24 +42,15 @@ multiline(filepath="Asthma/asthma_mortality_chart1PRA",  privacy = "secret",
 
 #Chart 
 multiline(filepath="Asthma/asthma_seccare_sex_chart1PRA",  privacy = "secret",
-<<<<<<< HEAD
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. Asthma incidence by gender, Scotland", 
-=======
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
->>>>>>> 67fd7e4e31f672b90d4c5373ef942e3d72b9f1f8
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 #Chart 
 multiline(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
-<<<<<<< HEAD
-          title="Chart 2. Asthma incidence by age and gender, Scotland", 
-=======
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
->>>>>>> 67fd7e4e31f672b90d4c5373ef942e3d72b9f1f8
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarised rate per 100,000")
 
