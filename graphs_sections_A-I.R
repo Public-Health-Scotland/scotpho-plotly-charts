@@ -7,42 +7,6 @@
 source("plotly_chart_functions.R")
 
 ############################.
-##Allergy ----
-############################.
-#Replaced with Shiny dashboard:
-# \\stats\scotpho\Website\Charts\Shiny\SQ\Allergic Conditions Chart
-
-# Old charts
-# #Chart 569.
-# multiline(filepath="Allergy/Allergy_CIS_Chart1", 
-#           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-#           title="Chart 1. Acute Hospital Inpatient/Day Case Discharges<br> Continuous Inpatient Stays (CIS) with selected diagnoses, Scotland", 
-#           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Inpatient-and-Day-Case-Activity/'>ISD</a>.", 
-#           xaxtitle="Financial year", yaxtitle="Continuous Inpatient Stays (CIS)")
-# 
-# #Chart 584.
-# multiline(filepath="Allergy/Allergy_CIS_rate_Chart2", 
-#           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-#           title="Chart 1. Acute Hospital Inpatient/Day Case Discharges<br> Continuous Inpatient Stays (CIS) with selected diagnoses,<br>Directly age-sex standardised to the European Standard Population 2013,<br> Scotland", 
-#           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>.", 
-#           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-# 
-# #Chart 571.
-# multiline(filepath="Allergy/Allergy_patients_Chart3", 
-#           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-#           title="Chart 1. Acute Hospital Inpatient/Day Case Patients<br>with selected diagnoses, Scotland", 
-#           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>.", 
-#           xaxtitle="Financial year", yaxtitle="Patients")
-# 
-# #Chart 586.
-# multiline(filepath="Allergy/Allergy_patients_rate_Chart4", 
-#           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-#           title="Chart 1. Acute Hospital Inpatient/Day Case Patients<br> with selected diagnoses,<br>Directly age-sex standardised to the European Standard Population 2013,<br> Scotland", 
-#           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>.", 
-#           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
-
-
-############################.
 ##Asthma ----
 ############################.
 
@@ -55,16 +19,15 @@ multiline(filepath="Asthma/asthma_mortality_chart1",
 
 #Chart 243
 multiline(filepath="Asthma/asthma_seccare_sex_chart1", 
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. First hospitalisations with asthma,<br> by gender, Scotland<br>Rates directly age-sex standardised using the European Standard Population 2013", 
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 #Chart 608
-#Legend overlay in plotly
 multiline(filepath="Asthma/asthma_seccare_age_sex_chart2", 
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
-          title="Chart 2. First hospitalisations with asthma,<br> by age and gender, Scotland<br>Rates directly age-sex standardised using the European Standard Population 2013", 
+          title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 ############################.
