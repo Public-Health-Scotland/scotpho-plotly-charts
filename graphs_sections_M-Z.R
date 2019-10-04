@@ -633,7 +633,7 @@ multiline(filepath="Suicide/suicide_uk_chart1_PRA",  privacy = "secret",
 ###############################.
 ##LIVE VERSIONS
 multiline(filepath="Suicide/suicide_national_chart1", 
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
