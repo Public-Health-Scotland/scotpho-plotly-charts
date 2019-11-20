@@ -478,20 +478,20 @@ multiline (filepath="Deaths/deaths-trend-allcause-chart1",
 
 barcompar(filepath="Deaths/deaths-allcause-byhb-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by NHS Board, 2017", 
+          title="Chart 1. All-cause death rates by NHS Board, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='NHS Board', yaxtitle="Age-sex standarized rate per 100,000")
 
 barcompar(filepath="Deaths/deaths-allcause-byLA-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by council, 2017", 
+          title="Chart 1. All-cause death rates by council, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='Council', yaxtitle="Age-sex standarized rate per 100,000")
 
 #Chart 329
 barcompar(filepath="Deaths/deaths-allcause-deprivation-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by deprivation decile, 2017", 
+          title="Chart 1. All-cause death rates by deprivation decile, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. ", 
           xaxtitle='SIMD decile', yaxtitle="Age-sex standarized rate per 100,000")
 
@@ -499,14 +499,14 @@ barcompar(filepath="Deaths/deaths-allcause-deprivation-chart1",
 #Chart 331
 onebar(filepath="Deaths/deaths-top10causes-chart1", 
        xvar="class1", yvar="measure", 
-       title="Chart 1. The ten most frequently occuring principal<br>causes of death, Scotland, 2015-2017", 
+       title="Chart 1. The ten most frequently occuring principal<br>causes of death, Scotland, 2016-2018", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes", 
        xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths")
 
 #Chart333
 onebar(filepath="Deaths/deaths-top10causes-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. The ten most frequently occuring principal causes of<br>premature death for people under 75 years, Scotland, 2015-2017", 
+       title="Chart 2. The ten most frequently occuring principal causes of<br>premature death for people under 75 years, Scotland, 2016-2018", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes", 
        xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths under 75 ")
 
