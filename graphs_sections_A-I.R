@@ -301,6 +301,8 @@ barcompar(filepath="Community Wellbeing/communitywellbeing_trust_chart2",
 ############################.
 ##COPD ----
 ############################.
+
+#LIVE CHARTS
 #Primary care
 multibar(filepath="COPD/COPD_Primary_care_chart_1", 
          xvar="class1", yvar="measure", group="class2", pal = palnogroups,
@@ -400,14 +402,14 @@ onebar(filepath="COPD/COPD_International - Chart 2",
 
 #Secondary care
 #Chart 467
-multiline (filepath="COPD/COPD_Secondary Care - Chart 1PRA",  privacy = "secret",
+multiline (filepath="COPD/COPD_Secondary Care - Chart 1_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #Chart 469
-multiline (filepath="COPD/COPD_Secondary Care - Chart 2PRA",  privacy = "secret",
+multiline (filepath="COPD/COPD_Secondary Care - Chart 2_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 2. Incidence of COPD, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
@@ -415,7 +417,7 @@ multiline (filepath="COPD/COPD_Secondary Care - Chart 2PRA",  privacy = "secret"
 
 #Mortality
 #Chart 471
-multiline (filepath="COPD/COPD_Mortality_Chart_1PRA",  privacy = "secret",
+multiline (filepath="COPD/COPD_Mortality_Chart_1_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Mortality rate for COPD by gender, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
@@ -423,18 +425,33 @@ multiline (filepath="COPD/COPD_Mortality_Chart_1PRA",  privacy = "secret",
 
 #Deprivation
 #Chart 473
-multibar(filepath="COPD/COPD_deprivation_Chart_1PRA",  privacy = "secret",
+multibar(filepath="COPD/COPD_deprivation_Chart_1_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. COPD admissions in males, Scotland, 2017/18", 
+         title="Chart 1. COPD admissions in males, Scotland, 2018/19", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 475
-multibar(filepath="COPD/COPD_deprivation_Chart_2PRA",  privacy = "secret",
+multibar(filepath="COPD/COPD_deprivation_Chart_2_PRA",  privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. COPD admissions in females, Scotland, 2017/18", 
+         title="Chart 2. COPD admissions in females, Scotland, 2018/19", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
+
+#NHS board
+#Chart 309
+barcompar(filepath="COPD/COPD - NHS Board data - Chart 1", privacy = "secret",
+          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+          title="Chart 1. COPD prevalence rate per 100 patients<br>registered with a GP Practice, 2015/16", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/Quality-And-Outcomes-Framework/2010-11/Register-and-prevalence-data.asp'>QOF, ISD Scotland</a>. Practices with new GMS contracts", 
+          xaxtitle='NHS Board', yaxtitle="Crude prevalence rate per 100 patients")
+
+#Chart 417
+barcompar(filepath="COPD/COPD_NHSboard_Chart_2_PRA", privacy = "secret",
+          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2018/19", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 codes J40-J44.", 
+          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 
 ############################.
@@ -662,6 +679,7 @@ onebar(filepath="Disability/disability-sah-chart2",
 ############################.
 ##Epilepsy ----
 ############################.
+
 #Chart 423
 multiline (filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1", 
            xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
@@ -684,24 +702,24 @@ multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3",
            xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 ############################.
-##PRE RELEASE ACCESS
+##EPILEPSY PRE RELEASE ACCESS
 
 #Chart 477
-multiline (filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1PRA",  privacy = "secret",
+multiline (filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
            title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
            xaxtitle="Year", yaxtitle="Number of deaths")
 
 #Chart 479
-multiline (filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2PRA",  privacy = "secret",
+multiline (filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
            xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 #Chart 481
-multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3PRA",  privacy = "secret",
+multiline (filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3_PRA",  privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 

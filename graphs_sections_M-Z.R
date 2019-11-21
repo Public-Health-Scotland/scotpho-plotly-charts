@@ -34,25 +34,32 @@ onebar(filepath="Migration/migration_la_chart1",
 ### Multiple sclerosis PRE RELEASE ACCESS
 #secondary care
 #Chart 590
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart1PRA",  privacy = "secret",
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 #Chart 592
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart2PRA",  privacy = "secret",
+multiline(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 #Chart 594
-multiline(filepath="Multiple Sclerosis/ms_mortality_chart1PRA",  privacy = "secret",
+multiline(filepath="Multiple Sclerosis/ms_mortality_chart1_PRA",  privacy = "secret",
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle='Year of registration', yaxtitle="Number of deaths")
+
+#new NHS board data chart
+barcompar(filepath="Multiple Sclerosis/ms_NHSboards_chart1_PRA", privacy = "secret",
+          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+          title="Chart 2. Hospital stays <br>with MS (main diagnosis), 2018/19", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
+          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 ############################.
 ### Multiple sclerosis LIVE charts
