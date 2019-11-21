@@ -602,7 +602,7 @@ barcompar(filepath="Diabetes/diabetes_international_chart1",
 #Adults
 multibar(filepath="Diet and Nutrition/diet_Adults - Chart 1", 
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
+         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2018", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
