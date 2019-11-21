@@ -498,14 +498,14 @@ barcompar(filepath="Deaths/deaths-allcause-deprivation-chart1",
 #Top 10 causes
 #Chart 331
 onebar(filepath="Deaths/deaths-top10causes-chart1", 
-       xvar="class1", yvar="measure", 
+       xvar="class1", yvar="measure", order = T,
        title="Chart 1. The ten most frequently occuring principal<br>causes of death, Scotland, 2016-2018", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes", 
        xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths")
 
 #Chart333
 onebar(filepath="Deaths/deaths-top10causes-chart2", 
-       xvar="class1", yvar="measure", 
+       xvar="class1", yvar="measure", order = T,
        title="Chart 2. The ten most frequently occuring principal causes of<br>premature death for people under 75 years, Scotland, 2016-2018", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes", 
        xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths under 75 ")
