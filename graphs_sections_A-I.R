@@ -269,19 +269,19 @@ oneline(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfacti
 
 barcompar(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2017", 
+          title="Chart 2. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2018", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='Council', yaxtitle="Percentage")
 
 barcompar(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart3", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 3. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by SIMD decile, Scotland, 2017", 
+          title="Chart 3. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by SIMD decile, Scotland, 2018", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='SIMD decile', yaxtitle="Percentage")
 
 barcompar(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart4", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 4. Adults (aged 16 plus) who rate their neighbourhood<br>as a very good place to live, Scotland, 2017", 
+          title="Chart 4. Adults (aged 16 plus) who rate their neighbourhood<br>as a very good place to live, Scotland, 2018", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='Urban-Rural classification', yaxtitle="Percentage")
 
