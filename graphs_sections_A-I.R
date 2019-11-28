@@ -491,26 +491,26 @@ multiline (filepath="Deaths/deaths-trend-allcause-chart1",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. All-cause death rates, Scotland", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. Rates directly age-sex standardised using the European Standard Population 2013 or 1976.", 
-           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
 
 barcompar(filepath="Deaths/deaths-allcause-byhb-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. All-cause death rates by NHS Board, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
-          xaxtitle='NHS Board', yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle='NHS Board', yaxtitle="Age-sex standarised rate per 100,000")
 
 barcompar(filepath="Deaths/deaths-allcause-byLA-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. All-cause death rates by council, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
-          xaxtitle='Council', yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle='Council', yaxtitle="Age-sex standarised rate per 100,000")
 
 #Chart 329
 barcompar(filepath="Deaths/deaths-allcause-deprivation-chart1", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by deprivation decile, 2018", 
+          title="Chart 1. All-cause death rates by deprivation quintile, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. ", 
-          xaxtitle='SIMD decile', yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle='SIMD quintile', yaxtitle="Age-sex standarised rate per 100,000")
 
 #Top 10 causes
 #Chart 331
