@@ -209,53 +209,53 @@ multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4",
 ##Chronic Liver Disease PRE RELEASE ACCESS
 #Mortality
 multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Chronic liver disease mortality<br> by gender, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmortage,
           title="Chart 2. Chronic liver disease mortality by age group, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
           title="Chart 3. Chronic liver disease mortality by condition, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd,
           title="Chart 4. Chronic liver disease mortality<br> by SIMD decile, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Morbidity
 multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Chronic liver disease morbidity<br>by gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmorbage,
           title="Chart 2. Chronic liver disease morbidity by age group, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
           title="Chart 3. Chronic liver disease morbidity<br>by condition, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", 
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", privacy="secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
           title="Chart 4. Chronic liver disease morbidity<br>by SIMD deciles, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
-          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000", privacy="secret")
+          xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##Community Wellbeing ----
@@ -466,7 +466,7 @@ oneline(filepath="Crime/Crime - National trends Chart 1",
 
 barcompar(filepath="Crime/Crime - by local authority Chart 1", 
        xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
-       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2017/18", 
+       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2018/19", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
        xaxtitle='Council area', yaxtitle="Crime rate per 10,000 population")
 
@@ -631,7 +631,7 @@ onebar(filepath="Diet and Nutrition/diet_Adults - Chart 2",
 
 multibar(filepath="Diet and Nutrition/diet_Adults - Chart 3", 
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 3. Adults consuming 5 or more portions<br> of fruit and vegetables per day, 2016", 
+         title="Chart 3. Adults consuming 5 or more portions<br> of fruit and vegetables per day, 2017", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>, <a href='http://content.digital.nhs.uk/healthsurveyengland'>Health Survey for England</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
@@ -664,17 +664,53 @@ oneline(filepath="Disability/Disability - ESA - Chart1Joomla",
         sourc="<a href='http://www.nomisweb.co.uk'>NOMIS</a>. Adults aged 16-64.", 
         xaxtitle="Year", yaxtitle="Percentage")
 
+multibar(filepath="Disability/disability-LTC-chart1", 
+       xvar="class1", yvar="measure", group="class2", pal=palnogroups,
+       title="Chart 1. Adults with a limiting long-term physical<br>or mental health<br>condition or illness, Scotland, 2018", 
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+       xaxtitle='Age Group', yaxtitle="Percentage")
+
 onebar(filepath="Disability/disability-LTC-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults with a limiting long-term physical<br>or mental health condition or illness, Scotland, 2016", 
+       title="Chart 2. Adults with a limiting long-term physical<br>or mental health<br>condition or illness, by SIMD quintile, Scotland, 2018", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
+onebar(filepath="Disability/disability-LTC-chart3", 
+       xvar="class1", yvar="measure", 
+       title="Chart 3. Percentage of adults (16 years and over) with a limiting long-term<br>physical or mental health condition/illness<br>by NHS health board", 
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+       xaxtitle='Health Board', yaxtitle="Percentage")
+
+onebar(filepath="Disability/disability-LTC-chart4", 
+       xvar="class1", yvar="measure", 
+       title="Chart 4. Percentage of adults (16 years and over) with a limiting long-term<br>physical or mental health condition/illness<br>by Local Authority", 
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+       xaxtitle='Local Authority', yaxtitle="Percentage")
+
+multibar(filepath="Disability/disability-sah-chart1", 
+         xvar="class1", yvar="measure", group="class2", pal=palnogroups,
+         title="Chart 1. Percentage of adults (16 years and over) rating their health<br>as bad or very bad, by age and sex, Scotland, 2018", 
+         sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+         xaxtitle='Age Group', yaxtitle="Percentage")
+
 onebar(filepath="Disability/disability-sah-chart2", 
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults rating their health<br>as 'bad or very bad', Scotland, 2016", 
+       title="Chart 1. Adults rating their health<br>as 'bad or very bad', Scotland, 2018", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
+
+onebar(filepath="Disability/disability-sah-chart3", 
+       xvar="class1", yvar="measure", 
+       title="Chart 3. Percentage of adults (16 years and over) rating their health<br>as bad or very bad, by NHS health board", 
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+       xaxtitle='Health Board', yaxtitle="Percentage")
+
+onebar(filepath="Disability/disability-sah-chart4", 
+       xvar="class1", yvar="measure", 
+       title="Chart 4. Percentage of adults (aged 16 years and over) rating their health<br>as bad or very bad, by Local Authority", 
+       sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
+       xaxtitle='Local Authority', yaxtitle="Percentage")
 
 ############################.
 ##Epilepsy ----
