@@ -17,13 +17,13 @@ multiline(filepath="Migration/migration_scottish_chart1",
 
 onebar(filepath="Migration/migration_board_chart1", 
        xvar="class1", yvar="measure",
-       title="Chart 1. Net migration by NHS board, 2015-16", 
+       title="Chart 1. Net migration by NHS board, 2017-18", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Health board", yaxtitle="Population")
 
 onebar(filepath="Migration/migration_la_chart1", 
        xvar="class1", yvar="measure",
-       title="Chart 1. Net migration by council, 2015-16", 
+       title="Chart 1. Net migration by council, 2017-18", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Council", yaxtitle="Population")
 
