@@ -10,19 +10,19 @@ source("plotly_chart_functions.R")
 ### Migration----
 ############################.
 multiline(filepath="Migration/migration_scottish_chart1", 
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, tick_freq = 3,
           title="Chart 1. Scottish migration trends: <br>natural change and net migration", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Change in population")
 
 onebar(filepath="Migration/migration_board_chart1", 
-       xvar="class1", yvar="measure",
-       title="Chart 1. Net migration by NHS board, 2017-18", 
+       xvar="class1", yvar="measure", order = T,
+       title="Chart 1. Net migration by NHS board, 2017-18",
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Health board", yaxtitle="Population")
 
 onebar(filepath="Migration/migration_la_chart1", 
-       xvar="class1", yvar="measure",
+       xvar="class1", yvar="measure", order = T,
        title="Chart 1. Net migration by council, 2017-18", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Council", yaxtitle="Population")

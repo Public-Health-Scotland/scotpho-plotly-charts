@@ -244,7 +244,7 @@ oneline <- function (filepath, xvar, yvar, title, sourc, xaxtitle, yaxtitle,
 ##Line plot 2+ series----
 #This macro should be modified once we get a more recent version of R (3.2.0 at the moment)
 #Currently it uses a very hacky solution to allow the display of lines, it could be simplified massively
-multiline <- function (filepath, xvar, yvar, group, title,
+multiline <- function (filepath, xvar, yvar, group, title, tick_freq =1,
                        sourc, xaxtitle, yaxtitle, pal_col, privacy = "public") {
   
   data_plot <- read.csv(paste0(data_folder, filepath, ".csv"), na.strings=c(""," ","NA")) #Reading data
@@ -265,7 +265,7 @@ multiline <- function (filepath, xvar, yvar, group, title,
                         font = list(size=15)), #title size
            annotations = list(), #It needs this because of a buggy behaviour
            yaxis = list(title = yaxtitle, rangemode="tozero"),
-           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10), dtick = 1), #axis parameter
+           xaxis = list(title = xaxtitle, tickangle = 270, tickfont =list(size=10), dtick = tick_freq), #axis parameter
            margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
            hovermode = 'false', # to get hover compare mode as default
            images = scotpho_logo,
