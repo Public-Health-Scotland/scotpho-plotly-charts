@@ -199,25 +199,25 @@ onebar(filepath="Oral Health/oral_adulttrend_chart2",
 #adults
 multibar(filepath="Physical activity/pa_agegender_csv_Chart_1",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2017",
+         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2018",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
 multibar(filepath="Physical activity/pa-adults-muscle-agegender-chart2",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2017",
+         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2018",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
 multibar(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2017",
+         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2018",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 multiline(filepath="Physical activity/pa-adults-timetrend-chart4",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 4. Adults achieving physical activity<br> recommendations by sex, Scotland, 2012-2017",
+          title="Chart 4. Adults achieving physical activity<br> recommendations by sex, Scotland, 2012-2018",
           sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
           xaxtitle='Year', yaxtitle="Percentage")
 
