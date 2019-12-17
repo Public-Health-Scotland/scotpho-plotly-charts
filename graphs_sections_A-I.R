@@ -155,53 +155,52 @@ multiline(filepath="Children/children_poverty_chart1",
 ##Chronic Liver Disease ----
 ############################.
 #Mortality
-multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1", 
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease <br> by gender, Scotland", 
+multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1",
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2", 
+multiline(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmortage,
-          title="Chart 2. Chronic liver disease mortality by age group, Scotland", 
+          title="Chart 2. Chronic liver disease deaths by age group, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3", 
+multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3",
           xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
-          title="Chart 3. Chronic liver disease mortality by condition, Scotland", 
+          title="Chart 3. Chronic liver disease deaths by condition, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4", 
+multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-          title="Chart 4. Chronic liver disease mortality<br> by SIMD decile, Scotland", 
+          title="Chart 4. Chronic liver disease deaths<br> by SIMD decile, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
-
-#Morbidity
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1", 
+#Secondary care
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease morbidity<br>by gender, Scotland ", 
+          title="Chart 1. Chronic liver disease hospital stays<br>by gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2", 
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2",
           xvar="class2", yvar="measure", group="class1", pal_col=pal_cldmorbage,
-          title="Chart 2. Chronic liver disease morbidity by age group, Scotland", 
+          title="Chart 2. Chronic liver disease hospital stays by age group, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3", 
+multiline(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3",
           xvar="class2", yvar="measure", group="class1", pal_col=palalccondition,
-          title="Chart 3. Chronic liver disease morbidity<br>by condition, Scotland", 
+          title="Chart 3. Chronic liver disease hospital stays<br>by condition, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4", 
           xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
-          title="Chart 4. Chronic liver disease morbidity<br>by SIMD deciles, Scotland", 
+          title="Chart 4. Chronic liver disease hospital stays<br>by SIMD deciles, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -227,12 +226,12 @@ multiline(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PR
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
 multiline(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd,
+          xvar="class2", yvar="measure", group="class1", pal_col=pal_simd2,
           title="Chart 4. Chronic liver disease deaths<br> by SIMD decile, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
-#Morbidity
+#Secondary care
 multiline(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA",  privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Chronic liver disease hospital stays<br>by gender, Scotland", 
