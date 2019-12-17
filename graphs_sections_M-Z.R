@@ -100,6 +100,13 @@ multiline(filepath="Multiple Sclerosis/ms_mortality_chart1",
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle='Year of registration', yaxtitle="Number of deaths")
 
+#new NHS board data chart
+barcompar(filepath="Multiple Sclerosis/ms_NHSboards_chart1",
+          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2018/19", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
+          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
+
 ############################.
 ### Obesity ----
 ############################.

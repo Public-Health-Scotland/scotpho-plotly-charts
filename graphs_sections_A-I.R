@@ -343,14 +343,14 @@ multiline (filepath="COPD/COPD_Mortality_Chart_1",
 #Chart 307
 multibar(filepath="COPD/COPD_deprivation_Chart_1", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. COPD admissions in males, Scotland, 2017/18", 
+         title="Chart 1. COPD admissions in males, Scotland, 2018/19", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 415
 multibar(filepath="COPD/COPD_deprivation_Chart_2", 
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. COPD admissions in females, Scotland, 2017/18", 
+         title="Chart 2. COPD admissions in females, Scotland, 2018/19", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -363,9 +363,9 @@ barcompar(filepath="COPD/COPD - NHS Board data - Chart 1",
           xaxtitle='NHS Board', yaxtitle="Crude prevalence rate per 100 patients")
 
 #Chart 417
-barcompar(filepath="/data/COPD/COPD - NHS Board data - Chart 2", 
+barcompar(filepath="COPD/COPD_NHSboard_Chart_2", 
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2015/16", 
+          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2018/19", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 codes J40-J44.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
