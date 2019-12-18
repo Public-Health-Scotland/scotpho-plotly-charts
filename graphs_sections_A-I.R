@@ -156,7 +156,7 @@ multiline(filepath="Children/children_poverty_chart1",
 ############################.
 #Mortality
 multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
@@ -208,7 +208,7 @@ multiline(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4",
 ##Chronic Liver Disease PRE RELEASE ACCESS
 #Mortality
 multiline(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>", 
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
