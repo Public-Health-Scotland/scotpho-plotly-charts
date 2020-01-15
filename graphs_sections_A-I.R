@@ -985,10 +985,11 @@ multiline(filepath="Injuries/inj_seccare_chart1",
         sourc="<a href='http://www.isdscotland.org/Health-Topics/Emergency-Care/Unintentional-Injuries/'>SMR01, ISD</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standarized rate per 100,000")
 
-oneline(filepath="Injuries/inj_mortality_chart_1", 
+oneline(filepath="Injuries/inj_mortality_chart_2", 
         xvar="class1", yvar="measure", 
-        title="Chart 1. Injury related mortality, Scotland", 
-        sourc="<a href='https://www.injuryobservatory.net/britain-and-ireland-deaths-due-to-injury/'>IOBI</a>", 
+        title="Chart 1. Injury related deaths, Scotland", 
+        sourc="<a href='http://www.isdscotland.org/Health-Topics/Emergency-Care/Unintentional-Injuries/'>ISD</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standarized rate per 100,000")
+
 
 ##END
