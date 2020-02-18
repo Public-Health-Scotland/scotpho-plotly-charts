@@ -1,7 +1,17 @@
 #This syntax defines palettes, plot parameters and plotting functions to create
 #charts using plotly and uploading to their server.
 #Read more about this in the Plotly chart SOP.
-#Jaime Villacampa August 17
+
+###############################################.
+#TO DO 
+# https://www.r-bloggers.com/how-to-add-trend-lines-in-r-using-plotly/
+#Test if annotations still needed?
+# Check what use for horizontal/vertical bar charts
+# What to do with hovermode = 'false'?
+# Dual axis not really woking
+# Fix issues when embedded in website (take out size?)
+# Rounding before plot?
+# Describe all parameters of function
 
 ############################.
 ##Packages----
@@ -63,14 +73,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
                      xref = "paper", yref = "paper",
                      x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
 
-###############################################.
-# Theme/styles 
 
-#Test if annotations still needed?
-# Check what use for horizontal/vertical bar charts
-# What to do with hovermode = 'false'?
-# Dual axis not really woking
-# Fix issues when embedded in website (take out size?)
 
 ###############################################.
 # Cleaning HTML 
@@ -94,9 +97,8 @@ write.table(html_file, file='test.html',  quote = FALSE,
 ############################.
 ### Plot functions----
 ############################.
-plot_website <- function (filepath, chart_type, privacy = "public", 
-                          xvar, yvar, group = NULL, comparator, compname, 
-                          title, sourc, xaxtitle, yaxtitle,
+plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, comparator, compname, 
+                          title, sourc, xaxtitle, yaxtitle, yvar_dashed,
                           tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2 ) {
   
@@ -166,6 +168,20 @@ plot_website <- function (filepath, chart_type, privacy = "public",
       # to get hover compare mode as default
       layout(hovermode = 'false', legend = legend_plot) 
     
+  } else if (chart_type == "multiline_dashed") { # MULTIPLE LINES WITH PART DASHED
+    # Custom layout
+    xaxis_plot[["dtick"]] <- tick_freq
+    legend_plot <-  list(x = 100, y = 0.5) 
+    
+    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = round(data_plot[,yvar],1),
+                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length],
+                           width = 650, height = 500) %>% 
+      add_lines(y = round(data_plot[,yvar], 1)) %>% #normal line
+      add_lines(y = round(data_plot[,yvar_dashed], 1), line = list(dash="dash"),
+                showlegend = FALSE) %>% #dashed line
+      # to get hover compare mode as default
+      layout(hovermode = 'false', legend = legend_plot) 
+
   } else if (chart_type == "dualaxisline") { # DUAL AXIS LINE PLOT
     # Custom layout
     yaxis_plot[["range"]] <-c(minyrange, maxyrange)
@@ -473,8 +489,8 @@ multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
            images = scotpho_logo,
            legend = list(x = 100, y = 0.5)) %>%   #anchoring the legend to the middle of the y-axis so that text appears halway down the graph
     config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
-  
-  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
+  plot_plotly
+  # api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
@@ -506,8 +522,8 @@ areaplot <- function (filepath, xvar, yvar, group, title,
            margin=list( l = 70, r = 50, b = 150, t = 50, pad = 4 ), #margin-paddings
            images = scotpho_logo) %>%
     config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
-  
-  api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
+  plot_plotly
+  # api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
   
 }
 
