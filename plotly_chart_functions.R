@@ -13,12 +13,17 @@
 # Rounding before plot?
 # Describe all parameters of function
 # Area plot chart wrong order of x axis (and colours)
+# opportunity to get the problem with simd decile order fixed
+# Do we need quotations for variables?
+# Incorporate saving and modifying the HTML into the code
+# move to read_csv?
 
 ############################.
 ##Packages----
 ############################.
 library (tidyverse)
 library(plotly) #version 4.7
+library(htmlwidgets)
 
 ############################.
 ##Plot and upload parameters----
@@ -74,11 +79,16 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
                      xref = "paper", yref = "paper",
                      x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
 
-
-
 ###############################################.
 # Cleaning HTML 
+# Partial bundle only saves the needed files (js) you need for the chart
+htmlwidgets::saveWidget(partial_bundle(plot_plotly), "index_small.html")
+# Saves the js libraries needed out of the main file
+htmlwidgets::saveWidget(plot_plotly, "index_selfcno.html", selfcontained = F)
 
+test <- "Hola/folder"
+
+sub('.*\\/', '', test)
 #HTML code that needs to be taken out
 string1 <- '<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>plotly</title>\n'
 string2 <- '</head>\n<body style="background-color: white;">'
@@ -124,17 +134,23 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
   
   pal_chose <-pal_col #Palette
   
+    ###############################################.
+    ## Multiple bar plot ----
   if (chart_type == "multibar") { # MULTIPLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
                            type = "bar", width = 650, height = 500, #size of plot
                            #Grouping variable for color and palette
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) 
     
+    ###############################################.
+    ## Single bar plot ----
   } else if (chart_type == "onebar") { # SINGLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
                            type = "bar", width = 650, height = 500,
                            marker = list(color = pal1color)) 
   
+    ###############################################.
+    ## Bar plot with comparator line----
   } else if (chart_type == "barcompar") { # BAR PLOT WITH COMPARATOR LINE
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], width = 650, height = 500) %>% 
       #adding bar layer
@@ -145,6 +161,8 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
                 line = list(color = '#FF0000')) %>% #changing line color
       layout(hovermode = 'false') # to get hover compare mode as default
     
+    ###############################################.
+    ## Stacked bar plot ----
   } else if (chart_type == "stackedbar") { # STACKED BAR PLOT
     
       if (horizontal == T) { #Horizontal stacked bar charts
@@ -168,12 +186,16 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
       } 
-      
+    
+    ###############################################.
+    ## Single line plot ----
   } else if (chart_type == "oneline") { # SINGLE LINE PLOT
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
                              type = "scatter", mode='lines', width = 650, height = 500, 
                              line = list(color = pal1color)) #Grouping variable for color and palette
-
+      
+    ###############################################.
+    ## Multiple lines  ----
   } else if (chart_type == "multiline") { # MULTIPLE LINES PLOT
     # Custom layout
     xaxis_plot[["dtick"]] <- tick_freq
@@ -186,6 +208,8 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
       # to get hover compare mode as default
       layout(hovermode = 'false', legend = legend_plot) 
     
+    ###############################################.
+    ## Multiple lines with parts dashed ----
   } else if (chart_type == "multiline_dashed") { # MULTIPLE LINES WITH PART DASHED
     # Custom layout
     xaxis_plot[["dtick"]] <- tick_freq
@@ -199,7 +223,9 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
                 showlegend = FALSE) %>% #dashed line
       # to get hover compare mode as default
       layout(hovermode = 'false', legend = legend_plot) 
-
+    
+    ###############################################.
+    ## Dual axis line plot ----
   } else if (chart_type == "dualaxisline") { # DUAL AXIS LINE PLOT
     # Custom layout
     yaxis_plot[["range"]] <-c(minyrange, maxyrange)
@@ -222,7 +248,7 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
     }
   
   ###############################################.
-  # Applying common layout 
+  # Applying common layout ----
   #If you need the plot ordered then it changes the layout
   if (order == TRUE | chart_type == "barcompar") { 
     xaxis_plot[["categoryorder"]] <- "array"
@@ -234,11 +260,32 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
            margin = margin_plot, images = scotpho_logo) %>%
     config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
   
-  
-  plot_plotly
+  plot_plotly # show the plot
   
   ###############################################.
   # Preparing HTML final file 
+  plot_name <- sub('.*\\/', '', filepath)
+  
+  # Partial bundle only saves the needed files (js) you need for the chart
+  saveWidget(partial_bundle(plot_plotly), paste0(plot_name, ".html"))
+  
+  #HTML code that needs to be taken out
+  string1 <- '<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>plotly</title>\n'
+  string2 <- '</head>\n<body style="background-color: white;">'
+  string3 <- '</body>\n</html>'
+  
+  html_file <- gsub(string1, "", html_file)
+  html_file <- gsub(string2, "", html_file)
+  html_file <- gsub(string3, "", html_file)
+  
+  # Substitutes the id for a unique one to ensure multiple charts work in one page
+  html_file <- gsub('id="htmlwidget-(.*?)"', paste0('id="', plot_name, '"', html_file))
+  html_file <- gsub('data-for="htmlwidget-(.*?)"', paste0('data-for="', plot_name, '"', html_file))
+  
+  # Saving
+  write.table(html_file, file=paste0(plot_name, ".html"),  quote = FALSE,
+              col.names = FALSE, row.names = FALSE)
+  
   
 } #end of function
 
