@@ -12,6 +12,7 @@
 # Fix issues when embedded in website (take out size?)
 # Rounding before plot?
 # Describe all parameters of function
+# Area plot chart wrong order of x axis (and colours)
 
 ############################.
 ##Packages----
@@ -195,6 +196,12 @@ plot_website <- function (filepath, chart_type, xvar, yvar, group = NULL, compar
         layout(yaxis2 = list(title = yaxtitle2, rangemode="tozero", side = "right",
                              tickfont = list(color = "red"), overlaying = "y")) 
       
+    } else if (chart_type == "areaplot") {
+      plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=round(data_plot[,yvar],1),
+                             type = "scatter", mode = 'none', stackgroup = 'one', 
+                             width = 650, height = 500, #size of plot
+                             #Grouping variable for color and palette
+                             color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length])
     }
   
   ###############################################.
@@ -495,8 +502,6 @@ multiline_dashed <- function (filepath, xvar, yvar, yvar_dashed, group, title,
 }
 
 
-#TO DO 
-# https://www.r-bloggers.com/how-to-add-trend-lines-in-r-using-plotly/
 ############################.
 ##Area plot with original values ----
 areaplot <- function (filepath, xvar, yvar, group, title,
