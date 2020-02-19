@@ -31,47 +31,13 @@ onebar(filepath="Migration/migration_la_chart1",
 ### Multiple sclerosis----
 ############################.
 ############################.
-### Multiple sclerosis PRE RELEASE ACCESS
-#secondary care
-#Chart 590
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
-
-#Chart 592
-multiline(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
-
-#Chart 594
-multiline(filepath="Multiple Sclerosis/ms_mortality_chart1_PRA",  privacy = "secret",
-          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
-          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle='Year of registration', yaxtitle="Number of deaths")
-
-#new NHS board data chart
-barcompar(filepath="Multiple Sclerosis/ms_NHSboards_chart1_PRA", privacy = "secret",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Hospital stays <br>with MS (main diagnosis), 2018/19", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
-          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
-
-############################.
-### Multiple sclerosis LIVE charts
 #primary care
-#Chart 229
 stackedbar(filepath="Multiple Sclerosis/ms_primcare_chart1", 
            xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
            title="Chart 1. Estimated number of consultations for<br> multiple sclerosis by staff type, Scotland ", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>ISD</a>. District nurse and health visitor data from 2006/07 onwards not available", 
            xaxtitle="Year", yaxtitle="Estimated number of consultations")
 
-#Chart 227
 multibar(filepath="Multiple Sclerosis/ms_primcare_chart2", 
          xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
          title="Chart 2. Patients consulting GP/practice nurse at least<br> once a year for multiple sclerosis, Scotland, 2012/13", 
@@ -79,21 +45,18 @@ multibar(filepath="Multiple Sclerosis/ms_primcare_chart2",
          xaxtitle='Age group', yaxtitle="Age-sex standarized rate<br> per 1,000 patients registered")
 
 #secondary care
-#Chart 231
 multiline(filepath="Multiple Sclerosis/ms_seccare_chart1", 
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
-#Chart 233
 multiline(filepath="Multiple Sclerosis/ms_seccare_chart2", 
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
-#Chart 440
 multiline(filepath="Multiple Sclerosis/ms_mortality_chart1", 
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
@@ -390,7 +353,7 @@ stackedbar(filepath="Population/pop_hb_est_chart3", horizontal = T,
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
            yaxtitle="", xaxtitle="Percentage of the population")
 
-stackedbar(filepath="Population/pop_la_est_chart4", 
+stackedbar(filepath="Population/pop_la_est_chart4",  horizontal = T,
            yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
            title="Chart 4. Age structure of </br>council areas, Scotland, 2018", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
@@ -518,40 +481,6 @@ barcompar(filepath="Social Environment/volunteering_chart1",
 ### Smoking ----
 ############################.
 ###############################.
-##PRE-RELEASE ACCESS
-#admissions
-multiline_dashed(filepath="Smoking/smoking_admissions_chart1", privacy = "secret",
-                 xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
-                 title="Chart 1. Hospital admissions attributable to smoking, Scotland", 
-                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
-                 xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
-
-multiline_dashed(filepath="Smoking/smoking_admissions_sex_chart2", privacy = "secret",
-                 xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
-                 title="Chart 2. Hospital admissions attributable to smoking<br> by gender, Scotland", 
-                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
-                 xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
-
-multiline_dashed(filepath="Smoking/smoking_admissions_age_chart3", privacy = "secret",
-                 xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,yvar_dashed = "measure2",
-                 title="Chart 3. Hospital admissions attributable to smoking <br>by age group, Scotland", 
-                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
-                 xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
-
-multiline(filepath="Smoking/smoking_admissions_simd_chart4", privacy = "secret",
-          xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
-          title="Chart 4. Hospital admissions attributable to smoking<br>by SIMD quintile, Scotland", 
-          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
-          xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
-
-onebar(filepath="Smoking/smoking_admissions_disease_chart5", privacy = "secret",
-       xvar="class1", yvar="measure", 
-       title="Chart 5. Hospital admissions attributable to smoking <br>by disease grouping, 2017, Scotland", 
-       sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, Expressed as a percentage of all diagnosis that could be attributed to smoking", 
-       xaxtitle="Disease group", yaxtitle="Percentage attributable")
-
-###############################.
-##LIVE VERSIONS
 #admissions
 multiline_dashed(filepath="Smoking/smoking_admissions_chart1", 
         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
@@ -612,40 +541,6 @@ multibar(filepath="Smoking/smoking_deaths_disease_chart4",
 ############################.
 ### Suicide ----
 ############################.
-###############################.
-##PRE-RELEASE ACCESS
-multiline(filepath="Suicide/suicide_national_chart1_PRA",  privacy = "secret",
-          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
-          title="Chart 1. Suicide rates, Scotland, all ages", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
-
-multibar(filepath="Suicide/suicide_national_chart2_PRA",  privacy = "secret",
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. Male deaths from suicide<br>over time by age group, Scotland", 
-         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-         xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
-
-multibar(filepath="Suicide/suicide_national_chart3_PRA",  privacy = "secret",
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 3. Female deaths from suicide<br>over time by age group, Scotland", 
-         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-         xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
-
-multiline(filepath="Suicide/suicide_national_chart4_PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
-
-multiline(filepath="Suicide/suicide_uk_chart1_PRA",  privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. Suicide death rates by UK country", 
-          sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
-          xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
-
-###############################.
-##LIVE VERSIONS
 multiline(filepath="Suicide/suicide_national_chart1", 
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
