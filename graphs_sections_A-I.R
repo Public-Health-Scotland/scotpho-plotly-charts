@@ -295,7 +295,7 @@ plot_webchart(filepath="COPD/COPD_Smoking_chart_2", chart_type = "multiline",
 
 #International Charts 1&2 not updated Dec 2018 - WHO data source no longer available???
 #International
-plot_webchart(filepath="COPD/COPD_International - Chart 1", chart_type = "onebar",
+plot_webchart(filepath="COPD/COPD_International - Chart 1", 
        xvar="class1", yvar="measure", chart_type = "onebar",
        title="Chart 1. Death rates due to COPD in various industrialised<br>countries, Males", 
        sourc="<a href='http://www.who.int/healthinfo/mortality_data/en/'>WHO Mortality Database</a>, extracted October 2016", 
