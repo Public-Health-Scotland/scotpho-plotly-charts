@@ -815,8 +815,7 @@ multiline (filepath="Health Inequalities/Health_Inequalities_Chart_2_new",
 
 dualaxisline(filepath="Health Inequalities/Health_Inequalities_Chart_3", 
              xvar="class1", yvar="measure", yvar2="measure2", 
-             title="Chart 3. Relative Index of Inequality (RII) and<br>Slope Index of Inequality (SII) (using SIMD income-employment<br> index), 
-             all-cause mortality under 75 years, Scotland", 
+             title="Chart 3. Relative Index of Inequality (RII) and<br>Slope Index of Inequality (SII) (using SIMD income-employment<br> index), all-cause mortality under 75 years, Scotland", 
              sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
              xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)", 
              yaxtitle2="Slope Index of Inequality (SII)",
@@ -826,8 +825,8 @@ dualaxisline(filepath="Health Inequalities/Health_Inequalities_Chart_3",
 ##In request by section author, this should include the trend line (linear regression)
 ##between deciles; we would need the values for that trend and then use barcompar
 onebar(filepath="Health Inequalities/Health_Inequalities_Chart_4", 
-       xvar="class1", yvar="measure", 
-       title="Chart 4. Age-standardised all-cause mortality rates<br>(under 75 years) by deprivation decile, Scotland 2017", 
+       xvar="class1", yvar="measure", order = T,
+       title="Chart 4. Age-standardised all-cause mortality rates<br>(under 75 years) by deprivation decile, Scotland 2018", 
        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-december-2018-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
        xaxtitle='SIMD income-employment index decile', 
        yaxtitle="European age-standarised mortality rate<br>per 100,000 populaton")
