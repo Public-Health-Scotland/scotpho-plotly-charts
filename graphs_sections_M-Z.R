@@ -76,7 +76,7 @@ plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "b
 #adults
 plot_webchart(filepath="Obesity/obesity_adults_Chart_1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Prevalence of obesity, Scotland, 2016", 
+         title="Chart 1. Prevalence of obesity, Scotland, 2016", data_down ="1934/obesity_adults_chart_1.csv",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 

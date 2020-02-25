@@ -12,6 +12,9 @@
 # Area plot chart wrong order of x axis (and colours)
 # opportunity to get the problem with simd decile order fixed
 # Do we need quotations for variables?
+# Download data button in bottom
+# move source at bottom
+#  Add fixed ranges and take out most buttons
 
 ############################.
 ##Packages----
@@ -92,6 +95,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' @param sourc text describing the source, its url and notes
 #' @param xaxtitle title of the x axis
 #' @param yaxtitle title of the y axis
+#' @param data_down last part of the url to the data files in the server, e.g. 1934/obesity_chart1.csv
 #' @param yvar_dashed Only for multiline_dashed. Column containing the dashed part of the serie
 #' @param horizontal Only for stackedbar charts. Set it up as an horizontal stackedbar chart.
 #' @param tick_freq Only for multiline and multiline_dashed. Frequency of ticks in the x axis
@@ -104,20 +108,19 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' @param y2name Only for dualaxisline. Label for the second y axis
 #' @param yaxtitle2 Only for dualaxisline. Title second y axis
 plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, comparator, compname, 
-                          title, sourc, xaxtitle, yaxtitle, yvar_dashed,
+                          title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down,
                           horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2 ) {
   
   ###############################################.
   # Common layout 
-  title_plot <-  list(text = paste(title, "<br>", "<sup><i>Source: ", sourc, sep=""), #title
-                      font = list(size=15)) #title size
+  title_plot <-  list(text = title, font = list(size=15)) #title size
   # Margin
-  margin_plot <- list( l = 70, r = 50, b = 150, t = 50, pad = 4) #margins
+  margin_plot <- list(l = 70, r = 50, b = 70, t = 100, pad =0) #margins
   #yaxis plot
-  yaxis_plot <- list(title = yaxtitle, rangemode="tozero")
+  yaxis_plot <- list(title = yaxtitle, rangemode="tozero", fixedrange = TRUE)
   # x axis
-  xaxis_plot <- list(title = xaxtitle, tickfont =list(size=10))
+  xaxis_plot <- list(title = xaxtitle, tickfont = list(size=10), fixedrange = TRUE)
   
   ###############################################.
   # Reading data 
@@ -134,7 +137,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Multiple bar plot ----
   if (chart_type == "multibar") { # MULTIPLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar", width = 630, height = 500, #size of plot
+                           type = "bar", width = 630, height = 350, #size of plot
                            #Grouping variable for color and palette
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) 
     
@@ -142,13 +145,13 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Single bar plot ----
   } else if (chart_type == "onebar") { # SINGLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar",  width = 630, height = 500, 
+                           type = "bar",  width = 630, height = 350, 
                            marker = list(color = pal1color)) 
   
     ###############################################.
     ## Bar plot with comparator line----
   } else if (chart_type == "barcompar") { # BAR PLOT WITH COMPARATOR LINE
-    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], width = 630, height = 500) %>% 
+    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], width = 630, height = 350) %>% 
       #adding bar layer
       add_bars(y=data_plot[,yvar], name=xaxtitle, showlegend = FALSE, #hiding this layer from legend
                marker = list(color = pal1color)) %>% #changing bar color
@@ -170,7 +173,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
         margin_plot <- list( l = 70, r = 0, b = 0, t = 80, pad = 4 ) #margin-paddings in stacked bar horizontal
         
         plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                               type = "bar", width = 630, height = 500, #size of plot
+                               type = "bar", width = 630, height = 350, #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length], 
                                orientation = 'h') %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
@@ -178,7 +181,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
         # tickangle = 360,
       } else { #Vertical stacked bar charts
         plot_plotly <- plot_ly(data=data_plot, x=as.factor(data_plot[,xvar]), y=data_plot[,yvar],
-                               type = "bar", width = 630, height = 500, #size of plot
+                               type = "bar", width = 630, height = 350, #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
       } 
@@ -187,7 +190,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Single line plot ----
   } else if (chart_type == "oneline") { # SINGLE LINE PLOT
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                             type = "scatter", mode='lines', width = 630, height = 500, 
+                             type = "scatter", mode='lines', width = 630, height = 350, 
                              line = list(color = pal1color)) #Grouping variable for color and palette
       
     ###############################################.
@@ -200,7 +203,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            type = 'scatter', mode = 'lines',
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length],
-                           width = 630, height = 500) %>% 
+                           width = 630, height = 350) %>% 
       # to get hover compare mode as default
       layout(hovermode = 'false', legend = legend_plot) 
     
@@ -213,7 +216,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length],
-                           width = 630, height = 500) %>% 
+                           width = 630, height = 350) %>% 
       add_lines(y = data_plot[,yvar]) %>% #normal line
       add_lines(y = data_plot[,yvar_dashed], line = list(dash="dash"),
                 showlegend = FALSE) %>% #dashed line
@@ -238,7 +241,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     } else if (chart_type == "areaplot") {
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
                              type = "scatter", mode = 'none', stackgroup = 'one', 
-                             width = 630, height = 500, #size of plot
+                             width = 630, height = 350, #size of plot
                              #Grouping variable for color and palette
                              color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length])
     }
@@ -250,23 +253,23 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     xaxis_plot[["categoryorder"]] <- "array"
     xaxis_plot[["categoryarray"]] <-  sort(data_plot[,yvar])
   }
-  
-  plot_plotly %<>% 
+
+    plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
+           legend = list(orientation = 'h',  x = 0.25, y = 1.2),
            margin = margin_plot, images = scotpho_logo) %>%
-    config(displaylogo = F, editable =F) # taking out plotly logo and collaborate button
-  
-  plot_plotly # show the plot
+    config(displaylogo = F, editable = F) # taking out plotly logo and edit button
   
   ###############################################.
   # Preparing HTML final file 
   plot_name <- sub('.*\\/', '', filepath) # name without the folder bit
 
-  # Partial bundle only saves the needed files (js) you need for the chart
-  saveWidget(partial_bundle(plot_plotly), paste0(data_folder, filepath, ".html"))
+    # Partial bundle only saves the needed files (js) you need for the chart
+  htmlwidgets::saveWidget(partial_bundle(plot_plotly, local = T), 
+             paste0(data_folder, filepath, ".html"))
 
   html_file <- paste(readLines(paste0(data_folder, filepath, ".html")), collapse="\n")
-  
+
   #HTML code that needs to be taken out
   string1 <- '<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>plotly</title>\n'
   string2 <- '</head>\n<body style="background-color: white;">'
@@ -279,11 +282,29 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
   # Substitutes the id for a unique one to ensure multiple charts work in one page
   html_file <- gsub('id="htmlwidget-(.*?)"', paste0('id="', plot_name, '"'), html_file)
   html_file <- gsub('data-for="htmlwidget-(.*?)"', paste0('data-for="', plot_name, '"'), html_file)
+  
+  # Adding some code and annotations t the final HTML file
+  start_html <- '<div style="width: 650px; height: 500px;">'
+  end_html <- paste0('<div style="width: 25%; float: left;">Source:', sourc, '</div>',
+                     '<div style="width: 25%; float: left;">',
+'<a id="download_data" href="https://www.scotpho.org.uk/media/', data_down, 
+  '" target="_blank" download>Download data</a>
+  </div>
+  <div style="width: 50%; float: left;">Note: Year of earliest positive specimen.</div>
+  </div>')
+  
+  html_file <- paste0(start_html, html_file, end_html)
 
   # Saving as HTML
   write.table(html_file, file=paste0(data_folder, filepath, ".html"),
               quote = FALSE, col.names = FALSE, row.names = FALSE)
   
+  # Deleting files created
+# file.remove(paste0(data_folder, filepath, "/", plot_name, "_files"), recursive = TRUE,
+#        force = T)
+# ?dir.create()
+
+  print(plot_plotly) # show the plot
   
 } #end of function
 
