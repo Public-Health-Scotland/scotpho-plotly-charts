@@ -12,9 +12,7 @@
 # Area plot chart wrong order of x axis (and colours)
 # opportunity to get the problem with simd decile order fixed
 # Do we need quotations for variables?
-# Download data button in bottom
-# move source at bottom
-#  Add fixed ranges and take out most buttons
+# For base 64 https://www.rdocumentation.org/packages/jsonlite/versions/1.6.1/topics/base64
 
 ############################.
 ##Packages----
@@ -116,7 +114,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
   # Common layout 
   title_plot <-  list(text = title, font = list(size=15)) #title size
   # Margin
-  margin_plot <- list(l = 70, r = 50, b = 70, t = 100, pad =0) #margins
+  margin_plot <- list(l = 80, r = 50, b = 80, t = 100, pad = 4) #margins
   #yaxis plot
   yaxis_plot <- list(title = yaxtitle, rangemode="tozero", fixedrange = TRUE)
   # x axis
