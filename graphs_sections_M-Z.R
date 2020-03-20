@@ -520,13 +520,13 @@ barcompar(filepath="Social Environment/volunteering_chart1",
 ###############################.
 ##PRE-RELEASE ACCESS
 #admissions
-multiline_dashed(filepath="Smoking/smoking_admissions_chart1", privacy = "secret",
+multiline_dashed(filepath="Smoking/smoking_admissions_chart1_PRA", privacy = "secret",
                  xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
                  title="Chart 1. Hospital admissions attributable to smoking, Scotland", 
                  sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
                  xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
-multiline_dashed(filepath="Smoking/smoking_admissions_sex_chart2", privacy = "secret",
+multiline_dashed(filepath="Smoking/smoking_admissions_sex_chart2_PRA", privacy = "secret",
                  xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
                  title="Chart 2. Hospital admissions attributable to smoking<br> by gender, Scotland", 
                  sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
