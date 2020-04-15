@@ -21,6 +21,7 @@ library (tidyverse)
 library(plotly) 
 library(htmlwidgets)
 library(webshot)
+library(magrittr)
 
 ############################.
 ##Plot and upload parameters----
@@ -255,7 +256,6 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     xaxis_plot[["categoryorder"]] <- "array"
     xaxis_plot[["categoryarray"]] <-  sort(data_plot[,yvar])
   }
-
     plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
            legend = list(orientation = 'h',  x = 0.25, y = 1.2),
@@ -264,58 +264,57 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     
     ###############################################.
     # Pushing chart to cloud server
-    
-  
-    if (static == FALSE) { 
+
+    if (static == FALSE) {
       api_create(x=plot_plotly, filename = filepath, sharing = "public") #Upload to server
-      
+
       ###############################################.
-      # Preparing HTML final file 
+      # Preparing HTML final file
       # This should be used once the Umbraco solution works well
       plot_name <- sub('.*\\/', '', filepath) # name without the folder bit
-      
+
       # Partial bundle only saves the needed files (js) you need for the chart
-      htmlwidgets::saveWidget(partial_bundle(plot_plotly, local = T), 
+      htmlwidgets::saveWidget(partial_bundle(plot_plotly, local = T),
                               paste0(data_folder, filepath, ".html"))
-      
+
       html_file <- paste(readLines(paste0(data_folder, filepath, ".html")), collapse="\n")
-      
+
       #HTML code that needs to be taken out
       string1 <- '<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>plotly</title>\n'
       string2 <- '</head>\n<body style="background-color: white;">'
       string3 <- '</body>\n</html>'
-      
+
       html_file <- gsub(string1, "", html_file)
       html_file <- gsub(string2, "", html_file)
       html_file <- gsub(string3, "", html_file)
-      
+
       # Substitutes the id for a unique one to ensure multiple charts work in one page
       html_file <- gsub('id="htmlwidget-(.*?)"', paste0('id="', plot_name, '"'), html_file)
       html_file <- gsub('data-for="htmlwidget-(.*?)"', paste0('data-for="', plot_name, '"'), html_file)
-      
+
       # Adding some code and annotations t the final HTML file
       start_html <- '<div style="width: 650px; height: 500px;">'
       end_html <- paste0('<div style="width: 25%; float: left;">Source:', sourc, '</div>',
                          '<div style="width: 25%; float: left;">',
-                         '<a id="download_data" href="https://www.scotpho.org.uk/media/', data_down, 
+                         '<a id="download_data" href="https://www.scotpho.org.uk/media/', data_down,
                          '" target="_blank" download>Download data</a>
   </div>
   <div style="width: 50%; float: left;">Note: Year of earliest positive specimen.</div>
   </div>')
-      
+
       html_file <- paste0(start_html, html_file, end_html)
-      
+
       # Saving as HTML
       write.table(html_file, file=paste0(data_folder, filepath, ".html"),
                   quote = FALSE, col.names = FALSE, row.names = FALSE)
-      
+
     } else if (static == TRUE) { # Exporting as PNG
-    export(plot_plotly, file=paste0(data_folder, filepath, ".png"), zoom = 10)
+
+          export(p = plot_plotly, file=paste0(data_folder, filepath, ".png"), zoom = 4)
        
     }
     
-    
-  print(plot_plotly) # show the plot
+  plot_plotly # show the plot
   
 } #end of function
 
