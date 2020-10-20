@@ -110,7 +110,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' @param static creates static version of the chart
 
 plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, comparator, compname, 
-                          title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down,
+                          title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
                           horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
                           static = F) {
@@ -140,7 +140,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Multiple bar plot ----
   if (chart_type == "multibar") { # MULTIPLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar", width = 630, height = 350, #size of plot
+                           type = "bar",  #size of plot
                            #Grouping variable for color and palette
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) 
     
@@ -148,13 +148,13 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Single bar plot ----
   } else if (chart_type == "onebar") { # SINGLE BAR PLOT
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar",  width = 630, height = 350, 
+                           type = "bar",  
                            marker = list(color = pal1color)) 
   
     ###############################################.
     ## Bar plot with comparator line----
   } else if (chart_type == "barcompar") { # BAR PLOT WITH COMPARATOR LINE
-    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], width = 630, height = 350) %>% 
+    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar]) %>% 
       #adding bar layer
       add_bars(y=data_plot[,yvar], name=xaxtitle, showlegend = FALSE, #hiding this layer from legend
                marker = list(color = pal1color)) %>% #changing bar color
@@ -176,7 +176,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
         margin_plot <- list( l = 70, r = 0, b = 0, t = 80, pad = 4 ) #margin-paddings in stacked bar horizontal
         
         plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                               type = "bar", width = 630, height = 350, #size of plot
+                               type = "bar", #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length], 
                                orientation = 'h') %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
@@ -184,7 +184,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
         # tickangle = 360,
       } else { #Vertical stacked bar charts
         plot_plotly <- plot_ly(data=data_plot, x=as.factor(data_plot[,xvar]), y=data_plot[,yvar],
-                               type = "bar", width = 630, height = 350, #size of plot
+                               type = "bar",  #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
       } 
@@ -193,7 +193,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     ## Single line plot ----
   } else if (chart_type == "oneline") { # SINGLE LINE PLOT
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                             type = "scatter", mode='lines', width = 630, height = 350, 
+                             type = "scatter", mode='lines',  
                              line = list(color = pal1color)) #Grouping variable for color and palette
       
     ###############################################.
@@ -201,37 +201,35 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
   } else if (chart_type == "multiline") { # MULTIPLE LINES PLOT
     # Custom layout
     xaxis_plot[["dtick"]] <- tick_freq
-    legend_plot <-  list(x = 100, y = 0.5) 
+    # legend_plot <-  list(x = 100, y = 0.5) 
     
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            type = 'scatter', mode = 'lines',
-                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length],
-                           width = 630, height = 350) %>% 
+                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       # to get hover compare mode as default
-      layout(hovermode = 'false', legend = legend_plot) 
+      layout(hovermode = 'false')#, legend = legend_plot) 
     
     ###############################################.
     ## Multiple lines with parts dashed ----
   } else if (chart_type == "multiline_dashed") { # MULTIPLE LINES WITH PART DASHED
     # Custom layout
     xaxis_plot[["dtick"]] <- tick_freq
-    legend_plot <-  list(x = 100, y = 0.5) 
+    # legend_plot <-  list(x = 100, y = 0.5) 
     
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
-                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length],
-                           width = 630, height = 350) %>% 
+                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       add_lines(y = data_plot[,yvar]) %>% #normal line
       add_lines(y = data_plot[,yvar_dashed], line = list(dash="dash"),
                 showlegend = FALSE) %>% #dashed line
       # to get hover compare mode as default
-      layout(hovermode = 'false', legend = legend_plot) 
+      layout(hovermode = 'false')#, legend = legend_plot) 
     
     ###############################################.
     ## Dual axis line plot ----
   } else if (chart_type == "dualaxislines") { # DUAL AXIS LINE PLOT
     # Custom layout
     yaxis_plot[["range"]] <-c(minyrange, maxyrange)
-    legend_plot <-  list(x = 100, y = 0.5) 
+    # legend_plot <-  list(x = 100, y = 0.5) 
     
     plot_plotly <- plot_ly(data=data_plot) %>%  
       add_lines(data_plot[,xvar], y=data_plot[,yvar], name = yname,  
@@ -244,7 +242,6 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     } else if (chart_type == "areaplot") {
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
                              type = "scatter", mode = 'none', stackgroup = 'one', 
-                             width = 630, height = 350, #size of plot
                              #Grouping variable for color and palette
                              color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length])
     }
@@ -258,7 +255,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
   }
     plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
-           legend = list(orientation = 'h',  x = 0.25, y = 1.2),
+           # legend = list(orientation = 'h',  x = 0.25, y = 1.2),
            margin = margin_plot, images = scotpho_logo) %>%
     config(displaylogo = F, editable = F) # taking out plotly logo and edit button
     
