@@ -19,13 +19,13 @@ plot_webchart(filepath="Asthma/asthma_mortality_chart1", chart_type = "multiline
 plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 ############################.
@@ -36,13 +36,13 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "mul
 plot_webchart(filepath="Cancer/Breast Cancer - Introduction Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 2. Mean age of women at birth of first child, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>ISD Scotland</a>", 
+        sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>PHS</a>", 
         xaxtitle="Year", yaxtitle="Mean age at first birth")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Female breast cancer incidence, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Breast'>ISD Scotland</a>", 
+        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Breast'>PHS</a>", 
         xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 2", 
@@ -55,7 +55,7 @@ plot_webchart(filepath="Cancer/Breast Cancer Chart 2",
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Colorectal cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Colorectal'>ISD Scotland</a>; ICD10 codes: C18-C20", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Colorectal'>PHS</a>; ICD10 codes: C18-C20", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 2", chart_type = "multiline",
@@ -68,7 +68,7 @@ plot_webchart(filepath="Cancer/Colorectal Cancer Chart 2", chart_type = "multili
 plot_webchart(filepath="Cancer/Lung Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Lung cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Lung-Cancer-and-Mesothelioma'>SCR, ISD Scotland</a>; ICD10 codes: C33 & C34", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Lung-Cancer-and-Mesothelioma'>SCR, PHS</a>; ICD10 codes: C33 & C34", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Lung Cancer Chart 2", chart_type = "multiline",

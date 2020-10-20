@@ -35,26 +35,26 @@ plot_webchart(filepath="Migration/migration_la_chart1", chart_type = "onebar",
 plot_webchart(filepath="Multiple Sclerosis/ms_primcare_chart1", chart_type = "stackedbar",
            xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
            title="Chart 1. Estimated number of consultations for<br> multiple sclerosis by staff type, Scotland ", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>ISD</a>. District nurse and health visitor data from 2006/07 onwards not available", 
+           sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>PHS</a>. District nurse and health visitor data from 2006/07 onwards not available", 
            xaxtitle="Year", yaxtitle="Estimated number of consultations")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_primcare_chart2", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
          title="Chart 2. Patients consulting GP/practice nurse at least<br> once a year for multiple sclerosis, Scotland, 2012/13", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>ISD</a>", 
+         sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>PHS</a>", 
          xaxtitle='Age group', yaxtitle="Age-sex standarized rate<br> per 1,000 patients registered")
 
 #secondary care
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          sourc="<a href='http://www.isdscotland.org/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
+          sourc="<a href='http://www.isdscotland.org/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "multiline",
@@ -67,7 +67,7 @@ plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "m
 plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2018/19", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, PHS</a>. ICD10 code G35.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 ############################.
@@ -316,8 +316,8 @@ plot_webchart(filepath="Population/pop_hb_proj_chart3",  chart_type = "multibar"
          xaxtitle='Health board', yaxtitle="Population")
 
 plot_webchart(filepath="Population/pop_hb_proj_chart4",
-       xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 4. Projected change in population<br> by NHS Board: 2016-2041", 
+       xvar="class1", yvar="measure", chart_type = "onebar", order = T,
+       title="Chart 4. Projected change in population<br> by NHS Board: 2018-2043", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
        xaxtitle='Health board', yaxtitle="Percentage")
 
@@ -328,16 +328,16 @@ plot_webchart(filepath="Population/pop_la_proj_chart5", chart_type = "multibar",
          xaxtitle='Council', yaxtitle="Population")
 
 plot_webchart(filepath="Population/pop_la_proj_chart6",
-       xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 6. Projected change in population<br> by council: 2016-2041", 
+       xvar="class1", yvar="measure", chart_type = "onebar", order = T,
+       title="Chart 6. Projected change in population<br> by council: 2018-2043", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
        xaxtitle='Council', yaxtitle="Percentage")
 
 #Pop estimation
 plot_webchart(filepath="Population/pop_scot_est_chart1", 
        xvar="class1", yvar="rounded_pop", chart_type = "onebar",
-       title="Chart 1. Population by age group, Scotland, 2018", 
-       sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
+       title="Chart 1. Population by age group, Scotland, 2019", 
+       sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/-by-theme/population/population-estimates'>NRS</a>", 
        xaxtitle='Age group', yaxtitle="Population")
 
 #Y axis range change in plotly
@@ -349,13 +349,13 @@ plot_webchart(filepath="Population/pop_scot_est_chart2",
 
 plot_webchart(filepath="Population/pop_hb_est_chart3", horizontal = T, chart_type = "stackedbar",
            yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
-           title="Chart 3. Age structure of </br>health boards, Scotland, 2018", 
+           title="Chart 3. Age structure of <br>health boards, Scotland, 2019", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
            yaxtitle="", xaxtitle="Percentage of the population")
 
 plot_webchart(filepath="Population/pop_la_est_chart4",  horizontal = T, chart_type = "stackedbar",
            yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
-           title="Chart 4. Age structure of </br>council areas, Scotland, 2018", 
+           title="Chart 4. Age structure of <br>council areas, Scotland, 2019", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
            yaxtitle="", xaxtitle="Percentage of the population")
 
@@ -485,31 +485,31 @@ plot_webchart(filepath="Social Environment/volunteering_chart1", chart_type = "b
 plot_webchart(filepath="Smoking/smoking_admissions_chart1", chart_type = "multiline_dashed",
         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
         title="Chart 1. Hospital admissions attributable to smoking, Scotland", 
-        sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
+        sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_admissions_sex_chart2", chart_type = "multiline_dashed",
           xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2",
           title="Chart 2. Hospital admissions attributable to smoking<br> by gender, Scotland", 
-          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
           xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_admissions_age_chart3", chart_type = "multiline_dashed",
           xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,yvar_dashed = "measure2",
           title="Chart 3. Hospital admissions attributable to smoking <br>by age group, Scotland", 
-          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
           xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_admissions_simd_chart4", chart_type = "multiline",
           xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
           title="Chart 4. Hospital admissions attributable to smoking<br>by SIMD quintile, Scotland", 
-          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_admissions_disease_chart5", 
          xvar="class1", yvar="measure", chart_type = "onebar",
          title="Chart 5. Hospital admissions attributable to smoking <br>by disease grouping, 2017, Scotland", 
-         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, Expressed as a percentage of all diagnosis that could be attributed to smoking", 
+         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, Expressed as a percentage of all diagnosis that could be attributed to smoking", 
          xaxtitle="Disease group", yaxtitle="Percentage attributable")
 
 ###########.
@@ -517,25 +517,25 @@ plot_webchart(filepath="Smoking/smoking_admissions_disease_chart5",
 plot_webchart(filepath="Smoking/smoking_deaths_sex_chart1",  chart_type = "multiline_dashed",
                  xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=palbysexoverall,
                  title="Chart 1. Deaths attributable to smoking by sex, </br>Scotland; 2003, 2008-2017", 
-                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
+                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
                  xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_deaths_age_chart2",  chart_type = "multiline_dashed",
                  xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=pal_five_gradient,
                  title="Chart 2. Deaths attributable to smoking by age group, </br>Scotland; 2003, 2008-2017", 
-                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>, please be aware that there are no data available for the period 2004-2007", 
+                 sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
                  xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_deaths_simd_chart3", chart_type = "multiline",
           xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,
           title="Chart 3. Deaths attributable to smoking by<br> SIMD quintile, Scotland; 2008-2017", 
-          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_deaths_disease_chart4", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 4. Deaths attributable to smoking as a percentage of<br> all deaths in each disease grouping, 2017, Scotland", 
-         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>ISD</a>", 
+         sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
          xaxtitle="Disease group", yaxtitle="Percentage attributable")
 
 ############################.
