@@ -117,7 +117,8 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
   
   ###############################################.
   # Common layout 
-  title_plot <-  list(text = title, font = list(size=15)) #title size
+  title_plot <-  list(text = paste0(title, "<br>", "<sup><i>Source: ", sourc),
+                      font = list(size=15)) #title size
   # Margin
   margin_plot <- list(l = 80, r = 50, b = 80, t = 100, pad = 4) #margins
   #yaxis plot
@@ -152,7 +153,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
                            marker = list(color = pal1color)) 
   
     ###############################################.
-    ## Bar plot with comparator line----
+    ## Bar plot with comparator line ----
   } else if (chart_type == "barcompar") { # BAR PLOT WITH COMPARATOR LINE
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar]) %>% 
       #adding bar layer
