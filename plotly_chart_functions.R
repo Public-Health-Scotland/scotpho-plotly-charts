@@ -86,6 +86,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' data_folder folder.
 #' @param chart_type what type of chart is. At the moment it accepts: "onebar",
 #' "multibar", "barcompar", "stackedbar", "oneline", "multiline", "multiline_dashe" "dualaxisline", "areaplot"
+#' @param privacy so we can make PRA charts
 #' @param xvar name of the variable for your x axis between quotes
 #' @param yvar name of the variable for your y axis between quotes
 #' @param group name of your grouping variable between quotes
@@ -109,7 +110,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' @param yaxtitle2 Only for dualaxisline. Title second y axis
 #' @param static creates static version of the chart
 
-plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, comparator, compname, 
+plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar, group = NULL, comparator, compname, 
                           title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
                           horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
@@ -264,7 +265,7 @@ plot_webchart <- function (filepath, chart_type, xvar, yvar, group = NULL, compa
     # Pushing chart to cloud server
 
     if (static == FALSE) {
-      api_create(x=plot_plotly, filename = filepath, sharing = "public") #Upload to server
+      api_create(x=plot_plotly, filename = filepath, sharing = privacy) #Upload to server
 
       ###############################################.
       # Preparing HTML final file
