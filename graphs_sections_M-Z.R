@@ -42,7 +42,7 @@ plot_webchart(filepath="Multiple Sclerosis/ms_primcare_chart2", chart_type = "mu
          xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
          title="Chart 2. Patients consulting GP/practice nurse at least<br> once a year for multiple sclerosis, Scotland, 2012/13", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>PHS</a>", 
-         xaxtitle='Age group', yaxtitle="Age-sex standarized rate<br> per 1,000 patients registered")
+         xaxtitle='Age group', yaxtitle="Age-sex standarised rate<br> per 1,000 patients registered")
 
 #secondary care
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1", chart_type = "multiline",
@@ -574,7 +574,7 @@ plot_webchart(filepath="Suicide/suicide_national_chart1", chart_type = "multilin
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
 
 plot_webchart(filepath="Suicide/suicide_national_chart2", chart_type = "multibar",
           xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
@@ -592,13 +592,13 @@ plot_webchart(filepath="Suicide/suicide_national_chart4", chart_type = "multilin
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
          title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-         xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+         xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
 
 plot_webchart(filepath="Suicide/suicide_uk_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
-          xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
+          xaxtitle="Year", yaxtitle="European age-standarised rate per 100,000")
 
 ############################.
 ### Violence ----
