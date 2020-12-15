@@ -198,38 +198,38 @@ plot_webchart(filepath="Oral Health/oral_adulttrend_chart2",
 #adults
 plot_webchart(filepath="Physical activity/pa_agegender_csv_Chart_1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2018",
+         title="Chart 1. Adults achieving physical activity recommendations <br> by age and sex, Scotland, 2019",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Physical activity/pa-adults-muscle-agegender-chart2", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2018",
+         title="Chart 2. Adults achieving physical activity recommendations,<br> including muscle strengthening activities per week, Scotland, 2019",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Physical activity/pa_adults_SIMD_csv_Chart_3", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2018",
+         title="Chart 3. Adults achieving physical activity<br> recommendations, by SIMD quintile, 2019",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Physical activity/pa-adults-timetrend-chart4",chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 4. Adults achieving physical activity<br> recommendations by sex, Scotland, 2012-2018",
+          title="Chart 4. Adults achieving physical activity<br> recommendations by sex, Scotland, 2012-2019",
           sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
           xaxtitle='Year', yaxtitle="Percentage")
 
 #children
 plot_webchart(filepath="Physical activity/pa_child_agegender_csv_Chart_1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations, Scotland, 2017",
+         title="Chart 1. Children between 2-15 years old meeting<br> physical activity recommendations, Scotland, 2019",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Physical activity/pa_childrenSIMD_csv_Chart_2", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations, by SIMD quintile, 2017",
+         title="Chart 2. Children between 2-15 years old meeting<br> physical activity recommendations, by SIMD quintile, Scotland, 2019",
          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>",
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
