@@ -95,7 +95,7 @@ plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1_PRA", chart_type 
 #new NHS board data chart
 plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1_PRA", chart_type = "barcompar", privacy = "secret",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Hospital stays <br>with MS (main diagnosis), 2019/20", 
+          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2019/20", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
@@ -599,6 +599,37 @@ plot_webchart(filepath="Suicide/suicide_uk_chart1", chart_type = "multiline",
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
           xaxtitle="Year", yaxtitle="European age-standarised rate per 100,000")
+
+##PRE-RELEASE ACCESS
+plot_webchart(filepath="Suicide/suicide_national_chart1_PRA", chart_type = "multiline", privacy = "secret", static = T,
+          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
+          title="Chart 1. Suicide rates, Scotland, all ages", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
+          xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Suicide/suicide_national_chart2_PRA", chart_type = "multibar", privacy = "secret", static = T,
+         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         title="Chart 2. Male deaths from suicide<br>over time by age group, Scotland", 
+         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
+         xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
+
+plot_webchart(filepath="Suicide/suicide_national_chart3_PRA", chart_type = "multibar", privacy = "secret", static = T,
+         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+         title="Chart 3. Female deaths from suicide<br>over time by age group, Scotland", 
+         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
+         xaxtitle="Age group", yaxtitle="Age-specific crude rate per 100,000")
+
+plot_webchart(filepath="Suicide/suicide_national_chart4_PRA", chart_type = "multiline", privacy = "secret", static = T,
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
+          xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Suicide/suicide_uk_chart1_PRA", chart_type = "multiline", privacy = "secret", static = T,
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+          title="Chart 1. Suicide death rates by UK country", 
+          sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
+          xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
 
 ############################.
 ### Violence ----
