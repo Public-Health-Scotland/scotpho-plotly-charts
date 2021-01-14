@@ -207,38 +207,38 @@ plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4", c
 #Neighbourhood staisfaction
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 1. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live, Scotland", 
+        title="Chart 1. Percentage of dults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live, Scotland, 2019", 
         sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
         xaxtitle="Year", yaxtitle="Percentage")
 
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2018", 
+          title="Chart 2. Percetnage of adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2019", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='Council', yaxtitle="Percentage")
 
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart3", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 3. Adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by SIMD decile, Scotland, 2018", 
+          title="Chart 3. Percentage of adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by SIMD decile, Scotland, 2019", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='SIMD decile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart4", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 4. Adults (aged 16 plus) who rate their neighbourhood<br>as a very good place to live, Scotland, 2018", 
+          title="Chart 4. Percentage of adults (aged 16 plus) who rate their neighbourhood<br>as a very good place to live, Scotland, 2019", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='Urban-Rural classification', yaxtitle="Percentage")
 
 #Trust
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_trust_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Adults (aged 16 plus) who believe that most people<br>can be trusted, Scotland, 2015/17", 
+          title="Chart 1. Percentage of adults (aged 16 plus) who believe that most people<br>can be trusted, Scotland, 2019", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>", 
           xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_trust_chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Adults (aged 16 plus) who believe that most people<br>in their neighbourhood can be trusted, Scotland, 2015/17", 
+          title="Chart 2. Percentage of adults (aged 16 plus) who believe that most people<br>in their neighbourhood can be trusted by SIMD quintile, 2019", 
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>. Excludes people who have just moved to the area.", 
           xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
