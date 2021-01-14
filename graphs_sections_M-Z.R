@@ -463,7 +463,7 @@ plot_webchart(filepath="Social Environment/lone_parent_chart3",
 #lone pensioners
 plot_webchart(filepath="Social Environment/lone_pensioner_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure",  comparator="comparator", compname="Scotland",
-       title="Chart 1. Lone pensioner households <br>by local authority area", 
+       title="Chart 1. Lone pensioner households <br>by local authority area, 2018", 
        sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='Local authority', yaxtitle="Percentage")
 
@@ -496,14 +496,14 @@ plot_webchart(filepath="Social Environment/neighb_rating_chart1", chart_type = "
 
 plot_webchart(filepath="Social Environment/neighb_rating_chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 2. . People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live by SIMD decile, Scotland, 2019", 
+       title="Chart 2. People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live by SIMD decile, Scotland, 2019", 
        sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD decile', yaxtitle="Percentage")
 
 #volunteering
 plot_webchart(filepath="Social Environment/volunteering_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 1. People who had given up time to help as an <br>organizer/volunteer in the last year, Scotland, 2018", 
+       title="Chart 1. Adults who provided unpaid help to organisations <br>or groups in the last 12 months, Scotland, 2018", 
        sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='Council', yaxtitle="Percentage")
 
