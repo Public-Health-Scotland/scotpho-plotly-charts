@@ -418,8 +418,8 @@ plot_webchart(filepath="Rurality/Rurality_Chart_2", chart_type = "stackedbar",
 #civic participation
 plot_webchart(filepath="Social Environment/Civic_participation_Chart_1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. People who agree with the statement: 'I can<br>influence decisions affecting my local area', Scotland, 2016", 
-          sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+          title="Chart 1. People who agree with the statement: 'I can<br>influence decisions affecting my local area', Scotland, 2018", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
           xaxtitle='Council', yaxtitle="Percentage")
 
 #Edited in plotly: x axis labels
@@ -438,7 +438,7 @@ plot_webchart(filepath="Social Environment/Civic_participation_Chart_3", chart_t
 plot_webchart(filepath="Social Environment/Civic_participation_Chart_4", 
        xvar="class1", yvar="measure", chart_type = "oneline",
        title="Chart 4. Scotland voter turnout: UK Parliament elections", 
-       sourc="<a href='http://www.ukpolitical.info/'>UK Political Info</a>", 
+       sourc="1945-2015: <a href='http://www.ukpolitical.info/'>UK Political Info</a>; 2017-2019: <a href='https://commonslibrary.parliament.uk/general-election-2019-turnout/'>UK Parliament</a>", 
        xaxtitle='Year', yaxtitle="Percentage")
 
 #Lone parents
@@ -463,15 +463,16 @@ plot_webchart(filepath="Social Environment/lone_parent_chart3",
 #lone pensioners
 plot_webchart(filepath="Social Environment/lone_pensioner_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure",  comparator="comparator", compname="Scotland",
-       title="Chart 1. Lone pensioner households <br>by NHS board of residence", 
-       sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-       xaxtitle='Health board', yaxtitle="Percentage")
+       title="Chart 1. Lone pensioner households <br>by local authority area", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
+       xaxtitle='Local authority', yaxtitle="Percentage")
 
-plot_webchart(filepath="Social Environment/lone_pensioner_chart2", chart_type = "barcompar",
-       xvar="class1", yvar="measure",  comparator="comparator", compname="Scotland",
-       title="Chart 2. Lone pensioner households by council", 
-       sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-       xaxtitle='Council', yaxtitle="Percentage")
+# Author asked for this to be removed
+# plot_webchart(filepath="Social Environment/lone_pensioner_chart2", chart_type = "barcompar",
+#        xvar="class1", yvar="measure",  comparator="comparator", compname="Scotland",
+#        title="Chart 2. Lone pensioner households by council", 
+#        sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
+#        xaxtitle='Council', yaxtitle="Percentage")
 
 #providers of unpaid care
 plot_webchart(filepath="Social Environment/unpaid_carers_chart1", chart_type = "barcompar",
@@ -489,21 +490,21 @@ plot_webchart(filepath="Social Environment/unpaid_carers_chart2", chart_type = "
 #rating of neighbourhood
 plot_webchart(filepath="Social Environment/neighb_rating_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 1. People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live, Scotland, 2015 ", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       title="Chart 1. People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live, Scotland, 2018 ", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='Council', yaxtitle="Percentage")
 
 plot_webchart(filepath="Social Environment/neighb_rating_chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 2. . People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live by SIMD decile, Scotland, 2016", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       title="Chart 2. . People rating their neighbourhood as a <br>'Very good' or 'Fairly good' place to live by SIMD decile, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD decile', yaxtitle="Percentage")
 
 #volunteering
 plot_webchart(filepath="Social Environment/volunteering_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 1. People who had given up time to help as an <br>organizer/volunteer in the last year, Scotland, 2012", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+       title="Chart 1. People who had given up time to help as an <br>organizer/volunteer in the last year, Scotland, 2018", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
        xaxtitle='Council', yaxtitle="Percentage")
 
 ############################.
