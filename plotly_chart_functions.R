@@ -43,7 +43,7 @@ pal1color <- '#08519c'
 #Palette of colors for those with no particular groupings
 palnogroups <- c('#08519c','#bdd7e7','#3182bd', '#6baed6', '#eff3ff')
 #Palette for those with a single category per sex and overall
-palbysexoverall <- c('#000000', '#08519c','#bdd7e7')
+palbysexoverall <- c('#000000', '#08519c','#a6611a')
 #Palette for alcohol conditions charts (it is variation of the previous one)
 palalccondition <- c('#08519c', '#000000','#bdd7e7')
 #Palettes for CLD mortality and morbidity by age group
