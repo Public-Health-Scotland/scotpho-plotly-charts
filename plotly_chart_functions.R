@@ -310,12 +310,12 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   #     write.table(html_file, file=paste0(data_folder, filepath, ".html"),
   #                 quote = FALSE, col.names = FALSE, row.names = FALSE)
   # 
-  #   } else if (static == TRUE) { # Exporting as PNG
-  # 
-  #         export(p = plot_plotly, file=paste0(data_folder, filepath, ".png"), zoom = 4)
-  #      
-  #   }
-  #   
+    } else if (static == TRUE) { # Exporting as PNG
+
+          export(p = plot_plotly, file=paste0(data_folder, filepath, ".png"), zoom = 4)
+
+    }
+
   
   
 } #end of function
