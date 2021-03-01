@@ -20,13 +20,13 @@ plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1", chart_type = "multili
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##Asthma PRE RELEASE ACCESS
@@ -43,14 +43,14 @@ plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1PRA", chart_type = "mult
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
-          xaxtitle="Financial year", yaxtitle="Age-sex standarised rate per 100,000")
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##Cancer ----
@@ -67,7 +67,7 @@ plot_webchart(filepath="Cancer/Breast Cancer Chart 1",
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Female breast cancer incidence, Scotland", 
         sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Breast'>PHS</a>", 
-        xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+        xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
@@ -424,25 +424,25 @@ plot_webchart(filepath="Deaths/deaths-trend-allcause-chart1", chart_type = "mult
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. All-cause death rates, Scotland", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. Rates directly age-sex standardised using the European Standard Population 2013 or 1976.", 
-           xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
+           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-byhb-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. All-cause death rates by NHS Board, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
-          xaxtitle='NHS Board', yaxtitle="Age-sex standarised rate per 100,000")
+          xaxtitle='NHS Board', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-byLA-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. All-cause death rates by council, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
-          xaxtitle='Council', yaxtitle="Age-sex standarised rate per 100,000")
+          xaxtitle='Council', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-deprivation-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 1. All-cause death rates by deprivation quintile, 2018", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. ", 
-          xaxtitle='SIMD quintile', yaxtitle="Age-sex standarised rate per 100,000")
+          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Top 10 causes
 plot_webchart(filepath="Deaths/deaths-top10causes-chart1", chart_type = "onebar",
@@ -482,13 +482,13 @@ plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart1", chart_type = "m
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Admissions to hospital with a <br>diagnosis of diabetes, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart2", chart_type = "multiline",
            xvar="class2", yvar="rate", group="class1", pal_col=pal5bysex,
            title="Chart 2. Admissions to hospital with a main <br>diagnosis of diabetic ketoacidosis, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>, ICD10 codes: E101, E111, E121, E131, E141", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Scottish diabetes survey
 plot_webchart(filepath="Diabetes/diabetes_survey_chart1", 
@@ -511,7 +511,7 @@ plot_webchart(filepath="Diabetes/diabetes_mortality_chart1", chart_type = "multi
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Deaths where diabetes was recorded as the<br> underlying cause or as a contributory factor to death, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
-           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #International comparison
 plot_webchart(filepath="Diabetes/diabetes_international_chart1", chart_type = "barcompar",
@@ -525,20 +525,20 @@ plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart1_pra", chart_type 
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Admissions to hospital with a <br>diagnosis of diabetes, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart2_pra", chart_type = "multiline", privacy = "secret", 
            xvar="class2", yvar="rate", group="class1", pal_col=pal5bysex,
            title="Chart 2. Admissions to hospital with a main <br>diagnosis of diabetic ketoacidosis, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>, ICD10 codes: E101, E111, E121, E131, E141", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #mortality
 plot_webchart(filepath="Diabetes/diabetes_mortality_chart1_pra", chart_type = "multiline", privacy = "secret", 
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Deaths where diabetes was recorded as the<br> underlying cause or as a contributory factor to death, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
-           xaxtitle="Year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #nhs boards
 plot_webchart(filepath="Diabetes/diabetes_nhsboard_chart1_pra", chart_type = "multibar", privacy = "secret",
@@ -659,13 +659,13 @@ plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2", chart_type = "
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##EPILEPSY PRE RELEASE ACCESS
@@ -682,14 +682,14 @@ plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2_PRA", chart_type
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 481
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
+           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##Ethnicity ----
@@ -741,7 +741,7 @@ plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_2_new", ch
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. Age-standardised all-cause mortality rates under 75<br> years by least and most deprived deciles (using SIMD income-employment index),<br> Scotland", 
            sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
-           xaxtitle="Year", yaxtitle="European age-standarised mortality rate<br>per 100,000 population")
+           xaxtitle="Year", yaxtitle="European age-standardised mortality rate<br>per 100,000 population")
 
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_3", 
              xvar="class1", yvar="measure", yvar2="measure2", chart_type = "dualaxislines",
@@ -760,7 +760,7 @@ plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_4", chart_
        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
 
        xaxtitle='SIMD income-employment index decile', 
-       yaxtitle="European age-standarised mortality rate<br>per 100,000 populaton")
+       yaxtitle="European age-standardised mortality rate<br>per 100,000 populaton")
 
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_5", chart_type = "areaplot",
          xvar="age_grp", yvar="value", group="cause", pal_col=pal_health_ineq_area,
@@ -906,20 +906,20 @@ plot_webchart(filepath="Income and employment/IE-worklessness-chart2", chart_typ
 plot_webchart(filepath="Injuries/inj_road_traffic_chart_1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Road traffic casualties, Scotland",
-           sourc="<a href='https://www.transport.gov.scot/publication/reported-road-casualties-scotland-2017/'>Transport Scotland</a>", 
-           xaxtitle="Year", yaxtitle="Number")
+           sourc="<a href='https://www.transport.gov.scot/publication/reported-road-casualties-scotland-2019/statistical-tables-1/'>Transport Scotland</a>. Injury definitions changed in 2019: cannot compare earlier years.", 
+           xaxtitle="Year", yaxtitle="Number of casualties")
 
 plot_webchart(filepath="Injuries/inj_seccare_chart1", chart_type = "multiline",
         xvar="class1", yvar="measure", group="class2", pal_col=palalccondition,
         title="Chart 1. Injury related hospital admissions, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Emergency-Care/Unintentional-Injuries/'>SMR01, ISD</a>", 
-        xaxtitle='Year', yaxtitle="Age-sex standarized rate per 100,000")
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 3</a>", 
+        xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Injuries/inj_mortality_chart_2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Injury related deaths, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Emergency-Care/Unintentional-Injuries/'>ISD</a>", 
-        xaxtitle='Year', yaxtitle="Age-sex standarized rate per 100,000")
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 4</a>", 
+        xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 
 ##END
