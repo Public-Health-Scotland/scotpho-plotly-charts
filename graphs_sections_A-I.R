@@ -262,20 +262,20 @@ plot_webchart(filepath="COPD/COPD_Primary_care_chart_2", chart_type = "stackedba
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
-           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PSD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 2. Incidence of COPD, Scotland", 
-           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PSD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000 per year")
 
 #Mortality
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Mortality rate for COPD by gender, Scotland", 
-           sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
+           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Deprivation
@@ -339,14 +339,14 @@ plot_webchart(filepath="COPD/COPD_International - Chart 2", chart_type = "onebar
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #Chart 469
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 2. Incidence of COPD, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000 per year")
 
 #Mortality
@@ -354,7 +354,7 @@ plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2_PRA", chart_type = "m
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Mortality rate for COPD by gender, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Deprivation
@@ -362,14 +362,14 @@ plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multilin
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_1_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 1. COPD admissions in males, Scotland, 2019/20", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
+         sourc="https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 475
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_2_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 2. COPD admissions in females, Scotland, 2019/20", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
+         sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #NHS board
@@ -384,7 +384,7 @@ plot_webchart(filepath="COPD/COPD - NHS Board data - Chart 1", chart_type = "bar
 plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "barcompar", privacy = "secret",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2019/20", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 codes J40-J44.", 
+          sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 codes J40-J44.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 ############################.
