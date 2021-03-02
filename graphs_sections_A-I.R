@@ -524,13 +524,13 @@ plot_webchart(filepath="Diabetes/diabetes_international_chart1", chart_type = "b
 plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart1_pra", chart_type = "multiline", privacy = "secret", 
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Admissions to hospital with a <br>diagnosis of diabetes, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
+           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>PHS</a>; ICD10 codes: E10, E11, E12, E13, E14", 
            xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart2_pra", chart_type = "multiline", privacy = "secret", 
            xvar="class2", yvar="rate", group="class1", pal_col=pal5bysex,
            title="Chart 2. Admissions to hospital with a main <br>diagnosis of diabetic ketoacidosis, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>ISD</a>, ICD10 codes: E101, E111, E121, E131, E141", 
+           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>PHS</a>, ICD10 codes: E101, E111, E121, E131, E141", 
            xaxtitle="Financial year", yaxtitle="Age-sex standarized rate per 100,000")
 
 #mortality
