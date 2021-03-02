@@ -31,73 +31,52 @@ plot_webchart(filepath="Migration/migration_la_chart1", chart_type = "onebar",
 ### Multiple sclerosis----
 ############################.
 ############################.
-#primary care
-plot_webchart(filepath="Multiple Sclerosis/ms_primcare_chart1", chart_type = "stackedbar",
-           xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
-           title="Chart 1. Estimated number of consultations for<br> multiple sclerosis by staff type, Scotland ", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>PHS</a>. District nurse and health visitor data from 2006/07 onwards not available", 
-           xaxtitle="Year", yaxtitle="Estimated number of consultations")
-
-plot_webchart(filepath="Multiple Sclerosis/ms_primcare_chart2", chart_type = "multibar",
-         xvar="class2", yvar="measure", group="class1", pal_col = palnogroups,
-         title="Chart 2. Patients consulting GP/practice nurse at least<br> once a year for multiple sclerosis, Scotland, 2012/13", 
-         sourc="<a href='http://www.isdscotland.org/Health-Topics/General-Practice/GP-consultations/'>PHS</a>", 
-         xaxtitle='Age group', yaxtitle="Age-sex standarised rate<br> per 1,000 patients registered")
 
 #secondary care
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
+#mortality
 plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "multiline",
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35", 
           xaxtitle='Year of registration', yaxtitle="Number of deaths")
 
 #new NHS board data chart
 plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2018/19", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, PHS</a>. ICD10 code G35.", 
+          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2019/20", 
+          sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 code G35.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 ### Multiple sclerosis PRE RELEASE ACCESS
+
+#Only secondary care charts require PRA
 #Chart 590
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #Chart 592
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
           title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/'>ISD</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate of <br>new cases per 100,000")
+          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
-#Chart 594
-plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1_PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
-          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35, ICD9 code: 340", 
-          xaxtitle='Year of registration', yaxtitle="Number of deaths")
 
-#new NHS board data chart
-plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1_PRA", chart_type = "barcompar", privacy = "secret",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2019/20", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD Scotland</a>. ICD10 code G35.", 
-          xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
 ############################.
 ### Obesity ----
@@ -575,7 +554,7 @@ plot_webchart(filepath="Suicide/suicide_national_chart1", chart_type = "multilin
           xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
           title="Chart 1. Suicide rates, Scotland, all ages", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
+          xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Suicide/suicide_national_chart2", chart_type = "multibar",
           xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
@@ -593,13 +572,13 @@ plot_webchart(filepath="Suicide/suicide_national_chart4", chart_type = "multilin
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
          title="Chart 4. Deaths from intentional self harm and events<br>of undetermined intent, Scotland", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a>", 
-         xaxtitle="Year", yaxtitle="Age-sex standarised rate per 100,000")
+         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Suicide/suicide_uk_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
-          xaxtitle="Year", yaxtitle="European age-standarised rate per 100,000")
+          xaxtitle="Year", yaxtitle="European age-standardised rate per 100,000")
 
 ##PRE-RELEASE ACCESS
 plot_webchart(filepath="Suicide/suicide_national_chart1_PRA", chart_type = "multiline", privacy = "secret", static = T,
@@ -630,7 +609,7 @@ plot_webchart(filepath="Suicide/suicide_uk_chart1_PRA", chart_type = "multiline"
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Suicide death rates by UK country", 
           sourc="<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/suicidesintheunitedkingdomreferencetables'>ONS</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/suicides'>NRS</a> & <a href='https://www.nisra.gov.uk/statistics/cause-death/suicide-deaths'>NISRA</a>", 
-          xaxtitle="Year", yaxtitle="European age-standarized rate per 100,000")
+          xaxtitle="Year", yaxtitle="European age-standardised rate per 100,000")
 
 ############################.
 ### Violence ----
