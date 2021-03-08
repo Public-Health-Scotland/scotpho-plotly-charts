@@ -362,7 +362,7 @@ plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multilin
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_1_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 1. COPD admissions in males, Scotland, 2019/20", 
-         sourc="https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
+         sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 475
