@@ -593,6 +593,7 @@ plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 3", chart_type 
 ############################.
 ##Disability ----
 ############################.
+## DO NOT RUN - NOT UPDATED.
 plot_webchart(filepath="Disability/Disability - ESA - Chart1Joomla", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Adults claiming Employment & Support<br> Allowance or Incapacity Benefits, Scotland", 
@@ -601,49 +602,49 @@ plot_webchart(filepath="Disability/Disability - ESA - Chart1Joomla",
 
 plot_webchart(filepath="Disability/disability-LTC-chart1", chart_type = "multibar",
        xvar="class1", yvar="measure", group="class2", pal=palnogroups,
-       title="Chart 1. Adults with a limiting long-term physical or<br>mental health condition or illness, Scotland, 2018", 
+       title="Chart 1. Adults with a limiting long-term physical or<br>mental health condition or illness, Scotland, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='Age Group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-LTC-chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults with a limiting long-term physical or mental<br>health condition or illness, by SIMD quintile, Scotland, 2018", 
+       title="Chart 2. Adults with a limiting long-term physical or mental<br>health condition or illness, by SIMD quintile, Scotland, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-LTC-chart3", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 3. Adults with a limiting long-term physical or mental<br>health condition/illness by NHS health board, 2018", 
+       title="Chart 3. Adults with a limiting long-term physical or mental<br>health condition/illness by NHS health board, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='Health Board', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-LTC-chart4", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 4. Adults with a limiting long-term physical or mental<br>health condition/illness by council area, 2018", 
+       title="Chart 4. Adults with a limiting long-term physical or mental<br>health condition/illness by council area, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='Council Area', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-sah-chart1", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal=palnogroups,
-         title="Chart 1. Adults rating their health as bad or very bad,<br>by age and sex, Scotland, 2018", 
+         title="Chart 1. Adults rating their health as bad or very bad,<br>by age and sex, Scotland, 2019", 
          sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
          xaxtitle='Age Group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-sah-chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults rating their health as bad or very bad,<br>by SIMD quintile, Scotland, 2018", 
+       title="Chart 2. Adults rating their health as bad or very bad,<br>by SIMD quintile, Scotland, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-sah-chart3", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 3. Adults rating their health as bad or very bad,<br>by NHS health board, 2018", 
+       title="Chart 3. Adults rating their health as bad or very bad,<br>by NHS health board, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='Health Board', yaxtitle="Percentage")
 
 plot_webchart(filepath="Disability/disability-sah-chart4", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 4. Adults rating their health as bad or very bad,<br>by council area, 2018", 
+       title="Chart 4. Adults rating their health as bad or very bad,<br>by council area, 2019", 
        sourc="<a href='http://www.gov.scot/Topics/Statistics/About/Surveys/SSCQ'>SSCQ, Scottish Government</a>. Adults aged 16 and over.", 
        xaxtitle='Council Area', yaxtitle="Percentage")
 
