@@ -32,24 +32,17 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "mul
 ##Asthma PRE RELEASE ACCESS
 
 #Chart 
-plot_webchart(filepath="Asthma/asthma_mortality_chart1PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Deaths due to asthma, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
