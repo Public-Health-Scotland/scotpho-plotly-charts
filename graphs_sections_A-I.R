@@ -428,19 +428,19 @@ plot_webchart(filepath="Deaths/deaths-trend-allcause-chart1", chart_type = "mult
 
 plot_webchart(filepath="Deaths/deaths-allcause-byhb-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by NHS Board, 2018", 
+          title="Chart 1. All-cause death rates by NHS Board, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='NHS Board', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-byLA-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by council, 2018", 
+          title="Chart 1. All-cause death rates by council, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='Council', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-deprivation-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by deprivation quintile, 2018", 
+          title="Chart 1. All-cause death rates by deprivation quintile, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. ", 
           xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
