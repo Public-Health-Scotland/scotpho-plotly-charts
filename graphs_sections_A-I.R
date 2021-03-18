@@ -32,24 +32,17 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "mul
 ##Asthma PRE RELEASE ACCESS
 
 #Chart 
-plot_webchart(filepath="Asthma/asthma_mortality_chart1PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Deaths due to asthma, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
@@ -362,7 +355,7 @@ plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multilin
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_1_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
          title="Chart 1. COPD admissions in males, Scotland, 2019/20", 
-         sourc="https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
+         sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 475
@@ -652,45 +645,38 @@ plot_webchart(filepath="Disability/disability-sah-chart4", chart_type = "onebar"
 ##Epilepsy ----
 ############################.
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
+           xvar="class2", yvar="measure", group="class1", tick_freq=1, pal_col=palbysexoverall,
+           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause on the death certificate, Scotland", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41", 
            xaxtitle="Year", yaxtitle="Number of deaths")
 
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xvar="class2", yvar="measure", group="class1", tick_freq=1, pal_col=palnogroups,
+           title="Chart 1. New cases (incidence) per 100,000 population with a main<br>diagnosis of epilepsy by sex, Scotland", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xvar="class2", yvar="measure", group="class1", tick_freq=1, pal_col=pal3bysex,
+           title="Chart 2. New cases (incidence) per 100,000 population with a main<br>diagnosis of epilepsy by age and sex, Scotland", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##EPILEPSY PRE RELEASE ACCESS
 
-#Chart 477
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
-           xaxtitle="Year", yaxtitle="Number of deaths")
-
 #Chart 479
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xvar="class2", yvar="measure", group="class1", tick_freq=1, pal_col=palnogroups,
+           title="Chart 1. New cases (incidence) per 100,000 population with<br>a main diagnosis of epilepsy by sex, Scotland", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 481
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
+           xvar="class2", yvar="measure", group="class1", tick_freq=1, pal_col=pal3bysex,
+           title="Chart 2. New cases (incidence) per 100,000 population with<br>a main diagnosis of epilepsy by age and sex, Scotland", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.

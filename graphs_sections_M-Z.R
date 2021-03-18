@@ -34,28 +34,28 @@ plot_webchart(filepath="Migration/migration_la_chart1", chart_type = "onebar",
 
 #secondary care
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35", 
+          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=palnogroups,
+          title="Chart 1. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=pal3bysex,
+          title="Chart 2. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #mortality
 plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "multiline",
-          xvar="class1", yvar="measure", group="class2", pal_col=palbysexoverall,
-          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause of death certificate, Scotland", 
+          xvar="class1", yvar="measure", group="class2", tick_freq = 1, pal_col=palbysexoverall,
+          title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause on the death certificate, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35", 
           xaxtitle='Year of registration', yaxtitle="Number of deaths")
 
 #new NHS board data chart
 plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Hospital stays <br>with MS (main diagnosis), 2019/20", 
+          title="Chart 1. Hospital stays per 100,000 population with<br> a main diagnosis of multiple sclerosis, 2019/20", 
           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 code G35.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
@@ -64,16 +64,16 @@ plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "b
 #Only secondary care charts require PRA
 #Chart 590
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 1. New cases (incidences) per 100,000 people with<br> a principal diagnosis of multiple sclerosis in Scotland", 
-          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=palnogroups,
+          title="Chart 1. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #Chart 592
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-          title="Chart 2. New cases (incidences) with a principal<br> diagnosis of multiple sclerosis, Scotland", 
-          sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 code: G35, ICD9 code: 340", 
+          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=pal3bysex,
+          title="Chart 2. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
+          sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 
