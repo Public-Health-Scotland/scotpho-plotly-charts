@@ -900,13 +900,13 @@ plot_webchart(filepath="Injuries/inj_road_traffic_chart_1", chart_type = "multil
 plot_webchart(filepath="Injuries/inj_seccare_chart1", chart_type = "multiline",
         xvar="class1", yvar="measure", group="class2", pal_col=palalccondition,
         title="Chart 1. Injury related hospital admissions, Scotland", 
-        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 3</a>", 
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2021 Table 1</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Injuries/inj_mortality_chart_2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Injury related deaths, Scotland", 
-        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 4</a>", 
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2021 Table 2</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 
