@@ -615,16 +615,16 @@ plot_webchart(filepath="Suicide/suicide_uk_chart1_PRA", chart_type = "multiline"
 ### Violence ----
 ############################.
 plot_webchart(filepath="Violence/Violence - National trends Chart 1", chart_type = "multiline",
-        xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+        xvar="class2", yvar="measure", group="class1", pal_col=palalccondition, markers = "lines+markers",
         title="Chart 1. Non-sexual crimes of violence recorded <br>by the police, Scotland", 
         sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
         xaxtitle="Financial year", yaxtitle="Number of crimes")
 
 plot_webchart(filepath="Violence/Violence - National trends Chart 2", chart_type = "multiline",
-        xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+        xvar="class2", yvar="measure", group="class1", pal_col=pal_five_gradient,
         title="Chart 2. Rates of non-sexual crimes of violence<br>recorded by the police, Scotland", 
         sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
-        xaxtitle="Financial year", yaxtitle="Rate per 10,000")
+        xaxtitle="Financial year", yaxtitle="Rate per 10,000 population")
 
 plot_webchart(filepath="Violence/Violence - Health data Chart 1", chart_type = "multibar",
           xvar="class2", yvar="measure", group="class1",  pal_col=palnogroups,
