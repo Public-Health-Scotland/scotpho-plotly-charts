@@ -387,26 +387,26 @@ plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "barcompar
 plot_webchart(filepath="Crime/Crime - National trends Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Crimes recorded by police, Scotland", 
-        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
-        xaxtitle='Year', yaxtitle="Number")
+        sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
+        xaxtitle='Financial year', yaxtitle="Number of crimes recorded")
 
 plot_webchart(filepath="Crime/Crime - by local authority Chart 1", chart_type = "barcompar",
        xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
-       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2018/19", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
+       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2019/20", 
+       sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
        xaxtitle='Council area', yaxtitle="Crime rate per 10,000 population")
 
 plot_webchart(filepath="Crime/crime-national-target-chart1", chart_type = "onebar",
        xvar="labelsx", yvar="measure", 
        title="Chart 1. Adults who were a victim of <br>one or more crimes, Scotland",
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>",
-       xaxtitle='Year', yaxtitle="Percentage")
+       sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>",
+       xaxtitle='Financial year', yaxtitle="Percentage of adults")
 
 plot_webchart(filepath="Crime/crime-national-target-chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
        title="Chart 2. Adults who think crime in their area has stayed<br> the same or reduced in the past 2 years, Scotland", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>", 
-       xaxtitle='Year', yaxtitle="Percentage")
+       sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>", 
+       xaxtitle='Financial year', yaxtitle="Percentage of adults")
 
 ############################.
 ##Deaths ----
