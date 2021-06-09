@@ -114,7 +114,7 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
                           title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
                           horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
-                          static = F) {
+                          static = F, markers = "lines") {
   
   ###############################################.
   # Common layout 
@@ -206,7 +206,7 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     # legend_plot <-  list(x = 100, y = 0.5) 
     
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
-                           type = 'scatter', mode = 'lines',
+                           type = 'scatter', mode = markers,
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       # to get hover compare mode as default
       layout(hovermode = 'false')#, legend = legend_plot) 
