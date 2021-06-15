@@ -833,60 +833,60 @@ plot_webchart(filepath="Immunisations/immunisation_inequalities_chart1", chart_t
 #Household income
 plot_webchart(filepath="Income and employment/IE-household-income-chart1", chart_type = "multiline",
            xvar="class1", yvar="measure", group="class2", pal_col=pal_gradient9,
-           title="Chart 1. Equivalised weekly household income (BHC) in Scotland", 
+           title="Chart 1. Equivalised weekly household income (AHC) in Scotland by decile", 
            sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI, DWP</a>", 
-           xaxtitle="Year", yaxtitle="£ per week")
+           xaxtitle="3-year average", yaxtitle="£ per week")
 
 plot_webchart(filepath="Income and employment/IE-household-income-chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
           title="Chart 2. Percentage of households reporting that they do not<br>manage well financially", 
-          sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey 2016</a>", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-household-survey-publications/'>Scottish Household Survey 2019</a>", 
           xaxtitle='Household type', yaxtitle="Percentage")
 
 #Working age poverty
 plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Percentage of population living in relative poverty<br>(After Housing Costs)", 
-           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI dataset, DWP</a>", 
-           xaxtitle="Year", yaxtitle="Percentage")
+           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI, DWP</a>", 
+           xaxtitle="3-year average", yaxtitle="Percentage")
 
-plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart2", chart_type = "barcompar",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of households where at least one person is<br>in work claiming Working Tax Credits", 
-          sourc="<a href='https://www.gov.uk/government/publications/hmrc-annual-report-and-accounts-2014-to-2015'>HMRC 2015/16</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/qmis/annualpopulationsurveyapsqmi>Annual Population Survey Household Datasets (2015)</a>", 
-          xaxtitle='Local authority', yaxtitle="Percentage of all households")
+plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart2", chart_type = "multiline",
+          xvar="class1", yvar="measure", group="class2",
+          title="Chart 2. Proportion of adults and children living in relative poverty <br>(After Housing Costs) who were working, Scotland", 
+          sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI, DWP</a>", 
+          xaxtitle="3-year average", yaxtitle="Proportion")
 
 #Availability of work
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart1", chart_type = "multiline",
            xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-           title="Chart 1. Employment rates for men and women in Scotland", 
-           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href='http://casweb.mimas.ac.uk/'>Census of Population</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates'>National Records for Scotland</a>", 
+           title="Chart 1. Employment rates for males and females in Scotland", 
+           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey, Office for National Statistics</a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Occupations in Scotland", 
-       sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Occupations', yaxtitle="Vacancies per 10 ILO unemployed")
+       title="Chart 2. Jobs density by Scottish region, 2019", 
+       sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>", 
+       xaxtitle="Region", yaxtitle="Jobs density")
 
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "onebar",
        xvar="class1", yvar="measure", order = TRUE,
-       title="Chart 3. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Scottish regions", 
-       sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Scottish region', yaxtitle="Vacancies per 10 ILO unemployed")
+       title="Chart 3. Changes in employees, jobs, claimant unemployed and ILO unemployment, Scotland", 
+       sourc="<a href='https://www.nomisweb.co.uk/sources/cc'>Claimant Count, Office for National Statistics</a>", 
+       yaxtitle="Thousands")
 
 #Legend overlay in plotly
-plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Percentage of adults aged 16-64 claiming unemployment<br>benefits, ILO unemployed and any out-of work benefits", 
-           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Work and Pensions Longitudinal Survey, WPLS</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/datasets/claimantcountandvacanciesdataset>Claimant Count</a>", 
-           xaxtitle="Year", yaxtitle="Percentage of adults aged 16-64")
+plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "onebar",
+           xvar="class1", yvar="measure",
+           title="Chart 1. People aged 16-64 who are ILO unemployed or economically<br> inactive but want work, Scotland, 2020",
+           sourc="<a href='https://www.nomisweb.co.uk/datasets/apsnew'>Annual Population Survey, Office for National Statistics</a>", 
+           yaxtitle="Number of people")
 
 plot_webchart(filepath="Income and employment/IE-worklessness-chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region", 
+          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region, November 2020", 
           sourc="<a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Longitudinal Survey, WPLS</a>, <a href=https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates>National Records of Scotland</a>.", 
-          xaxtitle='Region', yaxtitle="Percentage of adults aged 16-64")
+          xaxtitle='Region', yaxtitle="Percentage")
 
 ############################.
 ##Injuries ----
