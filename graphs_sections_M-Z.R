@@ -250,14 +250,14 @@ plot_webchart(filepath="Physical environment/environmental_justice_chart3",
 #green spaces
 plot_webchart(filepath="Physical environment/Greenspace SIMD - Chart 1", 
        xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 1. Adults living within a 5 minute walk <br> of greenspace, Scotland, 2017", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       title="Chart 1. Adults living within a 5 minute walk <br> of green or blue space, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/publications/scottish-household-survey-2019-annual-report/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Physical environment/Greenspace SIMD - Chart2", 
        xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 2. Adults satisfied/fairly satisfied with<br>local greenspace, Scotland, 2017", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       title="Chart 2. Adults satisfied/fairly satisfied with<br>local green or blue space, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/publications/scottish-household-survey-2019-annual-report/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 #housing
@@ -276,15 +276,15 @@ plot_webchart(filepath="Physical environment/Housing overcrowded - Chart 2",
 #maintenance
 plot_webchart(filepath="Physical environment/Maintenance - Chart 1", 
        xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 1. Adults saying that rubbish/litter lying around<br>is very/fairly common in their neighbourhood, Scotland, 2017", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       title="Chart 1. Adults saying that rubbish/litter lying around<br>is very/fairly common in their neighbourhood, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/publications/scottish-household-survey-2019-annual-report/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD decile', yaxtitle="Percentage")
 
 #traffic
 plot_webchart(filepath="Physical environment/Traffic - Chart 1", 
        xvar="class1", yvar="measure", chart_type = "oneline",
        title="Chart 1. Driver journeys delayed by congestion, Scotland", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey</a>", 
+       sourc="<a href='https://www.transport.gov.scot/publication/transport-and-travel-in-scotland-2019-results-from-the-scottish-household-survey/'>Travel and Transport in Scotland</a>", 
        xaxtitle='Year', yaxtitle="Percentage")
 
 ############################.
