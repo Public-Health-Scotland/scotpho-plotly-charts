@@ -114,8 +114,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
                           title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
                           horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
-                          static = F, markers = "lines") {
-  
+                          static = F, markers = "lines", simd_dec = FALSE) {
+
   ###############################################.
   # Common layout 
   title_plot <-  list(text = paste0(title, "<br>", "<sup><i>Source: ", sourc),
@@ -132,6 +132,13 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   
   data_plot <- read_csv(paste0(data_folder, filepath, ".csv")) %>% 
     mutate_if(is.numeric, round, 1) %>% as.data.frame()
+  
+  ## Define order SIMD deciles rather than alphabetical ----
+  if (simd_dec == TRUE) { 
+    data_plot <- data_plot %>% mutate(class1=factor(class1, levels=c("1 - most deprived","2","3","4",
+                                                       "5","6","7","8","9","10 - least deprived")))
+  }
+  
     
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
