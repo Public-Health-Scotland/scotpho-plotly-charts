@@ -221,12 +221,13 @@ plot_webchart(filepath="Physical activity/pa_children_international_chart4", cha
 ############################.
 ### Physical environment ----
 ############################.
+
 #active travel
-plot_webchart(filepath="Physical environment/Active travel - Chart 1", chart_type = "stackedbar",
-           xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-           title="Chart 1. Journeys made by main mode of transport", 
-           sourc="<a href='https://www.transport.gov.scot/publication/transport-and-travel-in-scotland-2017/'>Transport Scotland</a>", 
-           xaxtitle="Year", yaxtitle="Percentage journeys made")
+plot_webchart(filepath="Physical environment/Active travel - Chart 1", chart_type = "multiline",
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, 
+          title="Chart 1. Journeys made by main mode of transport",
+          sourc="<a href='https://www.gov.scot/publications/scottish-household-survey-2019-annual-report/'>Scottish Household Survey</a>", 
+          xaxtitle='Year', yaxtitle="Percentage journeys made")
 
 #environmental justice
 plot_webchart(filepath="Physical environment/environmental_justice_chart1", 
@@ -275,8 +276,8 @@ plot_webchart(filepath="Physical environment/Housing overcrowded - Chart 2",
 
 #maintenance
 plot_webchart(filepath="Physical environment/Maintenance - Chart 1", 
-       xvar="class1", yvar="measure", chart_type = "onebar",
-       title="Chart 1. Adults saying that rubbish/litter lying around<br>is very/fairly common in their neighbourhood, Scotland, 2019", 
+       xvar="class1", yvar="measure", chart_type = "onebar", simd_dec=TRUE,
+       title="Chart 1. Adults saying that rubbish/litter lying around is<br>very/fairly common in their neighbourhood, Scotland, 2019", 
        sourc="<a href='https://www.gov.scot/publications/scottish-household-survey-2019-annual-report/'>Scottish Household Survey</a>", 
        xaxtitle='SIMD decile', yaxtitle="Percentage")
 
