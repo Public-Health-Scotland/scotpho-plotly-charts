@@ -74,9 +74,9 @@ pal5bysex <- c('#2166ac','#4393c3', '#92c5de', '#d1e5f0', '#053061',
 ############################.
 #ScotPHO logo.
 #Needs to be https address or if local in code 64 (the latter does not work with 4.7 plotly)
-scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-charts/master/scotpho.png",
-                     xref = "paper", yref = "paper",
-                     x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
+# scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-charts/master/scotpho.png",
+#                      xref = "paper", yref = "paper",
+#                      x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
 
 ############################.
 ### Plot function ----
@@ -196,6 +196,7 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
                                type = "bar",  #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
+                 
       } 
     
     ###############################################.
@@ -203,7 +204,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   } else if (chart_type == "oneline") { # SINGLE LINE PLOT
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
                              type = "scatter", mode='lines',  
-                             line = list(color = pal1color)) #Grouping variable for color and palette
+                             line = list(color = pal1color)) %>% #Grouping variable for color and palette
+                             layout(yaxis = list(hoverformat = ",")) 
       
     ###############################################.
     ## Multiple lines  ----
@@ -265,7 +267,9 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
            # legend = list(orientation = 'h',  x = 0.25, y = 1.2),
-           margin = margin_plot, images = scotpho_logo) %>%
+           margin = margin_plot 
+           #images = scotpho_logo
+           ) %>%
     config(displaylogo = F, editable = F) # taking out plotly logo and edit button
     
     ###############################################.
