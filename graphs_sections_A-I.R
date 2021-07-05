@@ -872,11 +872,11 @@ plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", cha
        sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>", 
        xaxtitle="Region", yaxtitle="Jobs density")
 
-plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "onebar",
-       xvar="class1", yvar="measure", order = TRUE,
-       title="Chart 3. Changes in employees, jobs, claimant unemployed and ILO unemployment, Scotland", 
-       sourc="<a href='https://www.nomisweb.co.uk/sources/cc'>Claimant Count, Office for National Statistics</a>", 
-       yaxtitle="Thousands")
+plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "oneline",
+       xvar="class1", yvar="measure", tick_freq=4, order=TRUE,
+       title="Chart 3. Number of payrolled employees, Scotland, 2014 to 2021", 
+       sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/realtimeinformationstatisticsreferencetableseasonallyadjusted'>HMRC Paye-As-You-Earn Real Time Information, Office for National Statistics</a>", 
+       xaxtitle="Month", yaxtitle="Number of payrolled employees (millions)")
 
 #Worklessness
 plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "onebar",
