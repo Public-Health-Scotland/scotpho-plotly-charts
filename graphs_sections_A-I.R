@@ -866,12 +866,14 @@ plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart1", cha
            sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey, Office for National Statistics</a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
+#Note: chnaged line 134 in plotly_chart_functions.R to 2 decimal places for this chart
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "onebar",
-       xvar="class1", yvar="measure", 
+       xvar="class1", yvar="measure", order=TRUE,
        title="Chart 2. Jobs density by Scottish region, 2019", 
        sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>", 
        xaxtitle="Region", yaxtitle="Jobs density")
 
+#Note: commented out 'rangemode="tozero"' in line 126 of plotly_chart_functions.R to allow the y-axis to not start at zero.
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "oneline",
        xvar="class1", yvar="measure", tick_freq=4, order=TRUE,
        title="Chart 3. Number of payrolled employees, Scotland, 2014 to 2021", 
