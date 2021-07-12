@@ -547,40 +547,39 @@ plot_webchart(filepath="Diabetes/diabetes_nhsboard_chart1_pra", chart_type = "mu
 #Adults
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2018", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-       xaxtitle='SIMD quintile 2016', yaxtitle="Percentage")
+       title="Chart 2. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
+       xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 3", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
          title="Chart 3. Adults consuming 5 or more portions<br> of fruit and vegetables per day, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>, <a href='http://content.digital.nhs.uk/healthsurveyengland'>Health Survey for England</a>", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>, <a href='http://content.digital.nhs.uk/healthsurveyengland'>Health Survey for England</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 #Children
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 1", chart_type = "multibar",
-         xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 1. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         xvar="class2", yvar="measure", group="class1", pal=palnogroups, order=TRUE,
+         title="Chart 1. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
-#extending axis to 20 in plotly
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 2", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 2. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 2. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 3", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 3. Children consuming NO portions<br>of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 3. Children consuming NO portions<br>of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 ############################.
