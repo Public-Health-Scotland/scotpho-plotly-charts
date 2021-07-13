@@ -35,6 +35,11 @@ if (sessionInfo()$platform %in% c("x86_64-redhat-linux-gnu (64-bit)", "x86_64-pc
   data_folder <- "//stats/ScotPHO/Website/Charts/Plotly/data/"
 
 }
+
+# Buttons to remove
+bttn_remove <-  list('select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d',  
+                     'autoScale2d',   'toggleSpikelines',  'hoverCompareCartesian',  
+                     'hoverClosestCartesian', 'zoom2d', 'pan2d', 'resetScale2d')
   
 ############################.
 ### Palettes ----
@@ -71,12 +76,6 @@ pal3bysex <- c('#08519c','#4393c3', '#d1e5f0', '#8c510a', '#bf812d', '#f6e8c3')
 pal5bysex <- c('#2166ac','#4393c3', '#92c5de', '#d1e5f0', '#053061',
                '#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#543005')
 
-############################.
-#ScotPHO logo.
-#Needs to be https address or if local in code 64 (the latter does not work with 4.7 plotly)
-# scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-charts/master/scotpho.png",
-#                      xref = "paper", yref = "paper",
-#                      x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
 
 ############################.
 ### Plot function ----
@@ -270,7 +269,7 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
            margin = margin_plot 
            #images = scotpho_logo
            ) %>%
-    config(displaylogo = F, editable = F) # taking out plotly logo and edit button
+    config(displaylogo = F, displayModeBar = TRUE, modeBarButtonsToRemove = bttn_remove) # taking out plotly logo and edit button
     
     ###############################################.
     # Pushing chart to cloud server
