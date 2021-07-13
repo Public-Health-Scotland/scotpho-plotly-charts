@@ -283,6 +283,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
       ###############################################.
   #     # Preparing HTML final file
   #     # This should be used once the Umbraco solution works well
+      # # Setting file permissions to anyone to allow writing/overwriting of project files
+      # Sys.umask("006")
   #     plot_name <- sub('.*\\/', '', filepath) # name without the folder bit
   # 
   #     # Partial bundle only saves the needed files (js) you need for the chart
