@@ -10,7 +10,7 @@ source("plotly_chart_functions.R")
 ### Migration----
 ############################.
 plot_webchart(filepath="Migration/migration_scottish_chart1", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, tick_freq = 3,
+          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq = 3,
           title="Chart 1. Scottish migration trends: <br>natural change and net migration", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Change in population")
@@ -34,20 +34,20 @@ plot_webchart(filepath="Migration/migration_la_chart1", chart_type = "onebar",
 
 #secondary care
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=palnogroups,
+          xvar="class2", yvar="measure", group="class1", xtick_freq = 1, pal_col=palnogroups,
           title="Chart 1. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=pal3bysex,
+          xvar="class2", yvar="measure", group="class1", xtick_freq = 1, pal_col=pal3bysex,
           title="Chart 2. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #mortality
 plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "multiline",
-          xvar="class1", yvar="measure", group="class2", tick_freq = 1, pal_col=palbysexoverall,
+          xvar="class1", yvar="measure", group="class2", xtick_freq = 1, pal_col=palbysexoverall,
           title="Chart 1. Deaths in Scotland where multiple sclerosis was<br>the underlying cause on the death certificate, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>; ICD10 code: G35", 
           xaxtitle='Year of registration', yaxtitle="Number of deaths")
@@ -64,14 +64,14 @@ plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "b
 #Only secondary care charts require PRA
 #Chart 590
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=palnogroups,
+          xvar="class2", yvar="measure", group="class1", xtick_freq = 1, pal_col=palnogroups,
           title="Chart 1. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 #Chart 592
 plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", tick_freq = 1, pal_col=pal3bysex,
+          xvar="class2", yvar="measure", group="class1", xtick_freq = 1, pal_col=pal3bysex,
           title="Chart 2. New cases (incidence) per 100,000 population with<br> a main diagnosis of multiple sclerosis, Scotland", 
           sourc="<a href='https://www.publichealthscotland.scot/'>SMR01, PHS</a>; ICD10 code: G35, ICD9 code: 340", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
@@ -325,10 +325,10 @@ plot_webchart(filepath="Population/pop_hb_proj_chart3",  chart_type = "multibar"
          xaxtitle='Health board', yaxtitle="Population")
 
 plot_webchart(filepath="Population/pop_hb_proj_chart4",
-       xvar="class1", yvar="measure", chart_type = "onebar", order = T,
-       title="Chart 4. Projected change in population<br> by NHS Board: 2018-2043", 
+       xvar="measure", yvar="class1", chart_type = "onebar", order = T, horizontal = T,
+       title="Chart 4. Projected change in population by NHS Board: 2018-2043", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
-       xaxtitle='Health board', yaxtitle="Percentage")
+       xaxtitle='Percentage', yaxtitle="")
 
 plot_webchart(filepath="Population/pop_la_proj_chart5", chart_type = "multibar",
          xvar="class1", yvar="rounded_pop", group="class2", pal_col=palnogroups,
@@ -337,15 +337,15 @@ plot_webchart(filepath="Population/pop_la_proj_chart5", chart_type = "multibar",
          xaxtitle='Council', yaxtitle="Population")
 
 plot_webchart(filepath="Population/pop_la_proj_chart6",
-       xvar="class1", yvar="measure", chart_type = "onebar", order = T,
-       title="Chart 6. Projected change in population<br> by council: 2018-2043", 
+       xvar="measure", yvar="class1", chart_type = "onebar", order = T, horizontal = T,
+       title="Chart 6. Projected change in population by council: 2018-2043", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
-       xaxtitle='Council', yaxtitle="Percentage")
+       xaxtitle='Percentage', yaxtitle="")
 
 #Pop estimation
 plot_webchart(filepath="Population/pop_scot_est_chart1", 
        xvar="class1", yvar="rounded_pop", chart_type = "onebar",
-       title="Chart 1. Population by age group, Scotland, 2019", 
+       title="Chart 1. Population by age group, Scotland, 2020", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/-by-theme/population/population-estimates'>NRS</a>", 
        xaxtitle='Age group', yaxtitle="Population")
 
@@ -358,13 +358,13 @@ plot_webchart(filepath="Population/pop_scot_est_chart2",
 
 plot_webchart(filepath="Population/pop_hb_est_chart3", horizontal = T, chart_type = "stackedbar",
            yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
-           title="Chart 3. Age structure of <br>health boards, Scotland, 2019", 
+           title="Chart 3. Age structure of health boards, Scotland, 2020", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
            yaxtitle="", xaxtitle="Percentage of the population")
 
 plot_webchart(filepath="Population/pop_la_est_chart4",  horizontal = T, chart_type = "stackedbar",
            yvar="area", xvar="measure", group="age_group", pal_col=palnogroups,
-           title="Chart 4. Age structure of <br>council areas, Scotland, 2019", 
+           title="Chart 4. Age structure of council areas, Scotland, 2020", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
            yaxtitle="", xaxtitle="Percentage of the population")
 

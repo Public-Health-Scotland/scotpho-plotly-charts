@@ -98,7 +98,7 @@ pal5bysex <- c('#2166ac','#4393c3', '#92c5de', '#d1e5f0', '#053061',
 #' @param data_down last part of the url to the data files in the server, e.g. 1934/obesity_chart1.csv
 #' @param yvar_dashed Only for multiline_dashed. Column containing the dashed part of the serie
 #' @param horizontal Only for stackedbar charts. Set it up as an horizontal stackedbar chart.
-#' @param tick_freq Only for multiline and multiline_dashed. Frequency of ticks in the x axis
+#' @param xtick_freq Only for multiline and multiline_dashed. Frequency of ticks in the x axis
 #' @param pal_col Palette used in the plot
 #' @param order Used to order the bar charts by the yvar value
 #' @param minyrange Only for dualaxisline. Minimum value for yaxis
@@ -111,7 +111,7 @@ pal5bysex <- c('#2166ac','#4393c3', '#92c5de', '#d1e5f0', '#053061',
 
 plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar, group = NULL, comparator, compname, 
                           title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
-                          horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
+                          horizontal = F, xtick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
                           static = F, markers = "lines", simd_dec = FALSE) {
 
@@ -155,8 +155,16 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     ###############################################.
     ## Single bar plot ----
   } else if (chart_type == "onebar") { # SINGLE BAR PLOT
+    
+    orient <- case_when(horizontal == T ~ 'h', T ~ "v")
+    
+    if (horizontal == T ) {
+      yaxis_plot[["dtick"]] <- 1
+      margin_plot <- list( l = 70, r = 0, b = 0, t = 80, pad = 4 ) #margin-paddings in stacked bar horizontal
+    }
+    
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar",  
+                           type = "bar", orientation = orient,
                            marker = list(color = pal1color)) 
   
     ###############################################.
@@ -210,9 +218,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     ## Multiple lines  ----
   } else if (chart_type == "multiline") { # MULTIPLE LINES PLOT
     # Custom layout
-    xaxis_plot[["dtick"]] <- tick_freq
-    # legend_plot <-  list(x = 100, y = 0.5) 
-    
+    xaxis_plot[["dtick"]] <- xtick_freq
+
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            type = 'scatter', mode = markers,
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
@@ -223,9 +230,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     ## Multiple lines with parts dashed ----
   } else if (chart_type == "multiline_dashed") { # MULTIPLE LINES WITH PART DASHED
     # Custom layout
-    xaxis_plot[["dtick"]] <- tick_freq
-    # legend_plot <-  list(x = 100, y = 0.5) 
-    
+    xaxis_plot[["dtick"]] <- xtick_freq
+
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       add_lines(y = data_plot[,yvar]) %>% #normal line
@@ -259,16 +265,18 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   ###############################################.
   # Applying common layout ----
   #If you need the plot ordered then it changes the layout
-  if (order == TRUE | chart_type == "barcompar") { 
+  if ((order == TRUE | chart_type == "barcompar") && horizontal == F) { 
     xaxis_plot[["categoryorder"]] <- "array"
     xaxis_plot[["categoryarray"]] <-  sort(data_plot[,yvar])
+    
+  } else if (order == TRUE && horizontal == T) {
+    yaxis_plot[["categoryorder"]] <- "array"
+    yaxis_plot[["categoryarray"]] <-  sort(data_plot[,xvar])
   }
+  
     plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
-           # legend = list(orientation = 'h',  x = 0.25, y = 1.2),
-           margin = margin_plot 
-           #images = scotpho_logo
-           ) %>%
+           margin = margin_plot ) %>%
     config(displaylogo = F, displayModeBar = TRUE, modeBarButtonsToRemove = bttn_remove) # taking out plotly logo and edit button
     
     ###############################################.
