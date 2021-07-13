@@ -313,7 +313,7 @@ plot_webchart(filepath="Population/pop_scot_proj_chart1",
         xaxtitle="Year", yaxtitle="Population")
 
 plot_webchart(filepath="Population/pop_scot_proj_chart2", chart_type = "multiline",
-          xvar="class2", yvar="rounded_pop", group="class1", pal_col=palnogroups,
+          xvar="class2", yvar="rounded_pop", group="class1", pal_col=palbysexoverall,
           title="Chart 2. Projected population by age group, Scotland", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-projections'>NRS</a>", 
           xaxtitle="Year", yaxtitle="Population")
