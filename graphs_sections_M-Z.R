@@ -17,13 +17,13 @@ plot_webchart(filepath="Migration/migration_scottish_chart1", chart_type = "mult
 
 plot_webchart(filepath="Migration/migration_board_chart1", chart_type = "onebar",
        xvar="class1", yvar="measure", order = T, 
-       title="Chart 1. Net migration by NHS board, 2017-18",
+       title="Chart 1. Net migration by NHS board, 2019-20",
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
-       xaxtitle="Health board", yaxtitle="Population")
+       xaxtitle="NHS Board", yaxtitle="Population")
 
 plot_webchart(filepath="Migration/migration_la_chart1", chart_type = "onebar",
        xvar="class1", yvar="measure", order = T, 
-       title="Chart 1. Net migration by council, 2017-18", 
+       title="Chart 1. Net migration by council, 2019-20", 
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/migration'>NRS</a>", 
        xaxtitle="Council", yaxtitle="Population")
 
