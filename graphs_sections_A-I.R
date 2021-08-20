@@ -50,61 +50,62 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "
 ############################.
 
 #Breast cancer
-plot_webchart(filepath="Cancer/Breast Cancer - Introduction Chart 2", 
-        xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 2. Mean age of women at birth of first child, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>PHS</a>", 
-        xaxtitle="Year", yaxtitle="Mean age at first birth")
+# this chart doesn't seem to be included anymore
+# plot_webchart(filepath="Cancer/Breast Cancer - Introduction Chart 2", 
+#         xvar="class1", yvar="measure", chart_type = "oneline",
+#         title="Chart 2. Mean age of women at birth of first child, Scotland", 
+#         sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>PHS</a>", 
+#         xaxtitle="Year", yaxtitle="Mean age at first birth")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Female breast cancer incidence, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Breast'>PHS</a>", 
+        sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 code: C50", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 2. Female breast cancer mortality, Scotland", 
-        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 code: C50", 
+        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 code: C50", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Colorectal cancer
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Colorectal cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Colorectal'>PHS</a>; ICD10 codes: C18-C20", 
+          sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 codes: C18-C20", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 2. Colorectal cancer mortality, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 codes: C18-C20", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 codes: C18-C20", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Lung cancer
 plot_webchart(filepath="Cancer/Lung Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Lung cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Lung-Cancer-and-Mesothelioma'>SCR, PHS</a>; ICD10 codes: C33 & C34", 
+          sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 codes: C33 & C34", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Lung Cancer Chart 2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 2. Lung cancer mortality, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 codes: C33 & C34", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 codes: C33 & C34", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Prostate cancer
 plot_webchart(filepath="Cancer/Prostate Cancer Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Prostate cancer incidence, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Male-Genital-Organs'>SCR, ISD Scotland</a>. ICD10 code: C61", 
+        sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>. ICD10 code: C61", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Prostate Cancer Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 2. Prostate cancer mortality, Scotland", 
-        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 code: C61", 
+        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 code: C61", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
