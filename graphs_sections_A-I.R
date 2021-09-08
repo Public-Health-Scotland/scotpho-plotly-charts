@@ -774,7 +774,7 @@ plot_webchart(filepath="Housing/housing_availability_chart1", chart_type = "mult
 plot_webchart(filepath="Housing/housing_availability_chart2", chart_type = "stackedbar",
            xvar="class1", yvar="measure", group="class2", pal_col=pal3bysex,
            title="Chart 2. Housing tenure, Scotland", 
-           sourc="<a href='https://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey </a>", 
+           sourc="<a href='https://www.gov.scot/collections/scottish-household-survey-publications/'>Scottish Household Survey </a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
 #Quality and overcrowding
