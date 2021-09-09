@@ -780,7 +780,7 @@ plot_webchart(filepath="Housing/housing_availability_chart2", chart_type = "stac
 #Quality and overcrowding
 plot_webchart(filepath="Housing/housing_quality_chart1", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 1. Dwellings failing the Scottish Housing <br>Quality Standard by tenure, 2017", 
+       title="Chart 1. Dwellings failing the Scottish Housing <br>Quality Standard by tenure, 2019", 
        sourc="<a href='https://www.gov.scot/Topics/Statistics/SHCS'>Scottish House Condition Survey</a>", 
        xaxtitle='Tenure', yaxtitle="Percentage")
 
