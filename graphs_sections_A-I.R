@@ -786,7 +786,7 @@ plot_webchart(filepath="Housing/housing_quality_chart1", chart_type = "onebar",
 
 plot_webchart(filepath="Housing/housing_quality_chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Overcrowding (under bedroom standard)<br>by tenure, Scotland, 2017", 
+       title="Chart 2. Overcrowding (under bedroom standard)<br>by tenure, Scotland, 2019", 
        sourc="<a href='https://www.gov.scot/Topics/Statistics/SHCS'>Scottish House Condition Survey</a>", 
        xaxtitle='Tenure', yaxtitle="Percentage")
 
