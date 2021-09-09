@@ -382,15 +382,15 @@ plot_webchart(filepath="Religion, Spirituality and Belief/Religion - Chart 1", c
 ############################.
 plot_webchart(filepath="Rurality/Rurality_Chart_1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Life expectancy for Urban-Rural<br> areas, Scotland, 2014-2016", 
-         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-in-scottish-areas/2014-2016/list-of-tables'>NRS</a>", 
-         xaxtitle='2013-14 Urban-Rural classification', yaxtitle="Life expectancy at birth")
+         title="Chart 1. Life expectancy at birth for Urban-Rural<br> areas, Scotland, 2017-2019", 
+         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-in-scotland/2017-2019/data-tables'>NRS</a>", 
+         xaxtitle='2018 Urban-Rural classification', yaxtitle="Life expectancy at birth")
 
 plot_webchart(filepath="Rurality/Rurality_Chart_2", chart_type = "stackedbar",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. Population estimates across the Urban-Rural<br> classification, Scotland, 2016", 
+           title="Chart 2. Population estimates across the Urban-Rural<br> classification, Scotland, June 2020", 
            sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/2011-based-special-area-population-estimates/population-estimates-by-urban-rural-classification'>NRS</a>", 
-           xaxtitle="2013-14 Urban-Rural classification", yaxtitle="Population")
+           xaxtitle="2018 Urban-Rural classification", yaxtitle="Population")
 
 ############################.
 ### Social environment ----
