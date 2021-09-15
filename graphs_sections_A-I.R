@@ -11,12 +11,25 @@ source("plotly_chart_functions.R")
 ############################.
 
 plot_webchart(filepath="fig1", chart_type = "multiline",
-              xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-              title="Chart 1. Number of patients dispensed drugs for alcohol dependence by age group, Scotland", 
-              sourc="<a href='https://www.scotpho.org.uk/media/2069/treatment-for-alcohol-misuse-data-2020.xlsx'>Drugs used in alcohol dependence</a>", 
+              xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq=1,
+              title="Chart 1. Number of patients dispensed drugs <br />for alcohol dependence by age group, Scotland", 
+              sourc="Source", 
               xaxtitle="Year", yaxtitle="Number of patients")
 
 ############################.
+##ALCOHOL PRE RELEASE ACCESS
+
+#Treatment for alcohol misuse
+#Chart 467
+plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1_PRA", chart_type = "multiline", privacy = "secret",
+              xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq=1,
+              title="Chart 1. Number of patients dispensed drugs <br />for alcohol dependence by age group, Scotland", 
+              sourc="<a href='https://www.scotpho.org.uk/media/2069/treatment-for-alcohol-misuse-data-2020.xlsx'>Drugs used in alcohol dependence</a>", 
+              xaxtitle="Year", yaxtitle="Number of patients")
+
+
+############################.
+
 ##Asthma ----
 ############################.
 
