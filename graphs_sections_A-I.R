@@ -13,7 +13,7 @@ source("plotly_chart_functions.R")
 plot_webchart(filepath="fig1", chart_type = "multiline",
               xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq=1,
               title="Chart 1. Number of patients dispensed drugs <br />for alcohol dependence by age group, Scotland", 
-              sourc="Source", 
+              sourc="<a href='https://www.scotpho.org.uk/media/2069/treatment-for-alcohol-misuse-data-2020.xlsx'>Drugs used in alcohol dependence</a>", 
               xaxtitle="Year", yaxtitle="Number of patients")
 
 ############################.
