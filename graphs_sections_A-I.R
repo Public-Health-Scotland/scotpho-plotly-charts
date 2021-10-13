@@ -781,7 +781,7 @@ plot_webchart(filepath="Hepatitis C/hep_deprivation_chart1", chart_type = "oneba
 plot_webchart(filepath="High blood pressure/hbp_prevalence_chart1", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal=palnogroups,
          title="Chart 1. Prevalence of self-reported doctor-diagnosed<br>high blood pressure, Scotland, 2016 to 2019 combined", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>SHS, Scottish Government</a>. Adults aged 16 and over with survey-defined hypertension.", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>SHS, Scottish Government</a>. Adults aged 16 and over with survey-defined hypertension.", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 ############################.
