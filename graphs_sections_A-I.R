@@ -7,6 +7,29 @@
 source("plotly_chart_functions.R")
 
 ############################.
+##Alcohol ----
+############################.
+
+plot_webchart(filepath="fig1", chart_type = "multiline",
+              xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq=1,
+              title="Chart 1. Number of patients dispensed drugs <br />for alcohol dependence by age group, Scotland", 
+              sourc="<a href='https://www.scotpho.org.uk/media/2069/treatment-for-alcohol-misuse-data-2020.xlsx'>Drugs used in alcohol dependence</a>", 
+              xaxtitle="Year", yaxtitle="Number of patients")
+
+############################.
+##ALCOHOL PRE RELEASE ACCESS
+
+#Treatment for alcohol misuse
+#Chart 467
+plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1_PRA", chart_type = "multiline", privacy = "secret",
+              xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, xtick_freq=1,
+              title="Chart 1. Number of patients dispensed drugs <br />for alcohol dependence by age group, Scotland", 
+              sourc="<a href='https://www.scotpho.org.uk/media/2069/treatment-for-alcohol-misuse-data-2020.xlsx'>Drugs used in alcohol dependence</a>", 
+              xaxtitle="Year", yaxtitle="Number of patients")
+
+
+############################.
+
 ##Asthma ----
 ############################.
 
@@ -32,24 +55,17 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2", chart_type = "mul
 ##Asthma PRE RELEASE ACCESS
 
 #Chart 
-plot_webchart(filepath="Asthma/asthma_mortality_chart1PRA", chart_type = "multiline", privacy = "secret",
-          xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Deaths due to asthma, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>", 
-          xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_sex_chart1PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
           title="Chart 1. Patients hospitalised with asthma<br> by gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 
 plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "multiline", privacy = "secret",
           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
           title="Chart 2. Patients hospitalised with asthma<br> by age and gender, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>; ICD10 codes: J45 & J46", 
+          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, PHS</a>; ICD10 codes: J45 & J46", 
           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
@@ -57,61 +73,62 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA", chart_type = "
 ############################.
 
 #Breast cancer
-plot_webchart(filepath="Cancer/Breast Cancer - Introduction Chart 2", 
-        xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 2. Mean age of women at birth of first child, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>PHS</a>", 
-        xaxtitle="Year", yaxtitle="Mean age at first birth")
+# this chart doesn't seem to be included anymore
+# plot_webchart(filepath="Cancer/Breast Cancer - Introduction Chart 2", 
+#         xvar="class1", yvar="measure", chart_type = "oneline",
+#         title="Chart 2. Mean age of women at birth of first child, Scotland", 
+#         sourc="<a href='http://www.isdscotland.org/Health-Topics/Maternity-and-Births/Births'>PHS</a>", 
+#         xaxtitle="Year", yaxtitle="Mean age at first birth")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Female breast cancer incidence, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Breast'>PHS</a>", 
+        sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 code: C50", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Breast Cancer Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 2. Female breast cancer mortality, Scotland", 
-        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 code: C50", 
+        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 code: C50", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Colorectal cancer
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Colorectal cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Colorectal'>PHS</a>; ICD10 codes: C18-C20", 
+          sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 codes: C18-C20", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Colorectal Cancer Chart 2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 2. Colorectal cancer mortality, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 codes: C18-C20", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 codes: C18-C20", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Lung cancer
 plot_webchart(filepath="Cancer/Lung Cancer Chart 1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Lung cancer incidence, Scotland", 
-          sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Lung-Cancer-and-Mesothelioma'>SCR, PHS</a>; ICD10 codes: C33 & C34", 
+          sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>; ICD10 codes: C33 & C34", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Lung Cancer Chart 2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 2. Lung cancer mortality, Scotland", 
-          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 codes: C33 & C34", 
+          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 codes: C33 & C34", 
           xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Prostate cancer
 plot_webchart(filepath="Cancer/Prostate Cancer Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Prostate cancer incidence, Scotland", 
-        sourc="<a href='http://www.isdscotland.org/Health-Topics/Cancer/Cancer-Statistics/Male-Genital-Organs'>SCR, ISD Scotland</a>. ICD10 code: C61", 
+        sourc="<a href='https://publichealthscotland.scot/publications/cancer-incidence-in-scotland/'>Scottish Cancer Registry, PHS</a>. ICD10 code: C61", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Cancer/Prostate Cancer Chart 2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 2. Prostate cancer mortality, Scotland", 
-        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/vital-events-reference-tables'>NRS</a>; ICD10 code: C61", 
+        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables/'>NRS</a>; ICD10 code: C61", 
         xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
@@ -262,13 +279,13 @@ plot_webchart(filepath="COPD/COPD_Primary_care_chart_2", chart_type = "stackedba
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 1. Incidence of COPD, excluding bronchiectasis, <br>Scotland", 
-           sourc="https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="<a href='https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000")
 
 plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
            title="Chart 2. Incidence of COPD, Scotland", 
-           sourc="https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
+           sourc="<a href='https://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>ICD10 Codes:J40-J44, ICD9 Codes:490-492, 496", 
            xaxtitle="Financial year", yaxtitle="Age-sex standardised rate of <br>new cases per 100,000 per year")
 
 #Mortality
@@ -281,13 +298,13 @@ plot_webchart(filepath="COPD/COPD_Mortality_Chart_1", chart_type = "multiline",
 #Deprivation
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_1", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. COPD admissions in males, Scotland, 2018/19", 
+         title="Chart 1. COPD admissions in males, Scotland, 2019/20", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_2", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. COPD admissions in females, Scotland, 2018/19", 
+         title="Chart 2. COPD admissions in females, Scotland, 2019/20", 
          sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. ICD10 Codes: J40-J44", 
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -300,7 +317,7 @@ plot_webchart(filepath="COPD/COPD - NHS Board data - Chart 1", chart_type = "bar
 
 plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2018/19", 
+          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2019/20", 
           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 codes J40-J44.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
@@ -394,26 +411,26 @@ plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "barcompar
 plot_webchart(filepath="Crime/Crime - National trends Chart 1", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Crimes recorded by police, Scotland", 
-        sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
-        xaxtitle='Year', yaxtitle="Number")
+        sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
+        xaxtitle='Financial year', yaxtitle="Number of crimes recorded")
 
 plot_webchart(filepath="Crime/Crime - by local authority Chart 1", chart_type = "barcompar",
        xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
-       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2018/19", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/PubRecordedCrime'>Police Scotland</a>", 
+       title="Chart 1. Crimes recorded by the police<br> per 10,000 population, 2019/20", 
+       sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>", 
        xaxtitle='Council area', yaxtitle="Crime rate per 10,000 population")
 
 plot_webchart(filepath="Crime/crime-national-target-chart1", chart_type = "onebar",
        xvar="labelsx", yvar="measure", 
        title="Chart 1. Adults who were a victim of <br>one or more crimes, Scotland",
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>",
-       xaxtitle='Year', yaxtitle="Percentage")
+       sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>",
+       xaxtitle='Financial year', yaxtitle="Percentage of adults")
 
 plot_webchart(filepath="Crime/crime-national-target-chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
        title="Chart 2. Adults who think crime in their area has stayed<br> the same or reduced in the past 2 years, Scotland", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Crime-Justice/crime-and-justice-survey/publications'>Scottish Crime and Justice Survey</a>", 
-       xaxtitle='Year', yaxtitle="Percentage")
+       sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>", 
+       xaxtitle='Financial year', yaxtitle="Percentage of adults")
 
 ############################.
 ##Deaths ----
@@ -428,19 +445,19 @@ plot_webchart(filepath="Deaths/deaths-trend-allcause-chart1", chart_type = "mult
 
 plot_webchart(filepath="Deaths/deaths-allcause-byhb-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by NHS Board, 2018", 
+          title="Chart 1. All-cause death rates by NHS Board, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='NHS Board', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-byLA-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by council, 2018", 
+          title="Chart 1. All-cause death rates by council, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>.", 
           xaxtitle='Council', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Deaths/deaths-allcause-deprivation-chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. All-cause death rates by deprivation quintile, 2018", 
+          title="Chart 1. All-cause death rates by deprivation quintile, 2019", 
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths/age-standardised-death-rates-calculated-using-the-esp'>NRS</a>. ", 
           xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -554,40 +571,39 @@ plot_webchart(filepath="Diabetes/diabetes_nhsboard_chart1_pra", chart_type = "mu
 #Adults
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2018", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 1. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-       sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-       xaxtitle='SIMD quintile 2016', yaxtitle="Percentage")
+       title="Chart 2. Adults consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+       sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
+       xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Adults - Chart 3", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
          title="Chart 3. Adults consuming 5 or more portions<br> of fruit and vegetables per day, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>, <a href='http://content.digital.nhs.uk/healthsurveyengland'>Health Survey for England</a>", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>, <a href='http://content.digital.nhs.uk/healthsurveyengland'>Health Survey for England</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 #Children
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 1", chart_type = "multibar",
-         xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 1. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         xvar="class2", yvar="measure", group="class1", pal=palnogroups, order=TRUE,
+         title="Chart 1. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
-#extending axis to 20 in plotly
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 2", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 2. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 2. Children consuming 5 or more portions<br> of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 plot_webchart(filepath="Diet and Nutrition/diet_Children - Chart 3", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal=palnogroups,
-         title="Chart 3. Children consuming NO portions<br>of fruit and vegetables per day, Scotland, 2017", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 3. Children consuming NO portions<br>of fruit and vegetables per day, Scotland, 2019", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 ############################.
@@ -652,46 +668,11 @@ plot_webchart(filepath="Disability/disability-sah-chart4", chart_type = "onebar"
 ##Epilepsy ----
 ############################.
 plot_webchart(filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
+           xvar="class2", yvar="measure", group="class1", xtick_freq=1, pal_col=palbysexoverall,
+           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause on the death certificate, Scotland", 
+           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41", 
            xaxtitle="Year", yaxtitle="Number of deaths")
 
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
-
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
-
-############################.
-##EPILEPSY PRE RELEASE ACCESS
-
-#Chart 477
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_deaths_Chart_1_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-           title="Chart 1. Deaths where epilepsy was recorded as the<br>underlying cause or a contributory factor to death, Scotland", 
-           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>. ICD10 codes: G40 and G41 thereafter, ICD9 codes: 345 up to 1999", 
-           xaxtitle="Year", yaxtitle="Number of deaths")
-
-#Chart 479
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_sex_Chart_2_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 2. New cases (incidence) with a principal<br>diagnosis of epilepsy by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
-
-#Chart 481
-plot_webchart(filepath="Epilepsy/Epilepsy_incidence_age_sex_Chart_3_PRA", chart_type = "multiline", privacy = "secret",
-           xvar="class2", yvar="measure", group="class1", pal_col=pal3bysex,
-           title="Chart 3. New cases (incidence) with a principal<br>diagnosis of epilepsy by age and sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses/'>SMR01, ISD</a>. Directly age-sex standardised to the European Standard Population 2013.<br>ICD10 codes: G40 and G41, ICD9 code: 345", 
-           xaxtitle="Financial year", yaxtitle="Age-sex standardised rate per 100,000")
 
 ############################.
 ##Ethnicity ----
@@ -735,20 +716,20 @@ plot_webchart(filepath="Health Inequalities/Health_Inequalities_Policy_Chart_1",
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_1_new", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Relative Index of Inequality (RII)<br>(using SIMD income-employment index),<br>All-cause mortality under 75 years, Scotland", 
-        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
         xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
 
 #Legend overlay in plotly
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_2_new", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. Age-standardised all-cause mortality rates under 75<br> years by least and most deprived deciles (using SIMD income-employment index),<br> Scotland", 
-           sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+           sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
            xaxtitle="Year", yaxtitle="European age-standardised mortality rate<br>per 100,000 population")
 
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_3", 
              xvar="class1", yvar="measure", yvar2="measure2", chart_type = "dualaxislines",
              title="Chart 3. Relative Index of Inequality (RII) and<br>Slope Index of Inequality (SII) (using SIMD income-employment<br> index), all-cause mortality under 75 years, Scotland", 
-             sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
+             sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
              xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)", 
              yaxtitle2="Slope Index of Inequality (SII)",
              minyrange = 0.6, maxyrange = 1.5, yname = "Relative Index of Inequality (RII)", 
@@ -758,11 +739,11 @@ plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_3",
 ##between deciles; we would need the values for that trend and then use barcompar
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_4", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 4. Age-standardised all-cause mortality rates<br>(under 75 years) by deprivation decile, Scotland 2018", 
-       sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2020-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
-
+       title="Chart 4. Age-standardised all-cause mortality rates<br>(under 75 years) by deprivation decile, Scotland 2019", 
+       sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>", 
        xaxtitle='SIMD income-employment index decile', 
-       yaxtitle="European age-standardised mortality rate<br>per 100,000 populaton")
+       yaxtitle="European age-standardised mortality rate<br>per 100,000 populaton",
+       order=TRUE)
 
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_5", chart_type = "areaplot",
          xvar="age_grp", yvar="value", group="cause", pal_col=pal_health_ineq_area,
@@ -800,7 +781,7 @@ plot_webchart(filepath="Hepatitis C/hep_deprivation_chart1", chart_type = "oneba
 plot_webchart(filepath="High blood pressure/hbp_prevalence_chart1", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal=palnogroups,
          title="Chart 1. Prevalence of self-reported doctor-diagnosed<br>high blood pressure, Scotland, 2016 to 2019 combined", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>SHS, Scottish Government</a>. Adults aged 16 and over with survey-defined hypertension.", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>SHS, Scottish Government</a>. Adults aged 16 and over with survey-defined hypertension.", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 ############################.
@@ -816,19 +797,19 @@ plot_webchart(filepath="Housing/housing_availability_chart1", chart_type = "mult
 plot_webchart(filepath="Housing/housing_availability_chart2", chart_type = "stackedbar",
            xvar="class1", yvar="measure", group="class2", pal_col=pal3bysex,
            title="Chart 2. Housing tenure, Scotland", 
-           sourc="<a href='https://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey </a>", 
+           sourc="<a href='https://www.gov.scot/collections/scottish-household-survey-publications/'>Scottish Household Survey </a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
 #Quality and overcrowding
 plot_webchart(filepath="Housing/housing_quality_chart1", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 1. Dwellings failing the Scottish Housing <br>Quality Standard by tenure, 2017", 
+       title="Chart 1. Dwellings failing the Scottish Housing <br>Quality Standard by tenure, 2019", 
        sourc="<a href='https://www.gov.scot/Topics/Statistics/SHCS'>Scottish House Condition Survey</a>", 
        xaxtitle='Tenure', yaxtitle="Percentage")
 
 plot_webchart(filepath="Housing/housing_quality_chart2", chart_type = "onebar",
        xvar="class1", yvar="measure", 
-       title="Chart 2. Overcrowding (under bedroom standard)<br>by tenure, Scotland, 2017", 
+       title="Chart 2. Overcrowding (under bedroom standard)<br>by tenure, Scotland, 2019", 
        sourc="<a href='https://www.gov.scot/Topics/Statistics/SHCS'>Scottish House Condition Survey</a>", 
        xaxtitle='Tenure', yaxtitle="Percentage")
 
@@ -847,60 +828,65 @@ plot_webchart(filepath="Immunisations/immunisation_inequalities_chart1", chart_t
 #Household income
 plot_webchart(filepath="Income and employment/IE-household-income-chart1", chart_type = "multiline",
            xvar="class1", yvar="measure", group="class2", pal_col=pal_gradient9,
-           title="Chart 1. Equivalised weekly household income (BHC) in Scotland", 
-           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI, DWP</a>", 
-           xaxtitle="Year", yaxtitle="£ per week")
+           title="Chart 1. Equivalised weekly household income (AHC) in Scotland by decile", 
+           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>Scottish Government analysis of the Family Resources Survey, 
+           Households Below Average Incomes dataset</a>", 
+           xaxtitle="3-year average", yaxtitle="£ per week")
 
-plot_webchart(filepath="Income and employment/IE-household-income-chart2", chart_type = "barcompar",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+plot_webchart(filepath="Income and employment/IE-household-income-chart2", chart_type = "multiline",
+          xvar="class1", yvar="measure", group="class2", pal_col=pal_gradient9,
           title="Chart 2. Percentage of households reporting that they do not<br>manage well financially", 
-          sourc="<a href='http://www.gov.scot/Topics/Statistics/16002'>Scottish Household Survey 2016</a>", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-household-survey-publications/'>Scottish Household Survey</a>", 
           xaxtitle='Household type', yaxtitle="Percentage")
 
 #Working age poverty
 plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+           xvar="class2", yvar="measure", group="class1", pal_col=pal2bysex,
            title="Chart 1. Percentage of population living in relative poverty<br>(After Housing Costs)", 
-           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>HBAI dataset, DWP</a>", 
-           xaxtitle="Year", yaxtitle="Percentage")
+           sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>Scottish Government analysis of the Family Resources Survey, 
+           Households Below Average Incomes dataset</a>", 
+           xaxtitle="3-year average", yaxtitle="Percentage")
 
-plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart2", chart_type = "barcompar",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of households where at least one person is<br>in work claiming Working Tax Credits", 
-          sourc="<a href='https://www.gov.uk/government/publications/hmrc-annual-report-and-accounts-2014-to-2015'>HMRC 2015/16</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/qmis/annualpopulationsurveyapsqmi>Annual Population Survey Household Datasets (2015)</a>", 
-          xaxtitle='Local authority', yaxtitle="Percentage of all households")
+plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart2", chart_type = "multiline",
+          xvar="class1", yvar="measure", group="class2", pal_col=pal2bysex,
+          title="Chart 2. Proportion of adults and children living in relative poverty <br>(After Housing Costs) who were working, Scotland", 
+          sourc="<a href='https://www.gov.uk/government/collections/households-below-average-income-hbai--2'>Scottish Government analysis of 
+          the Family Resources Survey, Households Below Average Incomes dataset</a>", 
+          xaxtitle="3-year average", yaxtitle="Proportion")
 
 #Availability of work
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart1", chart_type = "multiline",
            xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-           title="Chart 1. Employment rates for men and women in Scotland", 
-           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href='http://casweb.mimas.ac.uk/'>Census of Population</a>, <a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates'>National Records for Scotland</a>", 
+           title="Chart 1. Employment rates for males and females in Scotland", 
+           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey, Office for National Statistics</a>", 
            xaxtitle="Year", yaxtitle="Percentage")
 
+#Note: chnaged line 134 in plotly_chart_functions.R to 2 decimal places for this chart
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "onebar",
-       xvar="class1", yvar="measure", 
-       title="Chart 2. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Occupations in Scotland", 
-       sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Occupations', yaxtitle="Vacancies per 10 ILO unemployed")
+       xvar="class1", yvar="measure", order=TRUE,
+       title="Chart 2. Jobs density by Scottish region, 2019", 
+       sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>", 
+       xaxtitle="Region", yaxtitle="Jobs density")
 
-plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "onebar",
-       xvar="class1", yvar="measure", order = TRUE,
-       title="Chart 3. Vacancies per 10 ILO unemployed (aged 16 plus):<br>Scottish regions", 
-       sourc="<a href='https://www.gov.uk/government/collections/ukces-employer-skills-survey-2015'>Employer Skills Survey, UKCES</a>, <a href='http://www.gov.scot/Topics/Statistics/Browse/Labour-Market/Publications'>Annual Population Survey</a>", 
-       xaxtitle='Scottish region', yaxtitle="Vacancies per 10 ILO unemployed")
+#Note: commented out 'rangemode="tozero"' in line 126 of plotly_chart_functions.R to allow the y-axis to not start at zero.
+plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "oneline",
+       xvar="class1", yvar="measure", xtick_freq=4, order=TRUE,
+       title="Chart 3. Number of payrolled employees, Scotland, 2014 to 2021", 
+       sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/realtimeinformationstatisticsreferencetableseasonallyadjusted'>HMRC Paye-As-You-Earn Real Time Information, Office for National Statistics</a>", 
+       xaxtitle="Month", yaxtitle="Number of payrolled employees (millions)")
 
-#Legend overlay in plotly
-plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Percentage of adults aged 16-64 claiming unemployment<br>benefits, ILO unemployed and any out-of work benefits", 
-           sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey</a>, <a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Work and Pensions Longitudinal Survey, WPLS</a>, <a href=https://www.ons.gov.uk/employmentandlabourmarket/peoplenotinwork/unemployment/datasets/claimantcountandvacanciesdataset>Claimant Count</a>", 
-           xaxtitle="Year", yaxtitle="Percentage of adults aged 16-64")
+#Worklessness
+plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "onebar",
+           xvar="measure", yvar="class2",
+           title="Chart 1. People aged 16-64 who are ILO unemployed or economically<br> inactive but want work, Scotland, 2020",
+           sourc="<a href='https://www.nomisweb.co.uk/datasets/apsnew'>Annual Population Survey, Office for National Statistics</a>", 
+           xaxtitle="Number of people", yaxtitle= FALSE)
 
 plot_webchart(filepath="Income and employment/IE-worklessness-chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region", 
-          sourc="<a href=https://www.gov.uk/government/statistics/work-and-pensions-longitudinal-study>DWP Longitudinal Survey, WPLS</a>, <a href=https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates>National Records of Scotland</a>.", 
-          xaxtitle='Region', yaxtitle="Percentage of adults aged 16-64")
+          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region, November 2020", 
+          sourc="<a href=https://www.gov.uk/government/organisations/department-for-work-pensions/about/statistics>DWP</a>, <a href=https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates>National Records of Scotland</a>.", 
+          xaxtitle='Region', yaxtitle="Percentage")
 
 ############################.
 ##Injuries ----
@@ -914,13 +900,13 @@ plot_webchart(filepath="Injuries/inj_road_traffic_chart_1", chart_type = "multil
 plot_webchart(filepath="Injuries/inj_seccare_chart1", chart_type = "multiline",
         xvar="class1", yvar="measure", group="class2", pal_col=palalccondition,
         title="Chart 1. Injury related hospital admissions, Scotland", 
-        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 3</a>", 
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2021 Table 1</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Injuries/inj_mortality_chart_2", 
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Injury related deaths, Scotland", 
-        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2020 Table 4</a>", 
+        sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/unintentional-injuries/'>PHS Unintentional Injuries publication March 2021 Table 2</a>", 
         xaxtitle='Year', yaxtitle="Age-sex standardised rate per 100,000")
 
 

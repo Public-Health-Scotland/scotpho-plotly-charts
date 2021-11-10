@@ -35,6 +35,11 @@ if (sessionInfo()$platform %in% c("x86_64-redhat-linux-gnu (64-bit)", "x86_64-pc
   data_folder <- "//stats/ScotPHO/Website/Charts/Plotly/data/"
 
 }
+
+# Buttons to remove
+bttn_remove <-  list('select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d',  
+                     'autoScale2d',   'toggleSpikelines',  'hoverCompareCartesian',  
+                     'hoverClosestCartesian', 'zoom2d', 'pan2d', 'resetScale2d')
   
 ############################.
 ### Palettes ----
@@ -71,12 +76,6 @@ pal3bysex <- c('#08519c','#4393c3', '#d1e5f0', '#8c510a', '#bf812d', '#f6e8c3')
 pal5bysex <- c('#2166ac','#4393c3', '#92c5de', '#d1e5f0', '#053061',
                '#8c510a', '#bf812d', '#dfc27d', '#f6e8c3', '#543005')
 
-############################.
-#ScotPHO logo.
-#Needs to be https address or if local in code 64 (the latter does not work with 4.7 plotly)
-scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-charts/master/scotpho.png",
-                     xref = "paper", yref = "paper",
-                     x= -0.09, y= 1.16, sizex = 0.16, sizey = 0.12, opacity = 1)
 
 ############################.
 ### Plot function ----
@@ -99,7 +98,7 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 #' @param data_down last part of the url to the data files in the server, e.g. 1934/obesity_chart1.csv
 #' @param yvar_dashed Only for multiline_dashed. Column containing the dashed part of the serie
 #' @param horizontal Only for stackedbar charts. Set it up as an horizontal stackedbar chart.
-#' @param tick_freq Only for multiline and multiline_dashed. Frequency of ticks in the x axis
+#' @param xtick_freq Only for multiline and multiline_dashed. Frequency of ticks in the x axis
 #' @param pal_col Palette used in the plot
 #' @param order Used to order the bar charts by the yvar value
 #' @param minyrange Only for dualaxisline. Minimum value for yaxis
@@ -112,10 +111,10 @@ scotpho_logo <- list(source ="https://raw.githubusercontent.com/ScotPHO/plotly-c
 
 plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar, group = NULL, comparator, compname, 
                           title, sourc, xaxtitle, yaxtitle, yvar_dashed, data_down = NULL,
-                          horizontal = F, tick_freq = 2, pal_col = NULL, order = FALSE,
+                          horizontal = F, xtick_freq = 2, pal_col = NULL, order = FALSE,
                           minyrange, maxyrange, yvar2, yname, y2name, yaxtitle2,
-                          static = F) {
-  
+                          static = F, markers = "lines", simd_dec = FALSE) {
+
   ###############################################.
   # Common layout 
   title_plot <-  list(text = paste0(title, "<br>", "<sup><i>Source: ", sourc),
@@ -132,6 +131,13 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   
   data_plot <- read_csv(paste0(data_folder, filepath, ".csv")) %>% 
     mutate_if(is.numeric, round, 1) %>% as.data.frame()
+  
+  ## Define order SIMD deciles rather than alphabetical ----
+  if (simd_dec == TRUE) { 
+    data_plot <- data_plot %>% mutate(class1=factor(class1, levels=c("1 - most deprived","2","3","4",
+                                                       "5","6","7","8","9","10 - least deprived")))
+  }
+  
     
   #Number of factors, so it knows how many colors of the pal to use
   cat_length <- length(unique(data_plot[,group]))
@@ -149,8 +155,16 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     ###############################################.
     ## Single bar plot ----
   } else if (chart_type == "onebar") { # SINGLE BAR PLOT
+    
+    orient <- case_when(horizontal == T ~ 'h', T ~ "v")
+    
+    if (horizontal == T ) {
+      yaxis_plot[["dtick"]] <- 1
+      margin_plot <- list( l = 70, r = 0, b = 0, t = 80, pad = 4 ) #margin-paddings in stacked bar horizontal
+    }
+    
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
-                           type = "bar",  
+                           type = "bar", orientation = orient,
                            marker = list(color = pal1color)) 
   
     ###############################################.
@@ -189,6 +203,7 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
                                type = "bar",  #size of plot
                                color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
           layout(barmode = 'stack', hovermode = 'false') #stacked bars
+                 
       } 
     
     ###############################################.
@@ -196,17 +211,17 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   } else if (chart_type == "oneline") { # SINGLE LINE PLOT
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
                              type = "scatter", mode='lines',  
-                             line = list(color = pal1color)) #Grouping variable for color and palette
+                             line = list(color = pal1color)) %>% #Grouping variable for color and palette
+                             layout(yaxis = list(hoverformat = ",")) 
       
     ###############################################.
     ## Multiple lines  ----
   } else if (chart_type == "multiline") { # MULTIPLE LINES PLOT
     # Custom layout
-    xaxis_plot[["dtick"]] <- tick_freq
-    # legend_plot <-  list(x = 100, y = 0.5) 
-    
+    xaxis_plot[["dtick"]] <- xtick_freq
+
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
-                           type = 'scatter', mode = 'lines',
+                           type = 'scatter', mode = markers,
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       # to get hover compare mode as default
       layout(hovermode = 'false')#, legend = legend_plot) 
@@ -215,9 +230,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
     ## Multiple lines with parts dashed ----
   } else if (chart_type == "multiline_dashed") { # MULTIPLE LINES WITH PART DASHED
     # Custom layout
-    xaxis_plot[["dtick"]] <- tick_freq
-    # legend_plot <-  list(x = 100, y = 0.5) 
-    
+    xaxis_plot[["dtick"]] <- xtick_freq
+
     plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       add_lines(y = data_plot[,yvar]) %>% #normal line
@@ -251,15 +265,19 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
   ###############################################.
   # Applying common layout ----
   #If you need the plot ordered then it changes the layout
-  if (order == TRUE | chart_type == "barcompar") { 
+  if ((order == TRUE | chart_type == "barcompar") && horizontal == F) { 
     xaxis_plot[["categoryorder"]] <- "array"
     xaxis_plot[["categoryarray"]] <-  sort(data_plot[,yvar])
+    
+  } else if (order == TRUE && horizontal == T) {
+    yaxis_plot[["categoryorder"]] <- "array"
+    yaxis_plot[["categoryarray"]] <-  sort(data_plot[,xvar])
   }
+  
     plot_plotly %<>% 
     layout(title = title_plot, yaxis = yaxis_plot, xaxis = xaxis_plot,
-           # legend = list(orientation = 'h',  x = 0.25, y = 1.2),
-           margin = margin_plot, images = scotpho_logo) %>%
-    config(displaylogo = F, editable = F) # taking out plotly logo and edit button
+           margin = margin_plot ) %>%
+    config(displaylogo = F, displayModeBar = TRUE, modeBarButtonsToRemove = bttn_remove) # taking out plotly logo and edit button
     
     ###############################################.
     # Pushing chart to cloud server
@@ -273,6 +291,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
       ###############################################.
   #     # Preparing HTML final file
   #     # This should be used once the Umbraco solution works well
+      # # Setting file permissions to anyone to allow writing/overwriting of project files
+      # Sys.umask("006")
   #     plot_name <- sub('.*\\/', '', filepath) # name without the folder bit
   # 
   #     # Partial bundle only saves the needed files (js) you need for the chart
