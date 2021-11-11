@@ -637,10 +637,15 @@ plot_webchart(filepath="Violence/Violence - Health data Chart 1", chart_type = "
 ### Vitamin D ----
 ############################.
 
-plot_webchart(filepath="quadrant", chart_type = "barcompar",
+plot_webchart(filepath="quadrant", chart_type = "barcompar", pal_col=pal1color,
               xvar="class1", yvar="measure", comparator="comparator", compname="Scottish Average",
               title="Chart 1. Vitamin D Status by SIMD Quintile", 
               sourc="<a href='https://www.foodstandards.gov.scot/downloads/Report_Final.pdf'>Scottish Health Survey adult respondents 2010-11, Purdon et al. 2013</a>",
-              xaxtitle='SIMD Quintile', yaxtitle="Mean vitamin D serum concentration, nmol/L")
+              xaxtitle='SIMD Quintile', yaxtitle="Mean vitamin D serum concentration, (nmol/L)")
 
+plot_webchart(filepath="quadrant2", chart_type = "barcompar", pal_col=pal1color,
+              xvar="class1", yvar="measure", comparator="comparator", compname="Scottish Average",
+              title="Chart 2. Percentage of population with suboptimal vitamin D (<25 nmol/L), by SIMD quintile", 
+              sourc="<a href='https://www.foodstandards.gov.scot/downloads/Report_Final.pdf'>Scottish Health Survey adult respondents 2010-11, Purdon et al. 2013</a>",
+              xaxtitle='SIMD Quintile', yaxtitle="Percentage population with suboptimal vitamin D (%)")
 ##END
