@@ -633,5 +633,14 @@ plot_webchart(filepath="Violence/Violence - Health data Chart 1", chart_type = "
           sourc="<a href='https://www.scotphn.net/wp-content/uploads/2015/10/Report-Violence-Prevention-A-Public-Health-Priority-December-2014.pdf'>Conaglen & Gallimore, 2014</a>", 
           xaxtitle="Age group", yaxtitle="Rate per 1,000")
 
+############################.
+### Vitamin D ----
+############################.
+
+plot_webchart(filepath="quadrant", chart_type = "barcompar",
+              xvar="class1", yvar="measure", comparator="comparator", compname="Scottish Average",
+              title="Chart 1. Vitamin D Status by SIMD Quintile", 
+              sourc="<a href='https://www.foodstandards.gov.scot/downloads/Report_Final.pdf'>Scottish Health Survey adult respondents 2010-11, Purdon et al. 2013</a>",
+              xaxtitle='SIMD Quintile', yaxtitle="Mean vitamin D serum concentration, nmol/L")
 
 ##END
