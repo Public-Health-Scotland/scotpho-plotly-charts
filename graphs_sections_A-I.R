@@ -555,7 +555,7 @@ plot_webchart(filepath="Diabetes/diabetes_secondarycare_chart2_pra", chart_type 
 plot_webchart(filepath="Diabetes/diabetes_mortality_chart1_pra", chart_type = "multiline", privacy = "secret", 
            xvar="class2", yvar="rate", group="class1", pal_col=pal2bysexoverall,
            title="Chart 1. Deaths where diabetes was recorded as the<br> underlying cause or as a contributory factor to death, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>; ICD10 codes: E10, E11, E12, E13, E14", 
+           sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>; ICD10 codes: E10, E11, E12, E13, E14", 
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #nhs boards
