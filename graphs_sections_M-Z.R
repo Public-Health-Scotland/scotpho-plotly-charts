@@ -144,7 +144,7 @@ plot_webchart(filepath="Obesity/obesity_International - Chart 2", chart_type = "
 ############################.
 plot_webchart(filepath="Older People/Older People - Chart 1", chart_type = "multibar",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. Population aged 60 and over, Scotland, 2018", 
+         title="Chart 1. Population aged 60 and over, Scotland, 2020", 
          sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates'>NRS</a>", 
          xaxtitle='Age', yaxtitle="Population")
 
