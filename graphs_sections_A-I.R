@@ -291,7 +291,7 @@ plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2", chart_type = "multi
 #Mortality
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Mortality rate for COPD by gender, Scotland", 
+           title="Chart 1. Mortality rate for COPD by sex, Scotland", 
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -370,7 +370,7 @@ plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2_PRA", chart_type = "m
 #Chart 471
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-           title="Chart 1. Mortality rate for COPD by gender, Scotland", 
+           title="Chart 1. Mortality rate for COPD by sex, Scotland", 
            sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
