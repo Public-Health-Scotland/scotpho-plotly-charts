@@ -55,7 +55,7 @@ plot_webchart(filepath="Multiple Sclerosis/ms_mortality_chart1", chart_type = "m
 #new NHS board data chart
 plot_webchart(filepath="Multiple Sclerosis/ms_NHSboards_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Hospital stays per 100,000 population with<br> a main diagnosis of multiple sclerosis, 2019/20", 
+          title="Chart 1. Hospital stays per 100,000 population with<br> a main diagnosis of multiple sclerosis, 2020/21", 
           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 code G35.", 
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
