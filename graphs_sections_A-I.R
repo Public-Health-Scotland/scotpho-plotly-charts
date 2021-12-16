@@ -291,14 +291,9 @@ plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2", chart_type = "multi
 
 #Mortality
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1", chart_type = "multiline",
-           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-<<<<<<< HEAD
-           title="Chart 1. Mortality rate for COPD by sex, Scotland", 
-           sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
-=======
+           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups, 
            title="Chart 1. Mortality rate for COPD by gender, Scotland",
            sourc="<a href='http://www.isdscotland.org/index.asp'>ISD</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496",
->>>>>>> 4f0f19b83dc2c56a947b3afb46f804d2d4ae27ab
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Deprivation
@@ -376,13 +371,8 @@ plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2_PRA", chart_type = "m
 #Chart 471
 plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multiline", privacy = "secret",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-<<<<<<< HEAD
            title="Chart 1. Mortality rate for COPD by sex, Scotland", 
-           sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496", 
-=======
-           title="Chart 1. Mortality rate for COPD by gender, Scotland",
            sourc="<a href='https://www.publichealthscotland.scot/'>PHS</a>. ICD10 Codes: J40-J44, ICD9 Codes: 490-492, 496",
->>>>>>> 4f0f19b83dc2c56a947b3afb46f804d2d4ae27ab
            xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 #Deprivation
@@ -474,16 +464,16 @@ plot_webchart(filepath="Deaths/deaths-allcause-deprivation-chart1", chart_type =
 
 #Top 10 causes
 plot_webchart(filepath="Deaths/deaths-top10causes-chart1", chart_type = "onebar",
-       xvar="class1", yvar="measure", order = T, 
+       xvar="measure", yvar="class1", order = T, horizontal = T,
        title="Chart 1. The ten most frequently occuring principal<br>causes of death, Scotland, 2020",
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes",
-       xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths")
+       xaxtitle='Percentage of all deaths', yaxtitle="Principal cause of death")
 
 plot_webchart(filepath="Deaths/deaths-top10causes-chart2", chart_type = "onebar",
-       xvar="class1", yvar="measure", order = T, 
+       xvar="measure", yvar="class1", order = T, horizontal = T,
        title="Chart 2. The ten most frequently occuring principal causes of<br>premature death for people under 75 years, Scotland, 2020",
        sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/general-publications/vital-events-reference-tables'>NRS</a>. Based on 3-digit ICD10 codes",
-       xaxtitle='Principal cause of death', yaxtitle="Percentage of all deaths under 75 ")
+       xaxtitle='Percentage of all deaths under 75', yaxtitle="Principal cause of death")
 
 ############################.
 ##Deprivation ----
