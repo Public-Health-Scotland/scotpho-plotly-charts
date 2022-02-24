@@ -548,6 +548,53 @@ plot_webchart(filepath="Smoking/smoking_deaths_disease_chart4", chart_type = "mu
          sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
          xaxtitle="Disease group", yaxtitle="Percentage attributable")
 
+###Smoking PRE-RELEASE ACCESS
+#deaths
+plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart1_PRA",  chart_type = "multiline_dashed", privacy = "secret",
+              xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=palbysexoverall, xtick_freq=1,
+              title="Chart 1. Deaths attributable to smoking by sex, </br>Scotland; 2003, 2008-2019", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
+
+plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA",  chart_type = "multiline_dashed", privacy = "secret",
+              xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=pal_five_gradient, xtick_freq=1,
+              title="Chart 2. Deaths attributable to smoking by age group, </br>Scotland; 2003, 2008-2019", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
+
+plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 1_PRA", chart_type = "multiline", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient, xtick_freq=1,
+              title="Chart 3. Deaths attributable to smoking by<br> SIMD quintile, Scotland; 2008-2019", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
+              xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="COPD/COPD_Secondary Care - Chart 2_PRA", chart_type = "multibar", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
+              title="Chart 4. Deaths attributable to smoking as a percentage of<br> all deaths in each disease grouping, 2019, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
+              xaxtitle="Disease group", yaxtitle="Percentage attributable")
+
+###Smoking PRE-RELEASE ACCESS
+#admissions
+plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multiline_dashed", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2", xtick_freq=1,
+              title="Chart 1. Hospital admissions attributable to smoking, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="COPD/COPD_deprivation_Chart_1_PRA", chart_type = "multiline_dashed", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2", xtick_freq=1,
+              title="Chart 2. Hospital admissions attributable to smoking<br> by gender, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
+
+plot_webchart(filepath="COPD/COPD_deprivation_Chart_2_PRA", chart_type = "multiline_dashed", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient,yvar_dashed = "measure2", xtick_freq=1,
+              title="Chart 3. Hospital admissions attributable to smoking <br>by age group, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
+
+
 ############################.
 ### Suicide ----
 ############################.
