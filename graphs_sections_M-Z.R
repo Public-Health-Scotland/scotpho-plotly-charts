@@ -594,6 +594,18 @@ plot_webchart(filepath="COPD/COPD_deprivation_Chart_2_PRA", chart_type = "multil
               sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
               xaxtitle="Year", yaxtitle="Sex standardised rate per 100,000")
 
+plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "multiline", privacy = "secret",
+              xvar="class1", yvar="measure", group="class2", pal_col=pal_five_gradient, xtick_freq=1,
+              title="Chart 4. Hospital admissions attributable to smoking<br>by SIMD quintile, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>", 
+              xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "secret",
+              xvar="class1", yvar="measure", chart_type = "onebar",
+              title="Chart 5. Hospital admissions attributable to smoking <br>by disease grouping, 2019, Scotland", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, Expressed as a percentage of all diagnosis that could be attributed to smoking", 
+              xaxtitle="Disease group", yaxtitle="Percentage attributable")
+
 
 ############################.
 ### Suicide ----
