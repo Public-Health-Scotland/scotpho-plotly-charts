@@ -219,6 +219,73 @@ plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4", c
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
+
+
+################################################
+##Chronic Liver Disease ---- Pre-release access versions
+################################################
+#Mortality
+plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",
+              chart_type = "multiline", privacy = "secret",
+              xvar="year", yvar="rate", group="sex", pal_col=palbysexoverall,
+              title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland",
+              sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2PRA", chart_type = "multiline", privacy = "secret",
+              xvar="year", yvar="rate", group="age_grp2", pal_col=pal_cldmortage,
+              title="Chart 2. Chronic liver disease deaths by age group, Scotland",
+              sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PRA", chart_type = "multiline", privacy = "secret",
+              xvar="year", yvar="rate", group="type", pal_col=palalccondition,
+              title="Chart 3. Chronic liver disease deaths by condition, Scotland",
+              sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA", chart_type = "multiline", privacy = "secret",
+              xvar="year", yvar="rate", group="decile", pal_col=pal_simd2,
+              title="Chart 4. Chronic liver disease deaths<br> by SIMD decile, Scotland",
+              sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+
+#Secondary care
+plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA", chart_type = "multiline", privacy = "secret",
+              xvar="fye", yvar="rate", group="sex", pal_col=palbysexoverall,
+              title="Chart 1. Chronic liver disease hospital stays<br>by gender, Scotland",
+              sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2PRA", chart_type = "multiline", privacy = "secret",
+              xvar="fye", yvar="rate", group="age_grp2", pal_col=pal_cldmorbage,
+              title="Chart 2. Chronic liver disease hospital stays by age group, Scotland",
+              sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3PRA", chart_type = "multiline", privacy = "secret",
+              xvar="fye", yvar="rate", group="type", pal_col=palalccondition,
+              title="Chart 3. Chronic liver disease hospital stays<br>by condition, Scotland",
+              sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+
+plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", chart_type = "multiline", privacy = "secret",
+              xvar="fye", yvar="rate", group="decile", pal_col=pal_simd2,
+              title="Chart 4. Chronic liver disease hospital stays<br>by SIMD deciles, Scotland",
+              sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+
+
+
+
+
+
+
+
+
+
+
+
 ############################.
 ##Community Wellbeing ----
 ############################.
