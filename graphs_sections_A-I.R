@@ -784,14 +784,14 @@ plot_webchart(filepath="Health Inequalities/Health_Inequalities_Policy_Chart_1",
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_1_new",
         xvar="class1", yvar="measure", chart_type = "oneline",
         title="Chart 1. Relative Index of Inequality (RII)<br>(using SIMD income-employment index),<br>All-cause mortality under 75 years, Scotland",
-        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>",
+        sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-march-2022-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>",
         xaxtitle="Year", yaxtitle="Relative Index of Inequality (RII)")
 
 #Legend overlay in plotly
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_2_new", chart_type = "multiline",
            xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
            title="Chart 2. Age-standardised all-cause mortality rates under 75<br> years by least and most deprived deciles (using SIMD income-employment index),<br> Scotland",
-           sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-january-2021-report'>Long-term Monitoring of Health Inequalities, Scottish Government</a>",
+           sourc="<a href='https://www.gov.scot/publications/long-term-monitoring-health-inequalities-march-2022-report/'>Long-term Monitoring of Health Inequalities, Scottish Government</a>",
            xaxtitle="Year", yaxtitle="European age-standardised mortality rate<br>per 100,000 population")
 
 plot_webchart(filepath="Health Inequalities/Health_Inequalities_Chart_3",

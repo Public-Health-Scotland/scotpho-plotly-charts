@@ -259,7 +259,8 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
       plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y=data_plot[,yvar],
                              type = "scatter", mode = 'none', stackgroup = 'one', 
                              #Grouping variable for color and palette
-                             color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length])
+                             color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>%
+        layout(xaxis = list(categoryorder = "trace"))
     }
   
   ###############################################.
