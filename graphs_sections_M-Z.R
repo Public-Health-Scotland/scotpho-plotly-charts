@@ -495,7 +495,7 @@ plot_webchart(filepath="Social Environment/volunteering_chart1", chart_type = "b
 plot_webchart(filepath="Smoking/smoking_admissions_chart1", chart_type = "multiline_dashed",
               xvar="class1", yvar="measure", group="class2", pal_col=palnogroups, yvar_dashed = "measure2", xtick_freq=1,
               title="Chart 1: Hospital admissions attributable to smoking, Scotland", 
-              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
               xaxtitle="Year", yaxtitle="Age-sex standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_admissions_sex_chart2", chart_type = "multiline_dashed",
@@ -527,7 +527,7 @@ plot_webchart(filepath="Smoking/smoking_admissions_disease_chart5",
 plot_webchart(filepath="Smoking/smoking_deaths_sex_chart1",  chart_type = "multiline_dashed",
               xvar="class1", yvar="measure", yvar_dashed = "measure2", group="class2", pal_col=palbysexoverall, xtick_freq=1,
               title="Chart 1: Deaths attributable to smoking by sex, </br>Scotland; 2003, 2008-2019", 
-              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation.asp'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
+              sourc="<a href='http://isdscotland.org/Health-Topics/Public-Health/Smoking-Cessation'>PHS</a>, please be aware that there are no data available for the period 2004-2007", 
               xaxtitle="Year", yaxtitle="Age standardised rate per 100,000")
 
 plot_webchart(filepath="Smoking/smoking_deaths_age_chart2",  chart_type = "multiline_dashed",
