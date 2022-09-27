@@ -84,52 +84,52 @@ plot_webchart(filepath="Multiple Sclerosis/ms_seccare_chart2_PRA", chart_type = 
 #adults
 plot_webchart(filepath="Obesity/obesity_adults_Chart_1", chart_type = "multibar",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 1. Prevalence of obesity, Scotland, 2016", data_down ="1934/obesity_adults_chart_1.csv",
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+         title="Chart 1. Adult obesity categorised by BMI, Scotland, 2020", data_down ="1934/obesity_adults_chart_1.csv",
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='Age group', yaxtitle="Percentage")
 
 plot_webchart(filepath="Obesity/obesity_adults_Chart_2", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-          title="Chart 2. Prevalence of obesity in <br>adults (16-64 years), Scotland", 
-          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+          title="Chart 2. Prevalence of obesity in adults(ages 16-64 and ages 16+), Scotland", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
           xaxtitle='Year', yaxtitle="Percentage")
 
 #children
 plot_webchart(filepath="Obesity/obesity_children_chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
           title="Chart 1. Children, aged 2-15 years, at risk of obesity, Scotland", 
-          sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
           xaxtitle='Year', yaxtitle="Percentage")
 
-plot_webchart(filepath="Obesity/obesity_children_chart2", chart_type = "multiline",
-          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
+plot_webchart(filepath="Obesity/obesity_children_chart2", chart_type = "oneline",
+          xvar="class2", yvar="measure", pal_col=palnogroups,
           title="Chart 2. Children in Primary 1 at risk of obesity, Scotland", 
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Child-Health/Child-Health-Programme/Child-Health-Systems-Programme-School.asp'>CHSP School</a>", 
           xaxtitle='Year', yaxtitle="Percentage")
 #deprivation
-plot_webchart(filepath="Obesity/obesity_Deprivation_Chart_1", chart_type = "multibar",
-         xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. Adults obese and morbidly obese<br>by SIMD quintile, Scotland, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
+plot_webchart(filepath="Obesity/obesity_Deprivation_Chart_1", chart_type = "onebar",
+         xvar="class1", yvar="measure", pal_col=palnogroups,
+         title="Chart 1. Percentage of adult population (16+)<br> categorised as obese (BMI and waist circumference) <br>by SIMD quintile, Scotland, 2018/19", 
+         sourc="<a href='https://www.gov.scot/collections/scottish-health-survey/'>Scottish Health Survey</a>", 
          xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
-plot_webchart(filepath="Obesity/obesity_Deprivation_Chart_2", chart_type = "multibar",
+plot_webchart(filepath="Obesity/obesity_Deprivation_Chart_2", chart_type = "multiline",
          xvar="class2", yvar="measure", group="class1", pal_col=palnogroups,
-         title="Chart 2. Children obese and morbidly obese<br>by SIMD quintile, Scotland, 2016", 
-         sourc="<a href='http://www.gov.scot/Topics/Statistics/Browse/Health/scottish-health-survey'>Scottish Health Survey</a>", 
-         xaxtitle='SIMD quintile', yaxtitle="Percentage")
+         title="Chart 2. Children in Primary 1 with BMI in 'obese and severely obese' category, <br>by SIMD quintile, Scotland", 
+         sourc="<a href='https://publichealthscotland.scot/publications/primary-1-body-mass-index-bmi-statistics-scotland/primary-1-body-mass-index-bmi-statistics-scotland-school-year-2020-to-2021/dashboard/'>PHS</a>", 
+         xaxtitle='School year', yaxtitle="Percentage")
 
 plot_webchart(filepath="Obesity/obesity_Deprivation_Chart_3", 
          xvar="class1", yvar="measure", chart_type = "onebar",
-         title="Chart 3. Children in Primary 1 at risk<br> of obesity, Scotland, 2015/16", 
+         title="Chart 3. Children in Primary 1 at risk<br> of obesity, Scotland, 2020/21", 
        sourc="<a href='http://www.isdscotland.org/Health-Topics/Child-Health/Child-Health-Programme/Child-Health-Systems-Programme-School.asp'>CHSP School</a>", 
        xaxtitle='SIMD quintile', yaxtitle="Percentage")
 
 #international
 #Maybe a good example worth try subplotting
 plot_webchart(filepath="Obesity/obesity_International - Chart 1", chart_type = "barcompar",
-         xvar="class1", yvar="measure", comparator="scotland_2016", compname="Scotland (2016)",
-         title="Chart 1. Prevalence of obesity in men by country", 
+         xvar="class1", yvar="measure", comparator="scotland_2020", compname="Scotland (2020)",
+         title="Chart 1. Prevalence of obesity by country", 
        sourc="<a href='http://stats.oecd.org/index.aspx?DataSetCode=HEALTH_STAT'>OECD: StatsExtract</a>", 
        xaxtitle='Country', yaxtitle="Percentage")
 
@@ -404,9 +404,9 @@ plot_webchart(filepath="Social Environment/Civic_participation_Chart_1", chart_t
 
 #Edited in plotly: x axis labels
 plot_webchart(filepath="Social Environment/Civic_participation_Chart_2", 
-          xvar="class1", yvar="measure", chart_type = "onebar",
-          title="Chart 2. Voter turnout: 2016 Scottish Parliamentary Elections", 
-          sourc="<a href='https://www.electoralcommission.org.uk/scotland'>Electoral Comission</a>", 
+          xvar="class1", yvar="measure", chart_type = "barcompar", comparator="comparator", compname="Scotland",
+          title="Chart 2. Voter turnout: 2021 Scottish Parliamentary Elections", 
+          sourc="<a href='https://commonslibrary.parliament.uk/research-briefings/cbp-9230/'>UK Parliament House of Commons Library</a>", 
           xaxtitle='Constituency', yaxtitle="Percentage")
 
 plot_webchart(filepath="Social Environment/Civic_participation_Chart_3", chart_type = "barcompar",
@@ -424,19 +424,20 @@ plot_webchart(filepath="Social Environment/Civic_participation_Chart_4",
 #Lone parents
 plot_webchart(filepath="Social Environment/lone_parent_chart1", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 1. Households with dependent children <br>which are lone parent households by NHS Board", 
-          sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-          xaxtitle='Health board', yaxtitle="Percentage")
+          title="Chart 1. Single parent households as % of all households with <br> children (average figures 2015-17)", 
+          sourc="<a href='https://www.gov.scot/collections/scottish-household-survey/'>Scottish Household Survey</a>", 
+          xaxtitle='Local Authority', yaxtitle="Percentage")
 
-plot_webchart(filepath="Social Environment/lone_parent_chart2", chart_type = "barcompar",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Households with dependent children <br>which are lone parent households by council", 
-          sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-          xaxtitle='Council', yaxtitle="Percentage")
+# this chart isn't currently being used 27-09-22
+# plot_webchart(filepath="Social Environment/lone_parent_chart2", chart_type = "barcompar",
+#           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+#           title="Chart 2. Households with dependent children <br>which are lone parent households by council", 
+#           sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
+#           xaxtitle='Council', yaxtitle="Percentage")
 
 plot_webchart(filepath="Social Environment/lone_parent_chart3", 
         xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 3. Households with dependent children <br>which are lone parent households, Scotland", 
+        title="Chart 2. Households with dependent children <br>which are lone parent households, Scotland", 
         sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/housholds/household-estimates'>NRS</a>", 
         xaxtitle='Year', yaxtitle="Percentage")
 
@@ -457,15 +458,16 @@ plot_webchart(filepath="Social Environment/lone_pensioner_chart1", chart_type = 
 #providers of unpaid care
 plot_webchart(filepath="Social Environment/unpaid_carers_chart1", chart_type = "barcompar",
        xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 1. People providing any unpaid care <br>by NHS board of residence, 2011",
-       sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-       xaxtitle='Health board', yaxtitle="Percentage")
+       title="Chart 1. Percentage of all adults providing unpaid care <br> by local authority area, 2016-19",
+       sourc="<a href='https://statistics.gov.scot/data/unpaid-care-provision-sscq'>Scottish Surveys Core Questions</a>", 
+       xaxtitle='Local Authority', yaxtitle="Percentage")
 
-plot_webchart(filepath="Social Environment/unpaid_carers_chart2", chart_type = "barcompar",
-          xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-       title="Chart 2. People providing any unpaid care by council, 2011",
-       sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
-       xaxtitle='Council', yaxtitle="Percentage")
+# Chart 2 currently not being used 27-09-22
+# plot_webchart(filepath="Social Environment/unpaid_carers_chart2", chart_type = "barcompar",
+#           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+#        title="Chart 2. People providing any unpaid care by council, 2011",
+#        sourc="<a href='http://www.scotlandscensus.gov.uk/'>Census 2011</a>", 
+#        xaxtitle='Council', yaxtitle="Percentage")
 
 #rating of neighbourhood
 plot_webchart(filepath="Social Environment/neighb_rating_chart1", chart_type = "barcompar",
