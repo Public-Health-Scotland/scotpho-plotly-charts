@@ -446,14 +446,14 @@ plot_webchart(filepath="COPD/COPD_Mortality_Chart_1_PRA", chart_type = "multilin
 #Chart 473
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_1_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 1. COPD admissions in males, Scotland, 2020/21",
+         title="Chart 1. COPD admissions in males, Scotland, 2021/22",
          sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44",
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
 #Chart 475
 plot_webchart(filepath="COPD/COPD_deprivation_Chart_2_PRA", chart_type = "multibar", privacy = "secret",
          xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-         title="Chart 2. COPD admissions in females, Scotland, 2020/21",
+         title="Chart 2. COPD admissions in females, Scotland, 2021/22",
          sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 Codes: J40-J44",
          xaxtitle='SIMD quintile', yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -468,7 +468,7 @@ plot_webchart(filepath="COPD/COPD - NHS Board data - Chart 1", chart_type = "bar
 #Chart 417
 plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "barcompar", privacy = "secret",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2020/21",
+          title="Chart 2. Hospital discharges <br>with COPD (main diagnosis), 2021/22",
           sourc="<a href='https://beta.isdscotland.org/find-publications-and-data/health-services/hospital-care/acute-hospital-activity-and-nhs-beds-information-annual/'>SMR01, PHS</a>. ICD10 codes J40-J44.",
           xaxtitle='NHS Board', yaxtitle="Crude rate per 100,000 population")
 
