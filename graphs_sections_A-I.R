@@ -292,13 +292,13 @@ plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA"
 #Neighbourhood staisfaction
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart1",
         xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 1. Percentage of dults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live, Scotland, 2019",
+        title="Chart 1. Percentage of adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live, Scotland, 2019",
         sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>",
         xaxtitle="Year", yaxtitle="Percentage")
 
 plot_webchart(filepath="Community Wellbeing/communitywellbeing_neighbourhoodsatisfaction_chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percetnage of adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2019",
+          title="Chart 2. Percentage of adults (aged 16 plus) who rate their neighbourhood<br> as a very good place to live by council, 2019",
           sourc="<a href='http://www.gov.scot/Topics/Statistics/16002/PublicationAnnual'>SHS</a>",
           xaxtitle='Council', yaxtitle="Percentage")
 
@@ -477,10 +477,16 @@ plot_webchart(filepath="COPD/COPD_NHSboard_Chart_2_PRA", chart_type = "barcompar
 ############################.
 
 plot_webchart(filepath="Crime/Crime - National trends Chart 1",
-        xvar="class1", yvar="measure", chart_type = "oneline",
-        title="Chart 1. Crimes recorded by police, Scotland",
-        sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>",
-        xaxtitle='Financial year', yaxtitle="Number of crimes recorded")
+              xvar="class1", yvar="measure", chart_type = "oneline",
+              title="Chart 1. Total crimes recorded by the police, Scotland",
+              sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>",
+              xaxtitle='Reporting year', yaxtitle="Number of crimes recorded")
+
+# plot_webchart(filepath="Crime/Crime - National trends Chart 1",
+#         xvar="class1", yvar="measure", chart_type = "oneline",
+#         title="Chart 1. Crimes recorded by police, Scotland",
+#         sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>",
+#         xaxtitle='Financial year', yaxtitle="Number of crimes recorded")
 
 plot_webchart(filepath="Crime/Crime - by local authority Chart 1", chart_type = "barcompar",
        xvar="class1", yvar="measure",  comparator="comp", compname="Scotland",
@@ -494,11 +500,17 @@ plot_webchart(filepath="Crime/crime-national-target-chart1", chart_type = "oneba
        sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>",
        xaxtitle='Financial year', yaxtitle="Percentage of adults")
 
-plot_webchart(filepath="Crime/crime-national-target-chart2", chart_type = "onebar",
-       xvar="class1", yvar="measure",
-       title="Chart 2. Adults who think crime in their area has stayed<br> the same or reduced in the past 2 years, Scotland",
-       sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>",
-       xaxtitle='Financial year', yaxtitle="Percentage of adults")
+# plot_webchart(filepath="Crime/crime-national-target-chart2", chart_type = "onebar",
+#        xvar="class1", yvar="measure",
+#        title="Chart 2. Adults who think crime in their area has stayed<br> the same or reduced in the past 2 years, Scotland",
+#        sourc="<a href='https://www.gov.scot/collections/scottish-crime-and-justice-survey/'>Scottish Crime and Justice Survey</a>",
+#        xaxtitle='Financial year', yaxtitle="Percentage of adults")
+
+plot_webchart(filepath="Crime/crime-national-target-chart2", chart_type = "oneline",
+              xvar="class1", yvar="measure",
+              title="Chart 2. Non-sexual crimes of violence reported by the police, Scotland",
+              sourc="<a href='https://www.gov.scot/collections/recorded-crime-in-scotland/'>Scottish Government</a>",
+              xaxtitle='Reporting year', yaxtitle="Number of crimes recorded")
 
 ############################.
 ##Deaths ----
