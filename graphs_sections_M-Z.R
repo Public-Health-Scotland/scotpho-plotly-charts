@@ -612,15 +612,34 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "se
 ############################.
 ### Stalling mortality trends ----
 ############################.
+
+#The file names called will not match the subject matter of these charts as we are having to recycle plotly charts that are no longer active
+#The plotly function is dependent on the file name/folder location which is why we need to keep using the old name but with different content data. 
+
 #file name hijacks unused chart from crime and re-purposes for stalling mortality
 plot_webchart(filepath="Crime/crime-national-target-chart1",
               chart_type = "multiline",
               xvar="year", yvar="life expectancy", group="series", pal_col=pal2bysex , xtick_freq=3,
-              title="Chart 1. Trends in life expectancy<br> in Scotland and England & Wales 1980-2019",
+              title="Chart 1. Trends in life expectancy<br> in Scotland and England & Wales 1980-2020",
               sourc=paste0("<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-at-scotland-level'>NRS</a>"," and ",
                            "<a href='https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies/bulletins/pastandprojecteddatafromtheperiodandcohortlifetables/2020baseduk1981to2070'>ONS</a>"),
               xaxtitle="Year", yaxtitle="Life expectancy (years)")
 
+#file name hijacks unused chart from crime and re-purposes for stalling mortality
+plot_webchart(filepath="Crime/crime-national-target-chart2",
+              chart_type = "multiline",
+              xvar="year", yvar="mortality", group="series", pal_col=palnogroups , xtick_freq=3,
+              title="Chart 2.  Trends in female mortality rates:<br> Scotland and its 20% most and least deprived populations<br>Rolling three-year averages per 100,000 population",
+              sourc=paste0("<a href='https://www.gcph.co.uk/life-expectancy'>GCPH analyses of NRS mortality and population data</a>"),
+              xaxtitle="Year", yaxtitle="Age standardised rate")
+
+#file name hijacks unused chart from crime and re-purposes for stalling mortality
+plot_webchart(filepath="Crime/Crime - by local authority Chart 1",
+              chart_type = "multiline",
+              xvar="year", yvar="mortality", group="series", pal_col=palnogroups , xtick_freq=3,
+              title="Chart 3.  Trends in female mortality rates:<br> England and its 20% most and least deprived populations<br>Rolling three-year averages per 100,000 population",
+              sourc=paste0("<a href='https://www.gcph.co.uk/life-expectancy'>GCPH analyses of NRS mortality and population data</a>"),
+              xaxtitle="Year", yaxtitle="Age standardised rate")
 
 
 ############################.
