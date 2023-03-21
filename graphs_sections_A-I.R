@@ -172,7 +172,7 @@ plot_webchart(filepath="Children/children_poverty_chart1", chart_type = "multili
 plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1",
           chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland",
+          title="Chart 1. Chronic liver disease deaths<br> by sex, Scotland",
           sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
           xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -197,7 +197,7 @@ plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4", c
 #Secondary care
 plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1", chart_type = "multiline",
           xvar="class2", yvar="measure", group="class1", pal_col=palbysexoverall,
-          title="Chart 1. Chronic liver disease hospital stays<br>by gender, Scotland",
+          title="Chart 1. Chronic liver disease hospital stays<br>by sex, Scotland",
           sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
           xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
 
@@ -225,55 +225,55 @@ plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4", c
 ##Chronic Liver Disease ---- Pre-release access versions
 ################################################
 #Mortality
-plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_gender_rate_Chart1PRA",
+plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_sex_rate_Chart1PRA",
               chart_type = "multiline", privacy = "secret",
               xvar="year", yvar="rate", group="sex", pal_col=palbysexoverall,
-              title="Chart 1. Chronic liver disease deaths<br> by gender, Scotland",
+              title="Chart 1. Chronic liver disease deaths<br> by sex, Scotland",
               sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
-              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_age_rate_Chart2PRA", chart_type = "multiline", privacy = "secret",
               xvar="year", yvar="rate", group="age_grp2", pal_col=pal_cldmortage,
               title="Chart 2. Chronic liver disease deaths by age group, Scotland",
               sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
-              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_conditions_rate_Chart3PRA", chart_type = "multiline", privacy = "secret",
               xvar="year", yvar="rate", group="type", pal_col=palalccondition,
               title="Chart 3. Chronic liver disease deaths by condition, Scotland",
               sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
-              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_mortality_simd_rate_Chart4PRA", chart_type = "multiline", privacy = "secret",
               xvar="year", yvar="rate", group="decile", pal_col=pal_simd2,
               title="Chart 4. Chronic liver disease deaths<br> by SIMD decile, Scotland",
               sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
-              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Year of death registration", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 #Secondary care
-plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_gender_rate_Chart1PRA", chart_type = "multiline", privacy = "secret",
+plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_sex_rate_Chart1PRA", chart_type = "multiline", privacy = "secret",
               xvar="fye", yvar="rate", group="sex", pal_col=palbysexoverall,
-              title="Chart 1. Chronic liver disease hospital stays<br>by gender, Scotland",
+              title="Chart 1. Chronic liver disease hospital stays<br>by sex, Scotland",
               sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
-              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_age_rate_Chart2PRA", chart_type = "multiline", privacy = "secret",
               xvar="fye", yvar="rate", group="age_grp2", pal_col=pal_cldmorbage,
               title="Chart 2. Chronic liver disease hospital stays by age group, Scotland",
               sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
-              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_conditions_rate_Chart3PRA", chart_type = "multiline", privacy = "secret",
               xvar="fye", yvar="rate", group="type", pal_col=palalccondition,
               title="Chart 3. Chronic liver disease hospital stays<br>by condition, Scotland",
               sourc="<a href='http://www.isdscotland.org/Health-Topics/Hospital-Care/Diagnoses'>SMR01, ISD Scotland</a>",
-              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 plot_webchart(filepath="Chronic Liver Disease/CLD_morbidity_simd_rate_Chart4PRA", chart_type = "multiline", privacy = "secret",
               xvar="fye", yvar="rate", group="decile", pal_col=pal_simd2,
               title="Chart 4. Chronic liver disease hospital stays<br>by SIMD deciles, Scotland",
               sourc="<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/deaths'>NRS</a>",
-              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000")
+              xaxtitle="Financial year of discharge", yaxtitle="Age-sex standardised rate per 100,000",static = T)
 
 
 
@@ -941,16 +941,22 @@ plot_webchart(filepath="Income and employment/IE-working-age-poverty-chart2", ch
 #Availability of work
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart1", chart_type = "multiline",
            xvar="class1", yvar="measure", group="class2", pal_col=palnogroups,
-           title="Chart 1. Employment rates for males and females in Scotland",
+           title="Chart 1. Employment rates for males and females in Scotland,1993-2022",
            sourc="<a href='https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/previousReleases'>Labour Force survey, Office for National Statistics</a>",
            xaxtitle="Year", yaxtitle="Percentage")
 
-#Note: chnaged line 134 in plotly_chart_functions.R to 2 decimal places for this chart
-plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "onebar",
-       xvar="class1", yvar="measure", order=TRUE,
-       title="Chart 2. Jobs density by Scottish region, 2019",
-       sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>",
-       xaxtitle="Region", yaxtitle="Jobs density")
+# #Note: chnaged line 134 in plotly_chart_functions.R to 2 decimal places for this chart
+# plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "onebar",
+#        xvar="class1", yvar="measure", order=TRUE,
+#        title="Chart 2. Jobs density by Scottish region, 2019",
+#        sourc="<a href='https://www.nomisweb.co.uk/datasets/jd'>Jobs density, Office for National Statistics</a>",
+#        xaxtitle="Region", yaxtitle="Jobs density")
+
+plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart2", chart_type = "barcompar",
+              xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
+              title="Ratio of Job Openings to Claimant unemployed:<br> Scotland, by local authority, August-October 2022",
+              sourc="Skills Development Scotland",
+              xaxtitle='Local authority', yaxtitle="Ratio")
 
 #Note: commented out 'rangemode="tozero"' in line 126 of plotly_chart_functions.R to allow the y-axis to not start at zero.
 plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", chart_type = "oneline",
@@ -960,15 +966,21 @@ plot_webchart(filepath="Income and employment/IE-availabilityofwork-chart3", cha
        xaxtitle="Month", yaxtitle="Number of payrolled employees (millions)")
 
 #Worklessness
-plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "onebar",
-           xvar="measure", yvar="class2",
-           title="Chart 1. People aged 16-64 who are ILO unemployed or economically<br> inactive but want work, Scotland, 2020",
-           sourc="<a href='https://www.nomisweb.co.uk/datasets/apsnew'>Annual Population Survey, Office for National Statistics</a>",
-           xaxtitle="Number of people", yaxtitle= FALSE)
+# plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "onebar",
+#            xvar="measure", yvar="class2",
+#            title="Chart 1. People aged 16-64 who are ILO unemployed or economically<br> inactive but want work, Scotland, 2020",
+#            sourc="<a href='https://www.nomisweb.co.uk/datasets/apsnew'>Annual Population Survey, Office for National Statistics</a>",
+#            xaxtitle="Number of people", yaxtitle= FALSE)
+
+plot_webchart(filepath="Income and employment/IE-worklessness-chart1", chart_type = "multibar",
+              xvar="class2", yvar="measure", group="class1", pal = palnogroups,
+              title="Chart 1. People aged 16-64 who are ILO unemployed or economically<br> inactive but want work, Scotland, selected years 2010 to 2021",
+              sourc="<a href='https://www.nomisweb.co.uk/datasets/apsnew'>Annual Population Survey, Office for National Statistics</a>",
+              xaxtitle=FALSE, yaxtitle="Number of people <br> (thousands)")
 
 plot_webchart(filepath="Income and employment/IE-worklessness-chart2", chart_type = "barcompar",
           xvar="class1", yvar="measure", comparator="comparator", compname="Scotland",
-          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region, November 2020",
+          title="Chart 2. Percentage of working-age adults aged 16-64 claiming key<br>out-of-work benefits, by Scottish sub-region, May 2022",
           sourc="<a href=https://www.gov.uk/government/organisations/department-for-work-pensions/about/statistics>DWP</a>, <a href=https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/population/population-estimates/mid-year-population-estimates>National Records of Scotland</a>.",
           xaxtitle='Region', yaxtitle="Percentage")
 
