@@ -225,6 +225,21 @@ plot_webchart <- function (filepath, chart_type, privacy = "public", xvar, yvar,
                            color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
       # to get hover compare mode as default
       layout(hovermode = 'false')#, legend = legend_plot) 
+  
+    ###############################################.
+    ## Multiple lines y axis not including origin  ----
+  } else if (chart_type == "multiline_ynotzero") { # MULTIPLE LINES PLOT where y axis not through zero- only to be used for life expectancy
+    # Custom layout
+    xaxis_plot[["dtick"]] <- xtick_freq
+    
+    #yaxis plot
+    yaxis_plot <- list(title = yaxtitle, rangemode="normal", fixedrange = TRUE)  
+    
+    plot_plotly <- plot_ly(data=data_plot, x=data_plot[,xvar], y = data_plot[,yvar],
+                           type = 'scatter', mode = markers,
+                           color=as.factor(data_plot[,group]), colors = pal_chose[1:cat_length]) %>% 
+      # to get hover compare mode as default
+      layout(hovermode = 'false')#, legend = legend_plot)     
     
     ###############################################.
     ## Multiple lines with parts dashed ----

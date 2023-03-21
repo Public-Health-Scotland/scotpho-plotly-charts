@@ -621,7 +621,7 @@ plot_webchart(filepath="Asthma/asthma_seccare_age_sex_chart2PRA",  privacy = "se
 
 #file name hijacks unused chart from crime and re-purposes for stalling mortality
 plot_webchart(filepath="Crime/crime-national-target-chart1",
-              chart_type = "multiline",
+              chart_type = "multiline_ynotzero",
               xvar="year", yvar="life expectancy", group="series", pal_col=pal2bysex , xtick_freq=3,
               title="Chart 1. Trends in life expectancy<br> in Scotland and England & Wales 1980-2020",
               sourc=paste0("<a href='https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/life-expectancy/life-expectancy-at-scotland-level'>NRS</a>"," and ",
